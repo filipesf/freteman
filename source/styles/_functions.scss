@@ -1,0 +1,136 @@
+//-------------------------------------
+// @FUNCTIONS
+//-------------------------------------
+
+///
+/// Generate Modular Scale number
+///
+/// @author Matheus Fernandes
+///
+/// @group modular scale
+///
+/// @require {variable} $base-size
+/// @require {variable} $base-size-ratio
+///
+/// @param {number} $scale - Scale of the size in the Modular Scale
+///
+/// @return {number} - REM Number
+///
+@function modular-scale($scale: 0) {
+  @if $scale == 0 {
+    @return $base-size;
+  }
+
+  @if $scale < 0 {
+    @return modular-scale($scale + 1) / $base-size-ratio;
+  }
+
+  @return modular-scale($scale - 1) * $base-size-ratio;
+}
+
+///
+/// Shorthand to `modular-scale()`
+///
+/// @group modular scale
+///
+/// @alias modular-scale
+///
+@function ms($scale: 0) {
+  @return modular-scale($scale);
+}
+
+///
+/// Return the colour in HEX
+///
+/// @author Filipe Fernandes
+///
+/// @group colours
+///
+/// @require {variable} $colors
+///
+/// @param {string} $key - Colour name
+/// @param {string} $shade - Colour shade
+///
+/// @return {string} - HEX Colour
+///
+/// @example scss
+///   // _foo.scss
+///   .foo { background-color: color(brand); }
+///
+///   // foo.css
+///   .foo { background-color: #ffcc00; }
+///
+///
+///   // _bar.scss
+///   .bar { background-color: color(brand, dark); }
+///
+///   // bar.css
+///   .bar { background-color: #d9ad00; }
+///
+@function color($key, $shade: base) {
+  $color: map-get($colors, $key);
+  $palette: (
+    $key: (
+      base: $color,
+      dark: mix(black, $color, 15%),
+      xdark: mix(black, $color, 40%),
+      light: mix(white, $color, 15%),
+      xlight: mix(white, $color, 40%)
+    )
+  );
+  @return map-get(map-get($palette, $key), $shade);
+}
+
+///
+/// Native `url(..)` function wrapper
+///
+/// @author Hugo Giraudel
+///
+/// @group assets
+///
+///
+/// @param {string} $base - base URL for the asset
+/// @param {string} $type - asset type folder (e.g. `fonts/`)
+/// @param {string} $path - asset path
+///
+/// @return {url}
+///
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+///
+/// Returns URL to an image based on its path
+///
+/// @author Hugo Giraudel
+///
+/// @group assets
+///
+/// @param {string} $path - image path
+/// @param {string} $base [$base-url] - base URL
+///
+/// @return {url}
+///
+/// @require $base-url
+///
+@function image($path, $base: $base-url) {
+  @return asset($base, 'images/', $path);
+}
+
+///
+/// Returns URL to a font based on its path
+///
+/// @author Hugo Giraudel
+///
+/// @group assets
+///
+/// @param {string} $path - font path
+/// @param {string} $base [$base-url] - base URL
+///
+/// @return {url}
+///
+/// @require $base-url
+///
+@function font($path, $base: $base-url) {
+  @return asset($base, 'fonts/', $path);
+}

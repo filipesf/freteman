@@ -1,0 +1,253 @@
+//-------------------------------------
+// @MIXINS
+//-------------------------------------
+
+///
+/// Place the `font-size` property
+///
+/// @group modular scale
+///
+/// @require modular-scale
+///
+/// @param {number} $scale [0] - Scale of the size in the Modular Scale
+///
+/// @output - Place the `font-size` property
+///
+/// @example scss
+///   // _typography.scss
+///   h1 {
+///     @include font-scale(3);
+///   }
+///
+///   // typography.css
+///   h1 {
+///     font-size: 2.37037rem;
+///   }
+///
+@mixin font-scale($scale: 0) {
+  font-size: modular-scale($scale);
+}
+
+///
+/// Calculate the perfect `line-height` based on proportional Modular Scale
+///
+/// @group modular scale
+///
+/// @param {number} $scale [0] - Scale of the size in the Modular Scale
+///
+/// @output - Place the `line-height` property
+///
+/// @example scss
+///   // _typography.scss
+///   h1 {
+///     @include line-scale(3);
+///   }
+///
+///   // typography.css
+///   h1 {
+///     line-height: 1.26562
+///   }
+///
+@mixin line-scale($scale: 0) {
+  $font-size: modular-scale($scale);
+  $line-height: ceil($font-size / $base-height-ratio) * ($base-height-ratio / $font-size);
+  line-height: $line-height;
+}
+
+///
+/// Place the `font-size` and `line-height` properties
+///
+/// @group modular scale
+///
+/// @require {mixin} font-scale
+/// @require {mixin} line-scale
+///
+/// @param {number} $scale [0] - Scale of the size in the Modular Scale
+///
+/// @output - `font-size` and `line-height`
+///
+/// @example scss
+///   // _typography.scss
+///   h1 {
+///     @include type-scale(3);
+///   }
+///
+///   // typography.css
+///   h1 {
+///     font-size: 2.37037rem;
+///     line-height: 1.26562
+///   }
+///
+@mixin type-scale($scale: 0) {
+  @include font-scale($scale);
+  @include line-scale($scale);
+}
+
+///
+/// Include Media Query
+///
+/// @group responsive
+///
+/// @author Jonathan Suh
+///
+/// @require {variable} $breakpoints
+///
+/// @param {string} $mq-breakpoint - Screen resolution name
+/// @param {map} $mq-breakpoints [$breakpoints] - Breakpoints list
+///
+/// @example scss - Simple usage
+///   // _foo.scss
+///   .foo {
+///     background-color: blue;
+///
+///     @include mq(small) {
+///       background-color: red;
+///     }
+///   }
+///
+///   // foo.css
+///   .foo {
+///     background-color: blue;
+///   }
+///
+///   @media screen and (min-width:320px) {
+///     .foo {
+///       background-color: red;
+///     }
+///   }
+///
+/// @example scss - Nesting
+///   // _bar.scss
+///   .bar {
+///     background-color: blue;
+///
+///     @include mq(small) {
+///       background-color: red;
+///
+///       @include mq(landscape) {
+///         background-color: yellow;
+///       }
+///     }
+///   }
+///
+///   // bar.css
+///   .bar {
+///     background-color: blue;
+///   }
+///
+///   @media screen and (min-width:320px) {
+///     .bar {
+///       background-color: red;
+///     }
+///   }
+///
+///   @media screen and (min-width:320px) and (orientation:landscape) {
+///     .bar {
+///       background-color: yellow;
+///     }
+///   }
+///
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  $mq-media-query: "screen and";
+
+  @if $mq-breakpoint == landscape or $mq-breakpoint == portrait {
+    $mq-media-query: "#{$mq-media-query} (orientation: #{$mq-breakpoint})";
+  } @else if $mq-breakpoint == retina {
+    $mq-media-query: "#{$mq-media-query} (-webkit-min-device-pixel-ratio: 2),"+
+                     "#{$mq-media-query} (min-resolution: 2dppx)";
+  } @else {
+    // If $mq-breakpoint is a key that exists in
+    // $mq-breakpoints, get and use the value
+    @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+      $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
+    $mq-media-query: "#{$mq-media-query} (min-width: #{$mq-breakpoint})";
+  }
+
+  @media #{$mq-media-query} {
+    @content;
+  }
+}
+
+///
+/// Event wrapper
+///
+/// @author Harry Roberts
+///
+/// @group helpers
+///
+/// @param {bool} $self [false] - Whether or not to include current selector
+///
+/// @link https://twitter.com/csswizardry/status/478938530342006784
+///
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+///
+/// Create a rectangle
+///
+/// @author Filipe Fernandes
+///
+/// @group spacing
+///
+/// @param {number} $width
+/// @param {number} $height [$width] - $width as default for square shapes
+///
+/// @example scss
+///   // _foo.scss
+///   .foo {
+///     @include rectangle($spacing-double);
+///   }
+///
+///   // foo.css
+///   .foo {
+///     width: 3rem;
+///     height: 3rem;
+///   }
+///
+///   // _bar.scss
+///   .bar {
+///     @include rectangle($spacing-double, $spacing-whole);
+///   }
+///
+///   // bar.css
+///   .bar {
+///     width: 3rem;
+///     height: 1.5rem;
+///   }
+///
+@mixin rectangle($width, $height: $width) {
+  height: $height;
+  width: $width;
+}
+
+///
+/// Get transitions
+///
+/// @author Filipe Fernandes
+///
+/// @group transitions
+///
+/// @require {variable} $transitions
+///
+/// @param {variable} $time - Transition duration
+///
+/// @output - Place transition property with the specified time
+///
+@mixin transition($time) {
+  transition: map-get($transitions, $time);
+}

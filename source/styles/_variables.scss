@@ -1,0 +1,101 @@
+//-------------------------------------
+// @VARIABLES
+//-------------------------------------
+
+/// Base size for typography
+/// @group modular scale
+/// @type {number}
+$base-size: 1rem;
+
+/// Base ratio to calculate font scale
+/// @group modular scale
+/// @type {number}
+$base-size-ratio: (4 / 3);
+
+/// Base ratio to calculate `line-height` and spacing scale
+/// @group modular scale
+/// @type {number}
+$base-height-ratio: 1.5;
+
+/// Base height for `line-height` and spacing
+/// @group modular scale
+/// @type {number}
+$base-height: $base-size * $base-height-ratio;
+
+/// @group spacing
+/// @require {variable} $base-height
+$spacing-third: $base-height / 3;
+/// @group spacing
+/// @require {variable} $base-height
+$spacing-half: $base-height / 2;
+/// @group spacing
+/// @require {variable} $base-height
+$spacing-whole: $base-height;
+/// @group spacing
+/// @require {variable} $base-height
+$spacing-double: $base-height * 2;
+/// @group spacing
+/// @require {variable} $base-height
+$spacing-triple: $base-height * 3;
+
+/// Colours
+/// @group colours
+/// @type {map}
+$colors: (
+  brand: #f1392f,
+  accent: #00ff6e,
+  dark: #3b3e47,
+  gray: #f3f3f6,
+  light: #f7f7f7
+);
+
+/// Font Family Sans
+/// @group typography
+/// @type {list}
+$font-family-sans: Roboto, 'Helvetica Neue', sans-serif;
+/// Font Family Serif
+/// @group typography
+/// @type {list}
+$font-family-serif: Georgia, 'Times New Roman', Times, serif;
+/// Font Family Mono
+/// @group typography
+/// @type {list}
+$font-family-mono: Inconsolata, 'Courier New', Courier, monospace;
+/// Font Family for headings
+/// @group typography
+/// @require {variable} $font-family-sans
+/// @type {list}
+$font-family-heading: Raleway, $font-family-sans;
+/// Font Family for paragraphs
+/// @require {variable} $font-family-sans
+/// @group typography
+/// @type {list}
+$font-family-paragraph: $font-family-sans;
+
+/// Breakpoints
+/// @group responsive
+/// @type {map}
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  large: 1024px,
+  wide: 1440px
+);
+
+/// Transitions
+/// @group transitions
+/// @type {map}
+$transitions: (
+  xshort: all ease 0.15s,
+  short: all ease 0.25s,
+  medium: all ease 0.4s,
+  long: all ease 0.7s,
+  xlong: all ease 1s
+);
+
+/// Relative or absolute URL where all assets are served from
+/// @group assets
+/// @type {string}
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/';
