@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.app-sidebar {
+  min-height: 100vh;
+  max-width: 230px;
+  background-color: color(brand);
+}
+
+.app-nav__link {
+  color: white;
+}
