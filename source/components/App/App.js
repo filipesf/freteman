@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import Sidebar from '../Sidebar/Sidebar';
+import Header from '../Header/Header';
 
 class App extends Component {
   render() {
     return (
       <div id="FretemanApp">
-        <Sidebar />
+        <Header />
       </div>
     );
   }
