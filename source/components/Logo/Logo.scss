@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+//-------------------------------------
+// @LOGO
+//-------------------------------------
+
+.site-logo {
+  margin-bottom: $spacing-whole;
+
+  @include mq(medium) {
+    margin: 0;
+  }
+}
