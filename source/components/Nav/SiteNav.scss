@@ -1,0 +1,62 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+//-------------------------------------
+// @SITE NAV
+//-------------------------------------
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(medium) {
+    flex-direction: row;
+  }
+}
+
+
+
+.site-nav__list {
+  margin: 0;
+  display: none;
+
+  @include mq(medium) {
+    display: block;
+  }
+}
+
+
+
+.site-nav__item {
+  display: block;
+  @include type-scale(0);
+  font-weight: bold;
+
+  & + .site-nav__item {
+    margin: 0;
+
+    @include mq(medium) {
+      margin-top: 0;
+      margin-left: $spacing-whole;
+    }
+  }
+
+  @include mq(medium) {
+    display: inline-block;
+  }
+}
+
+
+
+.site-nav__link {
+  color: white;
+  @include transition(medium);
+
+  &:hover {
+    text-decoration: none;
+    color: color(accent);
+  }
+}
