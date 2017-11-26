@@ -6,7 +6,6 @@
 //-------------------------------------
 // @PAGE
 //-------------------------------------
-
 // 1. Set the global `box-sizing` state to `border-box`.
 // @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
 // @link http://paulirish.com/2012/box-sizing-border-box-ftw
@@ -19,6 +18,8 @@
     outline: none;          // [2]
   }
 }
+
+
 
 // High-, page-level styling.
 //
@@ -47,6 +48,8 @@ html {
   }
 }
 
+
+
 // As well as using normalize.css, it is often advantageous to remove all
 // margins from certain elements.
 body,
@@ -61,6 +64,8 @@ hr {
   padding: 0;
 }
 
+
+
 // Define vertical rhythm for all block level elements.
 h1, h2, h3, h4, h5, h6, hgroup,
 p, address, blockquote, figure,
@@ -70,22 +75,40 @@ pre, table, hr {
   margin-bottom: $spacing-whole;
 }
 
+
+
 // Remove extra vertical spacing when nesting lists.
 li {
   > ul,
-  > ol { margin-bottom: 0; }
+  > ol {
+    margin-bottom: 0;
+  }
 }
+
+
 
 // Give a help cursor to elements that give extra info on `:hover`.
 abbr[title],
-dfn[title] { cursor: help; }
+dfn[title] {
+  cursor: help;
+}
+
+
 
 // Remove underlines from potentially troublesome elements.
 u,
-ins { text-decoration: none; }
+ins {
+  text-decoration: none;
+}
+
+
 
 // Apply faux underlines to inserted text via `border-bottom`.
-ins { border-bottom: 1px solid; }
+ins {
+  border-bottom: 1px solid;
+}
+
+
 
 // Makes the <hr/> border thiner.
 hr {
@@ -100,12 +123,13 @@ hr {
 //-------------------------------------
 // @TYPOGRAPHY
 //-------------------------------------
-
 body {
   font-family: $font-family-heading;
   font-weight: 400;
   color: color(dark);
 }
+
+
 
 h1, h2, h3,
 h4, h5, h6 {
@@ -114,24 +138,14 @@ h4, h5, h6 {
   color: inherit;
 }
 
-h1 { @include type-scale(3); }
-h2 { @include type-scale(2); }
-h3 { @include type-scale(1); }
-h4 { @include type-scale(0); }
-h5 { @include type-scale(0); }
-h6 { @include type-scale(-1); }
 
-blockquote {
-  border-left: 3px solid color(brand);
-  padding-left: $spacing-whole;
-  font-family: $font-family-serif;
-  font-style: italic;
-}
 
 p {
   margin-bottom: $spacing-whole;
   @include type-scale(0);
 }
+
+
 
 a {
   text-decoration: none;
@@ -149,7 +163,6 @@ a {
 //-------------------------------------
 // @IMAGES (by @inuitcss)
 //-------------------------------------
-
 // 1. Fluid images for responsive purposes.
 // 2. Offset `alt` text from surrounding copy.
 // 3. Setting `vertical-align` removes the whitespace that appears under `img`
@@ -160,6 +173,8 @@ img {
   font-style: italic;     // [2]
   vertical-align: middle; // [3]
 }
+
+
 
 // 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
 //    to remove the effects.
@@ -178,7 +193,6 @@ img[height] { // [2]
 //-------------------------------------
 // @WRAPPER
 //-------------------------------------
-
 .l-wrapper {
   width: 100%;
   max-width: 75rem;
