@@ -2,6 +2,7 @@
   "name": "freteman",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://freteman-8ab81.firebaseapp.com",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
