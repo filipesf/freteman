@@ -5,12 +5,36 @@
 //-------------------------------------
 // @HEADLINE
 //-------------------------------------
-.headline {}
+.headline {
+  text-align: center;
+}
 
 
 
-.headline__title {}
+.headline__title {
+  @include type-scale(2);
+  margin-bottom: 0;
+}
 
 
 
-.headline__subtitle {}
+.headline__subtitle {
+  @include type-scale(0);
+  font-weight: 300;
+}
+
+
+.headline--header {
+  max-width: 470px;
+  text-align: left;
+  color: white;
+
+  > .headline__title {
+    @include type-scale(3);
+    margin-bottom: $spacing-double;
+  }
+
+  > .headline__subtitle {
+    @include type-scale(1);
+  }
+}
