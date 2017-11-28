@@ -7,9 +7,5 @@
 //-------------------------------------
 
 .site-logo {
-  margin-bottom: $spacing-whole;
-
-  @include mq(medium) {
-    margin: 0;
-  }
+  margin: 0;
 }
