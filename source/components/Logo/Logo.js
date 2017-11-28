@@ -1,14 +1,16 @@
 import React from 'react';
 import logo from './logo-freteman.png';
+import logoMobile from './logo-freteman-mobile.png';
 import './Logo.scss';
 
 const Logo = props => {
   return (
-    <figure className="site-logo">
-      <a href="#Logo">
-        <img src={logo} alt="Freteman"/>
-      </a>
-    </figure>
+    <a className="site-logo" href="#Logo">
+      <picture>
+        <source media="(max-width: 768px)" srcSet={logoMobile} />
+        <img src={logo} alt="Freteman" />
+      </picture>
+    </a>
   );
 }
 
