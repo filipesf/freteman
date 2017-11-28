@@ -5,22 +5,56 @@
 //-------------------------------------
 // @HEADER
 //-------------------------------------
-
 .site-header {
-  height: 100vh;
-  padding: $spacing-double;
+  padding: $spacing-double $spacing-whole;
   font-family: Nunito;
   background-color: color(brand);
-  background-position: center 8rem;
+  background-position: center top;
   background-repeat: repeat-x;
-  background-size: cover;
+  background-size: 90rem;
+  color: white;
 
-  @include mq(medium) {
-    min-height: 770px;
-    height: auto;
+  .c-block {
+    display: none;
   }
 
-  .site-nav {
-    margin-bottom: 6rem;
+  @include mq(medium) {
+    height: auto;
+    padding: $spacing-double;
+
+    .c-block {
+      display: block;
+    }
+  }
+}
+
+
+
+// NEEDS REFACTORING
+.site-header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+
+  @include mq(medium) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+
+
+.site-header__image {
+  width: 100%;
+  margin: 0;
+  margin-top: $spacing-triple;
+
+  > img {
+    max-width: 100%;
   }
 }
