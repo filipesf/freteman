@@ -14,27 +14,40 @@
 .headline__title {
   @include type-scale(2);
   margin-bottom: 0;
+  color: inherit;
 }
 
 
 
 .headline__subtitle {
-  @include type-scale(0);
+  font-size: 1.125rem; // NEEDS REFACTORING
+  margin-bottom: 0;
   font-weight: 300;
+  color: inherit;
 }
 
 
 .headline--header {
   max-width: 470px;
-  text-align: left;
-  color: white;
+  text-align: center;
+
+  @include mq(medium) {
+    text-align: left;
+  }
 
   > .headline__title {
-    @include type-scale(3);
-    margin-bottom: $spacing-double;
+    margin-bottom: $spacing-half;
+    @include font-scale(2);
+    @include line-scale(0);
+
+    @include mq(medium) {
+      margin-bottom: $spacing-double;
+      @include type-scale(3);
+    }
   }
 
   > .headline__subtitle {
-    @include type-scale(1);
+    @include font-scale(1);
+    @include line-scale(0);
   }
 }
