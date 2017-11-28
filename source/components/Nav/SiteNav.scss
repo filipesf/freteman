@@ -7,10 +7,22 @@
 //-------------------------------------
 
 .site-nav {
+  padding: $spacing-double;
+  background-color: color(brand);
+}
+
+
+
+// NEEDS REFACTORING
+.site-nav__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
 
   @include mq(medium) {
     flex-direction: row;
