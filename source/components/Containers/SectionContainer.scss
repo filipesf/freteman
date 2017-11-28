@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+//-------------------------------------
+// @SECTION CONTAINER
+//-------------------------------------
+
+.section {
+  padding-top: $spacing-double * 2;
+  padding-bottom: $spacing-double * 2;
+}
+
+
+
+.section--tint {
+  background-color: color(light);
+}
+
+
+
+.section--red {
+  background-color: color(brand);
+  color: white;
+}
