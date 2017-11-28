@@ -7,8 +7,13 @@
 //-------------------------------------
 
 .site-nav {
-  padding: $spacing-double;
+  padding: $spacing-whole;
   background-color: color(brand);
+
+  @include mq(medium) {
+    padding: $spacing-double;
+    background-color: color(brand);
+  }
 }
 
 
