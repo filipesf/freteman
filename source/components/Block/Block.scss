@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+//-------------------------------------
+// @BLOCK
+//-------------------------------------
+.c-block {
+  width: 370px;
+  height: 493px;
+  padding: $spacing-whole;
+  background-color: white;
+  color: color(dark);
+}
