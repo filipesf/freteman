@@ -1,54 +1,52 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import SiteNav from '../Nav/SiteNav';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Headline from '../Headline/Headline';
-import SectionContainer from '../Containers/SectionContainer';
+import Section from '../Section/Section';
+
+import SiteNav  from '../../components/Nav/SiteNav';
+import Header   from '../../components/Header/Header';
+import Footer   from '../../components/Footer/Footer';
+import Headline from '../../components/Headline/Headline';
 
 const LandingPage = () =>
   <section className="landing-page">
     <SiteNav />
     <Header />
 
-    <SectionContainer>
+    <Section>
       <Headline
         title="Tipos de serviços"
         subtitle="Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade."
       />
-    </SectionContainer>
+    </Section>
 
-    <SectionContainer>
+    <Section>
       <Headline
         title="Como Funciona"
         subtitle="Chame um mensageiro em três passos simples"
       />
-    </SectionContainer>
+    </Section>
 
-    <SectionContainer>
+    <Section>
       <Headline
         title="Benefícios"
         subtitle="Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade."
       />
-    </SectionContainer>
+    </Section>
 
-    <SectionContainer theme="red">
+    <Section theme="red">
       <Headline
         title="Clientes Satisfeitos"
       />
-    </SectionContainer>
+    </Section>
 
-    <SectionContainer theme="tint">
+    <Section theme="tint">
       <Headline
         title="Marcas"
         subtitle="Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade."
       />
-    </SectionContainer>
+    </Section>
 
     <Footer />
   </section>
-
-LandingPage.PropTypes = {}
 
 export default LandingPage;
