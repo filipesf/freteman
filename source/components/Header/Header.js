@@ -4,7 +4,7 @@ import trucks from './trucks.png';
 import './Header.scss';
 
 import Headline from '../Headline/Headline';
-import Block from '../Block/Block';
+import Block from '../../containers/Block/Block';
 
 const Header = props => {
   return (
