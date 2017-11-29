@@ -2,23 +2,25 @@
 @import '../../../assets/styles/functions';
 @import '../../../assets/styles/mixins';
 
-//-------------------------------------
-// @SECTION CONTAINER
-//-------------------------------------
-.section {
+/* ==========================================================================
+   SECTION
+   ========================================================================== */
+.c-section {
   padding-top: $spacing-double * 2;
   padding-bottom: $spacing-double * 2;
-}
 
 
 
-.section--tint {
-  background-color: color(light);
-}
+/* VARIANTS
+   ========================================================================== */
+  &.-tint {
+    background-color: color(light);
+  }
 
 
 
-.section--red {
-  background-color: color(brand);
-  color: white;
+  &.-red {
+    background-color: color(brand);
+    color: white;
+  }
 }

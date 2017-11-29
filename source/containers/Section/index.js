@@ -5,8 +5,8 @@ import './assets/section.scss';
 
 const SectionContainer = ({theme, ...props}) => {
   const classes = classNames(
-    'section',
-    theme && `section--${theme}`
+    'c-section',
+    theme && `-${theme}`
   );
 
   return (

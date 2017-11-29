@@ -2,10 +2,9 @@
 @import '../../../assets/styles/functions';
 @import '../../../assets/styles/mixins';
 
-//-------------------------------------
-// @SITE NAV
-//-------------------------------------
-
+/* ==========================================================================
+   SITE NAV
+   ========================================================================== */
 .site-nav {
   padding: $spacing-whole;
   background-color: color(brand);
@@ -14,66 +13,68 @@
     padding: $spacing-double;
     background-color: color(brand);
   }
-}
 
 
 
-// NEEDS REFACTORING
-.site-nav__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+/* ELEMENTS
+   ========================================================================== */
+  // NEEDS REFACTORING
+  > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-  width: 100%;
-  max-width: 75rem;
-  margin: 0 auto;
-
-  @include mq(medium) {
-    flex-direction: row;
-  }
-}
-
-
-
-.site-nav__list {
-  margin: 0;
-  display: none;
-
-  @include mq(medium) {
-    display: block;
-  }
-}
-
-
-
-.site-nav__item {
-  display: block;
-  @include type-scale(0);
-  font-weight: bold;
-
-  & + .site-nav__item {
-    margin: 0;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
 
     @include mq(medium) {
-      margin-top: 0;
-      margin-left: $spacing-whole;
+      flex-direction: row;
     }
   }
 
-  @include mq(medium) {
-    display: inline-block;
+
+
+  .list {
+    margin: 0;
+    display: none;
+
+    @include mq(medium) {
+      display: block;
+    }
   }
-}
 
 
 
-.site-nav__link {
-  color: white;
-  @include transition(medium);
+  .item {
+    display: block;
+    @include type-scale(0);
+    font-weight: bold;
 
-  &:hover {
-    text-decoration: none;
-    color: color(accent);
+    & + .item {
+      margin: 0;
+
+      @include mq(medium) {
+        margin-top: 0;
+        margin-left: $spacing-whole;
+      }
+    }
+
+    @include mq(medium) {
+      display: inline-block;
+    }
+  }
+
+
+
+  .link {
+    color: white;
+    @include transition(medium);
+
+    &:hover {
+      text-decoration: none;
+      color: color(accent);
+    }
   }
 }

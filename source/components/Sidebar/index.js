@@ -9,12 +9,12 @@ function Sidebar(props) {
         <img src={logo} className="app-sidebar__logo" alt="Freteman Logo"></img>
        </a>
       <nav className="app-nav">
-        <ul className="app-nav__list">
-          <li className="app-nav__item"><a href="#Solicitar" className="app-nav__link">Solicitar</a></li>
-          <li className="app-nav__item"><a href="#Rastrear" className="app-nav__link">Rastrear</a></li>
-          <li className="app-nav__item"><a href="#Ordens" className="app-nav__link">Ordens</a></li>
-          <li className="app-nav__item"><a href="#Senha" className="app-nav__link">Senha</a></li>
-          <li className="app-nav__item"><a href="#Sair" className="app-nav__link">Sair</a></li>
+        <ul className="list">
+          <li className="item"><a href="#Solicitar" className="link">Solicitar</a></li>
+          <li className="item"><a href="#Rastrear" className="link">Rastrear</a></li>
+          <li className="item"><a href="#Ordens" className="link">Ordens</a></li>
+          <li className="item"><a href="#Senha" className="link">Senha</a></li>
+          <li className="item"><a href="#Sair" className="link">Sair</a></li>
         </ul>
       </nav>
     </aside>

@@ -2,11 +2,10 @@
 @import '../../../assets/styles/functions';
 @import '../../../assets/styles/mixins';
 
-//-------------------------------------
-// #BUTTON
-//-------------------------------------
-
-.btn {
+/* ==========================================================================
+   BUTTON
+   ========================================================================== */
+.c-btn {
   display: block;
   border: none;
   border-radius: 5px;
@@ -31,55 +30,53 @@
     color: color(dark);
   }
 
-  + .btn {
+  + .c-btn {
     margin-top: $spacing-whole;
 
     @include mq(medium) {
       margin-top: 0;
     }
   }
-}
 
 
 
-.btn--primary {
-  background-color: color(brand);
-  color: color(accent);
-
-  &:hover {
-    background-color: color(brand, dark);
-    color: color(accent, dark);
-  }
-}
-
-
-
-.btn--accent {
-  background-color: color(accent);
-  color: color(brand);
-
-  &:hover {
-    background-color: color(accent, dark);
-    color: color(brand, dark);
-  }
-}
-
-
-
-.btn--outline {
-  border: 1px solid;
-  background-color: transparent;
-  color: color(brand);
-
-  &:hover {
-    background-color: rgba(black, .05);
-    color: color(brand);
-  }
-
-  &.btn--accent {
+/* VARIANTS
+   ========================================================================== */
+  &.-primary {
+    background-color: color(brand);
     color: color(accent);
 
     &:hover {
+      background-color: color(brand, dark);
+      color: color(accent, dark);
+    }
+  }
+
+
+
+  &.-accent {
+    background-color: color(accent);
+    color: color(brand);
+
+    &:hover {
+      background-color: color(accent, dark);
+      color: color(brand, dark);
+    }
+  }
+
+
+
+  &.-outline {
+    border: 1px solid;
+    background-color: transparent;
+    color: color(brand);
+
+    &:hover {
+      background-color: rgba(black, .05);
+      color: color(brand);
+    }
+
+    &.-accent {
       color: color(accent);
     }
   }

@@ -8,15 +8,15 @@ const Headline = ({
   ...props
 }) => {
   const classes = classNames(
-    'headline',
-    modifier && `headline--${modifier}`
+    'c-headline',
+    modifier && `-${modifier}`
   );
 
   return (
     <section className={classes}>
-      <h2 className="headline__title">{props.title}</h2>
+      <h2 className="title">{props.title}</h2>
       {props.subtitle &&
-        <h3 className="headline__subtitle">{props.subtitle}</h3>
+        <h3 className="subtitle">{props.subtitle}</h3>
       }
     </section>
   );

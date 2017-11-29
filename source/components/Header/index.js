@@ -9,18 +9,18 @@ import Block from '../../containers/Block';
 const Header = props => {
   return (
     <header className="site-header" style={{backgroundImage: 'url('+ bg +')'}}>
-      <div className="site-header__container">
-        <section className="site-header__section">
+      <div className="container">
+        <section className="section">
           <Headline
             title="Entregamos qualquer coisa em qualquer lugar"
             subtitle="Atendemos entregas de mercadorias, cargas, móveis e mudanças."
             modifier="header"
           />
-          <figure className="site-header__image">
+          <figure className="image">
             <img src={trucks} alt="Trucks" />
           </figure>
         </section>
-        <section className="site-header__section">
+        <section className="section">
           <Block shadow={true} radius={true}></Block>
         </section>
       </div>
