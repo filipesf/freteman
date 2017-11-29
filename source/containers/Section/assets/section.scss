@@ -1,11 +1,10 @@
-@import '../../styles/variables';
-@import '../../styles/functions';
-@import '../../styles/mixins';
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
 
 //-------------------------------------
 // @SECTION CONTAINER
 //-------------------------------------
-
 .section {
   padding-top: $spacing-double * 2;
   padding-bottom: $spacing-double * 2;

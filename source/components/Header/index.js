@@ -1,10 +1,10 @@
 import React from 'react';
-import bg from './header-bg.svg';
-import trucks from './trucks.png';
-import './Header.scss';
+import bg from './assets/header-bg.svg';
+import trucks from './assets/trucks.png';
+import './assets/header.scss';
 
-import Headline from '../Headline/Headline';
-import Block from '../../containers/Block/Block';
+import Headline from '../Headline';
+import Block from '../../containers/Block';
 
 const Header = props => {
   return (

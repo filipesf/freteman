@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo-freteman.png';
-import logoMobile from './logo-freteman-mobile.png';
-import './Logo.scss';
+import logo from './assets/logo-freteman.png';
+import logoMobile from './assets/logo-freteman-mobile.png';
+import './assets/logo.scss';
 
 const Logo = props => {
   return (

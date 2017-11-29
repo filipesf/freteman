@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.png';
-import './Sidebar.scss';
+import logo from './assets/logo.png';
+import './assets/sidebar.scss';
 
 function Sidebar(props) {
   return (

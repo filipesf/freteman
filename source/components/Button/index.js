@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
-import './Button.scss';
+import './assets/button.scss';
 
 const Btn = ({
   block,

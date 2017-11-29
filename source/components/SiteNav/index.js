@@ -1,8 +1,8 @@
 import React from 'react';
-import './SiteNav.scss';
+import './assets/sitenav.scss';
 
-import Logo from '../Logo/Logo';
-import '../Button/Button';
+import Logo from '../Logo';
+import '../Button';
 
 const SiteNav = props => {
   return (

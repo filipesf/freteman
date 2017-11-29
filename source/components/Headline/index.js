@@ -1,10 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import './Headline.scss';
-
-import HeadlineTitle from './HeadlineTitle';
-import HeadlineSubTitle from './HeadlineSubTitle';
+import './assets/headline.scss';
 
 const Headline = ({
   modifier,
@@ -17,9 +14,9 @@ const Headline = ({
 
   return (
     <section className={classes}>
-      <HeadlineTitle text={props.title} />
+      <h2 className="headline__title">{props.title}</h2>
       {props.subtitle &&
-        <HeadlineSubTitle text={props.subtitle} />
+        <h3 className="headline__subtitle">{props.subtitle}</h3>
       }
     </section>
   );

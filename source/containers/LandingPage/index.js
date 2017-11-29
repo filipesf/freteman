@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Section from '../Section/Section';
+import Section from '../Section';
 
-import SiteNav  from '../../components/Nav/SiteNav';
-import Header   from '../../components/Header/Header';
-import Footer   from '../../components/Footer/Footer';
-import Headline from '../../components/Headline/Headline';
+import SiteNav  from '../../components/SiteNav';
+import Header   from '../../components/Header';
+import Footer   from '../../components/Footer';
+import Headline from '../../components/Headline';
 
 const LandingPage = () =>
   <section className="landing-page">

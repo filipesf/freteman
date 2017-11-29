@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import './Block.scss';
+import './assets/block.scss';
 
 const Block = ({shadow, radius, ...props}) => {
   const classes = classNames(

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import './Section.scss';
+import './assets/section.scss';
 
 const SectionContainer = ({theme, ...props}) => {
   const classes = classNames(
