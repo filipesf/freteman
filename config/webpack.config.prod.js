@@ -156,7 +156,17 @@ module.exports = {
           {
             test: /\.scss$/,
             include: paths.appSrc,
-            loaders: ["style-loader", "css-loader", "sass-loader"]
+            use: [{
+                loader: "style-loader"
+              }, {
+                loader: "css-loader"
+              }, {
+                loader: "sass-loader",
+                options: {
+                  outputStyle: 'compressed'
+                }
+              }
+            ]
           },
           // The notation here is somewhat confusing.
           // "postcss" loader applies autoprefixer to our CSS.
