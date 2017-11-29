@@ -7,7 +7,8 @@
    ========================================================================== */
 .c-btn {
   display: block;
-  border: none;
+  border: 1px solid;
+  border-color: color(brand);
   border-radius: 5px;
   padding: $spacing-third $spacing-half;
   @include type-scale(0);
@@ -15,7 +16,8 @@
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  color: color(gray, dark);
+  background-color: color(brand);
+  color: color(accent);
   cursor: pointer;
   user-select: none;
   white-space: nowrap;
@@ -27,7 +29,8 @@
 
   &:hover {
     text-decoration: none;
-    color: color(dark);
+    background-color: color(brand, dark);
+    color: color(accent, dark);
   }
 
   + .c-btn {
@@ -42,19 +45,21 @@
 
 /* VARIANTS
    ========================================================================== */
-  &.-primary {
-    background-color: color(brand);
-    color: color(accent);
+  &.-link {
+    border-color: transparent;
+    background-color: transparent;
+    color: color(brand);
 
     &:hover {
-      background-color: color(brand, dark);
-      color: color(accent, dark);
+      background-color: transparent;
+      color: color(brand, dark);
     }
   }
 
 
 
   &.-accent {
+    border-color: color(accent);
     background-color: color(accent);
     color: color(brand);
 
@@ -67,7 +72,6 @@
 
 
   &.-outline {
-    border: 1px solid;
     background-color: transparent;
     color: color(brand);
 
