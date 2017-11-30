@@ -8,10 +8,11 @@
 .c-btn {
   display: block;
   border: 1px solid;
-  border-color: color(brand);
+  border-color: transparent;
   border-radius: 5px;
   padding: $spacing-third $spacing-half;
-  @include type-scale(0);
+  @include font-scale(-2);
+  @include line-scale(0);
   font-family: inherit;
   font-weight: 600;
   text-align: center;
@@ -45,6 +46,20 @@
 
 /* VARIANTS
    ========================================================================== */
+  &.-block {
+    display: block;
+    width: 100%;
+  }
+
+
+
+  &.-large {
+    padding: $spacing-half $spacing-whole;
+    @include font-scale(0);
+  }
+
+
+
   &.-link {
     border-color: transparent;
     background-color: transparent;
@@ -59,7 +74,6 @@
 
 
   &.-accent {
-    border-color: color(accent);
     background-color: color(accent);
     color: color(brand);
 
@@ -72,6 +86,7 @@
 
 
   &.-outline {
+    border-color: color(brand);
     background-color: transparent;
     color: color(brand);
 
@@ -81,6 +96,7 @@
     }
 
     &.-accent {
+      border-color: color(accent);
       color: color(accent);
     }
   }

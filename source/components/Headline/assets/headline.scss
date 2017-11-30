@@ -13,13 +13,13 @@
 /* ELEMENTS
  ========================================================================== */
   > .title {
-    @include type-scale(2);
+    @include type-scale(11);
     margin-bottom: 0;
     color: inherit;
   }
 
   > .subtitle {
-    font-size: 1.125rem; // NEEDS REFACTORING
+    @include type-scale(2);
     margin-bottom: 0;
     font-weight: 300;
     color: inherit;
@@ -39,17 +39,17 @@
 
     > .title {
       margin-bottom: $spacing-half;
-      @include font-scale(2);
+      @include font-scale(8);
       @include line-scale(0);
 
       @include mq(medium) {
         margin-bottom: $spacing-double;
-        @include type-scale(3);
+        @include type-scale(14);
       }
     }
 
     > .subtitle {
-      @include font-scale(1);
+      @include font-scale(5);
       @include line-scale(0);
     }
   }
