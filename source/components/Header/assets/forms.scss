@@ -26,11 +26,12 @@ form {
 
   label {
     display: block;
-    padding-bottom: $spacing-third;
     color: color(brand);
     @include type-scale(-2);
-    font-family: "Source Sans Pro";
-    font-weight: 600;
+
+    > input {
+      margin-top: $spacing-third;
+    }
   }
 
   input[type="text"] {
@@ -41,7 +42,6 @@ form {
     background-color: white;
     border: solid 1px #ecedf1;
 
-    font-family: "Source Sans Pro";
     @include type-scale(2);
   }
 }

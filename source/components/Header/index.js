@@ -29,20 +29,37 @@ const Header = props => {
           <Block shadow={true} radius={true}>
             <form>
               <fieldset className="c-fieldset -collection" style={{backgroundImage: 'url('+ arrowCollection +')'}}>
-                <label htmlFor="collection-address">Endereço de coleta</label>
-                <input id="collection-address" type="text" placeholder="Digite um endereço" />
+                <label htmlFor="collection-address">
+                  <span>Endereço de coleta</span>
+                  <input id="collection-address" type="text" placeholder="Digite um endereço" />
+                </label>
               </fieldset>
 
               <fieldset className="c-fieldset -delivery" style={{backgroundImage: 'url('+ arrowDelivery +')'}}>
-                <label htmlFor="delivery-address">Endereço de entrega</label>
-                <input id="delivery-address" type="text" placeholder="Digite um endereço" />
+                <label htmlFor="delivery-address">
+                  <span>Endereço de entrega</span>
+                  <input id="delivery-address" type="text" placeholder="Digite um endereço" />
+                </label>
               </fieldset>
 
+              <hr />
+
               <fieldset className="c-fieldset">
-                <input type="radio" name="veicle" value="Fiorino" />
-                <input type="radio" name="veicle" value="Van" />
-                <input type="radio" name="veicle" value="Caminhão" />
+                <label htmlFor="Fiorino" className="c-btn">
+                  <input id="Fiorino" type="radio" name="veicle" value="Fiorino" />
+                  <span>Fiorino</span>
+                </label>
+                <label htmlFor="Van" className="c-btn">
+                  <input id="Van" type="radio" name="veicle" value="Van" />
+                  <span>Van</span>
+                </label>
+                <label htmlFor="Caminhão" className="c-btn">
+                  <input id="Caminhão" type="radio" name="veicle" value="Caminhão" />
+                  <span>Caminhão</span>
+                </label>
               </fieldset>
+
+              <hr />
 
               <section>
                 <div>
