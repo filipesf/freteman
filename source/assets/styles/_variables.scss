@@ -10,7 +10,7 @@ $base-size: 1rem;
 /// Base ratio to calculate font scale
 /// @group modular scale
 /// @type {number}
-$base-size-ratio: (4 / 3);
+$base-size-ratio: (16 / 15); // Minor Second
 
 /// Base ratio to calculate `line-height` and spacing scale
 /// @group modular scale
@@ -98,4 +98,4 @@ $transitions: (
 /// @type {string}
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/';
+$base-url: '/static/media/';
