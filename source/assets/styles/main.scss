@@ -17,8 +17,8 @@
   &,
   &:before,
   &:after {
-    box-sizing: border-box; // [1]
-    outline: none;          // [2]
+    box-sizing: border-box; /* [1] */
+    outline: none;          /* [2] */
   }
 }
 
@@ -40,15 +40,15 @@
  * 6. Make a soft and nice highlight on the selection.
  */
 html {
-  @include type-scale(0);              // [1]
-  -webkit-font-smoothing: antialiased; // [2]
-  -moz-osx-font-smoothing: grayscale;  // [2]
-  text-size-adjust: 100%;              // [3]
-  overflow-y: scroll;                  // [4]
-  min-height: 100%;                    // [5]
+  @include type-scale(0);                     /* [1] */
+  -webkit-font-smoothing: antialiased;        /* [2] */
+  -moz-osx-font-smoothing: grayscale;         /* [2] */
+  text-size-adjust: 100%;                     /* [3] */
+  overflow-y: scroll;                         /* [4] */
+  min-height: 100%;                           /* [5] */
 
   ::selection {
-    background-color: rgba(color(brand), .8); // [6]
+    background-color: rgba(color(brand), .8); /* [6] */
     color: white;
   }
 }
