@@ -1,0 +1,47 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+
+/* ==========================================================================
+   FORMS
+   ========================================================================== */
+form {
+  margin: 0;
+}
+
+.c-fieldset {
+  border: none;
+
+  &.-collection,
+  &.-delivery {
+    padding-left: $spacing-double;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: $spacing-whole;
+  }
+
+  &.-collection {}
+
+  &.-delivery {}
+
+  label {
+    display: block;
+    padding-bottom: $spacing-third;
+    color: color(brand);
+    @include type-scale(-2);
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+  }
+
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: $spacing-half;
+    border-radius: $spacing-third / 2;
+    background-color: white;
+    border: solid 1px #ecedf1;
+
+    font-family: "Source Sans Pro";
+    @include type-scale(2);
+  }
+}
