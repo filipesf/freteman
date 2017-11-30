@@ -13,12 +13,12 @@
   padding: $spacing-third $spacing-half;
   @include font-scale(-2);
   @include line-scale(0);
-  font-family: inherit;
+  font-family: $font-family-heading;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  background-color: color(brand);
-  color: color(accent);
+  background-color: color(light);
+  color: color(dark);
   cursor: pointer;
   user-select: none;
   white-space: nowrap;
@@ -30,8 +30,8 @@
 
   &:hover {
     text-decoration: none;
-    background-color: color(brand, dark);
-    color: color(accent, dark);
+    background-color: color(light, dark);
+    color: color(dark, dark);
   }
 
   + .c-btn {
@@ -72,6 +72,16 @@
   }
 
 
+
+  &.-primary {
+    background-color: color(brand);
+    color: color(accent);
+
+    &:hover {
+      background-color: color(brand, dark);
+      color: color(accent, dark);
+    }
+  }
 
   &.-accent {
     background-color: color(accent);
