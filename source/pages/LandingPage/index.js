@@ -8,7 +8,7 @@ import Footer   from '../../components/Footer';
 import Headline from '../../components/Headline';
 
 const LandingPage = () =>
-  <section className="landing-page">
+  <section id="LandingPage">
     <SiteNav />
     <Header />
 
