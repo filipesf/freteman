@@ -9,39 +9,72 @@ form {
   margin: 0;
 }
 
-.c-fieldset {
-  border: none;
 
-  &.-collection,
-  &.-delivery {
-    padding-left: $spacing-double;
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: $spacing-whole;
+
+
+
+
+/* SUB COMPONENTS
+   ========================================================================== */
+.c-fieldset {
+  display: grid;
+  border: none;
+  margin-bottom: $spacing-whole;
+
+  > .icon {
+    display: block;
+    @include rectangle($spacing-whole);
+    fill: color(brand);
   }
 
-  &.-collection {}
+  > .field {
+    width: 100%;
 
-  &.-delivery {}
+    > .label {
+      display: block;
+      color: color(brand);
+      @include type-scale(-2);
+    }
 
-  label {
-    display: block;
-    color: color(brand);
-    @include type-scale(-2);
-
-    > input {
+    > .input {
       margin-top: $spacing-third;
+
+      &[type="text"] {
+        display: block;
+        width: 100%;
+        padding: $spacing-half;
+        border-radius: $spacing-third / 2;
+        background-color: white;
+        border: solid 1px #ecedf1;
+
+        @include type-scale(2);
+      }
+    }
+
+    &.-radio {
+      input {
+        display: none;
+      }
     }
   }
 
-  input[type="text"] {
-    display: block;
-    width: 100%;
-    padding: $spacing-half;
-    border-radius: $spacing-third / 2;
-    background-color: white;
-    border: solid 1px #ecedf1;
 
-    @include type-scale(2);
+
+
+
+/* VARIANTS
+   ========================================================================== */
+    &.has-veicles {
+      grid-template-columns: auto auto auto;
+      grid-column-gap: $spacing-half;
+    }
+
+    &.has-icon {
+    grid-template-columns: $spacing-whole auto;
+    grid-column-gap: $spacing-half;
+
+    > .field + .field {
+      margin-left: $spacing-half;
+    }
   }
 }
