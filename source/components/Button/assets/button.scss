@@ -60,6 +60,45 @@
 
 
 
+  &.-radio {
+    padding: $spacing-third;
+    @include type-scale(-4);
+    fill: #B1B6C3;
+    width: 100%;
+
+    .text {
+      display: block;
+      margin-top: $spacing-third;
+      color: #7a8295;
+      @include transition(short);
+    }
+
+    input {
+      display: none;
+    }
+
+    &:hover {
+      background-color: color(brand);
+      fill: color(brand, xdark);
+
+      .text {
+        color: white;
+      }
+    }
+  }
+
+
+
+  &.-icon {
+    .icon {
+      display: block;
+      width: 70px;
+      margin: 0 auto;
+    }
+  }
+
+
+
   &.-link {
     border-color: transparent;
     background-color: transparent;
