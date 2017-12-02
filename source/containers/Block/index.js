@@ -6,8 +6,7 @@ import './assets/block.scss';
 const Block = ({shadow, radius, ...props}) => {
   const classes = classNames(
     'c-block',
-    shadow && `u-box-shadow`,
-    radius && `u-border-radius`
+    shadow && `_shadow`
   );
 
   return (
@@ -19,8 +18,7 @@ const Block = ({shadow, radius, ...props}) => {
 
 Block.PropTypes = {
   children: PropTypes.element.isRequired,
-  shadow: PropTypes.bool,
-  radius: PropTypes.bool
+  shadow: PropTypes.bool
 }
 
 export default Block;

@@ -6,7 +6,12 @@
    BLOCK
    ========================================================================== */
 .c-block {
+  border-radius: $spacing-half;
   padding: $spacing-whole;
   background-color: white;
   color: color(dark);
+
+  &.-flat {
+    border-radius: 0;
+  }
 }
