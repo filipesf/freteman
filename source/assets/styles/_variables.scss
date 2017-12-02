@@ -93,6 +93,15 @@ $transitions: (
   xlong: all ease 1s
 );
 
+/// Box Shadow Size
+/// @group decoration
+/// @type {list}
+$box-shadow-size: 0 3px 4px 0;
+/// Box Shadow Size Large
+/// @group decoration
+/// @type {list}
+$box-shadow-size-large: 0 12px 34px 0;
+
 /// Relative or absolute URL where all assets are served from
 /// @group assets
 /// @type {string}
