@@ -24,7 +24,7 @@ const Header = props => {
           </figure>
         </section>
         <section className="section">
-          <Block shadow={true} radius={true}>
+          <Block shadow={true}>
             <FormHome />
           </Block>
         </section>
