@@ -53,6 +53,7 @@ const FormHome = props => {
           </label>
           <input id="Caminhão" type="radio" name="veicle" value="Caminhão" />
         </div>
+        <small className="detail">150kg max. P 133 x L 133 x A 133 cm</small>
       </div>
 
       <hr />
