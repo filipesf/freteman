@@ -44,7 +44,7 @@
       @include line-scale(0);
 
       @include mq(medium) {
-        margin-bottom: $spacing-double;
+        margin-bottom: $spacing-whole;
         @include type-scale(14);
       }
     }
