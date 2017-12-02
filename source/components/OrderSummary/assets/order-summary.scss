@@ -1,0 +1,58 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+
+/* ==========================================================================
+   RESULTS TABLE
+   ========================================================================== */
+.c-order-summary {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-row-gap: $spacing-half;
+  margin-bottom: $spacing-whole;
+
+
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+  > .item {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &.-total {
+      border-top: 1px solid color(light);
+      padding-top: $spacing-whole;
+      margin-top: $spacing-half;
+    }
+  }
+
+
+  > .item > .name {
+    margin: 0;
+    @include type-scale(-2);
+    font-weight: bold;
+    color: color(brand);
+
+    &.-large {
+      @include font-scale(4);
+      line-height: 1;
+    }
+  }
+
+
+
+  > .item > .value {
+    margin: 0;
+
+    &.-large {
+      @include font-scale(8);
+      line-height: 1;
+    }
+  }
+}

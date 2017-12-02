@@ -8,6 +8,8 @@ import carFiorino from '../../assets/images/icons/car-fiorino.svg';
 import carTruck from '../../assets/images/icons/car-truck.svg';
 import carUtil from '../../assets/images/icons/car-util.svg';
 
+import OrderSummary from '../OrderSummary';
+
 const FormHome = props => {
   return (
     <form>
@@ -58,17 +60,7 @@ const FormHome = props => {
 
       <hr />
 
-      <section>
-        <div>
-          <h5>Distância</h5>
-          <p>54km e 200m</p>
-        </div>
-
-        <div>
-          <h5>Valor</h5>
-          <p>R$ 1264,00</p>
-        </div>
-      </section>
+      <OrderSummary />
 
       <button className="c-btn -block -large -accent">Chamar Mensageiro</button>
     </form>
