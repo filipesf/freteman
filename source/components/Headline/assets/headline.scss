@@ -30,10 +30,11 @@
 /* VARIANTS
  ========================================================================== */
   &.-header {
-    max-width: 470px;
+    max-width: 100%;
     text-align: center;
 
     @include mq(medium) {
+      max-width: 470px;
       text-align: left;
     }
 
