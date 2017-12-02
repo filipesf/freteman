@@ -1,6 +1,6 @@
 import React from 'react';
 
-import bg from './assets/header-bg.svg';
+import bg from './assets/bg-header.png';
 import trucks from './assets/trucks.png';
 
 import './assets/header.scss';
