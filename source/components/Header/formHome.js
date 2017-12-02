@@ -11,25 +11,25 @@ import carUtil from '../../assets/images/icons/car-util.svg';
 const FormHome = props => {
   return (
     <form>
-      <div className="c-fieldset has-icon">
+      <section className="c-fieldset has-icon">
         <SVG className="icon" classSuffix="" svg={arrowCollection} />
         <div className="field">
           <label className="label" htmlFor="collection-address">Endereço de coleta</label>
           <input className="input" id="collection-address" type="text" placeholder="Digite um endereço" />
         </div>
-      </div>
+      </section>
 
-      <div className="c-fieldset has-icon">
+      <section className="c-fieldset has-icon">
         <SVG className="icon" classSuffix="" svg={arrowDelivery} />
         <div className="field">
           <label className="label" htmlFor="delivery-address">Endereço de entrega</label>
           <input className="input" id="delivery-address" type="text" placeholder="Digite um endereço" />
         </div>
-      </div>
+      </section>
 
       <hr />
 
-      <div className="c-fieldset has-veicles">
+      <section className="c-fieldset has-veicles">
         <div className="field -radio">
           <label htmlFor="Fiorino" className="c-btn -radio -icon">
             <SVG className="icon" classSuffix="" svg={carFiorino} />
@@ -54,7 +54,7 @@ const FormHome = props => {
           <input id="Caminhão" type="radio" name="veicle" value="Caminhão" />
         </div>
         <small className="detail">150kg max. P 133 x L 133 x A 133 cm</small>
-      </div>
+      </section>
 
       <hr />
 
