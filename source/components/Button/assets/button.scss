@@ -69,6 +69,7 @@
     .text {
       display: block;
       margin-top: $spacing-third;
+      line-height: 1;
       color: #7a8295;
       @include transition(short);
     }
