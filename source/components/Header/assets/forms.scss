@@ -49,6 +49,7 @@ form {
         @include type-scale(2);
         border-radius: $spacing-third / 2;
         background-color: white;
+        color: color(dark);
         @include transition(short);
 
         &:hover {
@@ -59,6 +60,14 @@ form {
           border-color: color(brand);
           box-shadow: 0 3px 4px 0 rgba(color(brand, light), 0.15);
         }
+
+        @include placeholder {
+          color: rgba(color(dark), .5)
+        }
+      }
+
+      &._flat:focus {
+        box-shadow: none;
       }
     }
 
