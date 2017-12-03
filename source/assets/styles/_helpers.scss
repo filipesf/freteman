@@ -14,3 +14,15 @@
 ._shadow-large {
   box-shadow: $box-shadow-size-large rgba(black, 0.3) !important;
 }
+
+
+
+._flat {
+  border: none  !important;
+  padding: 0  !important;
+  margin: 0  !important;
+}
+
+._flat-grid {
+  grid-gap: 0 0 !important;
+}
