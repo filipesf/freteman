@@ -66,6 +66,12 @@
 
 /* CONTEXTUAL COMPONENTS
    ========================================================================== */
+  .l-fieldset.has-icon > .icon {
+    margin-top: $spacing-half;
+  }
+
+
+
   .c-input.-text {
     border: none;
     margin: 0;
