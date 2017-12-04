@@ -76,6 +76,14 @@
 
 
   .l-order-summary {
+    grid-template-columns: auto auto;
     grid-gap: 0 0;
+    justify-content: space-between;
+  }
+
+
+
+  .c-order-item {
+    grid-template-columns: auto;
   }
 }
