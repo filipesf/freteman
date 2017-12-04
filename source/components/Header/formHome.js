@@ -17,7 +17,7 @@ const FormHome = props => {
         <SVG className="icon" classSuffix="" svg={arrowCollection} />
         <div className="c-field">
           <label className="label" htmlFor="collection-address">Endereço de coleta</label>
-          <input className="c-input -text _nospacing _noborder _noshadow" id="collection-address" type="text" placeholder="Digite um endereço" />
+          <input className="c-input -text" id="collection-address" type="text" placeholder="Digite um endereço" />
         </div>
       </section>
 
@@ -25,7 +25,7 @@ const FormHome = props => {
         <SVG className="icon" classSuffix="" svg={arrowDelivery} />
         <div className="c-field">
           <label className="label" htmlFor="delivery-address">Endereço de entrega</label>
-          <input className="c-input -text _nospacing _noborder _noshadow" id="delivery-address" type="text" placeholder="Digite um endereço" />
+          <input className="c-input -text" id="delivery-address" type="text" placeholder="Digite um endereço" />
         </div>
       </section>
 
