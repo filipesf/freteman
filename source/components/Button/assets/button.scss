@@ -1,37 +1,19 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/functions';
 @import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
 
 /* ==========================================================================
    BUTTON
    ========================================================================== */
 .c-btn {
-  display: block;
-  border: 1px solid;
+  @include o-btn;
   border-color: transparent;
-  border-radius: 5px;
-  padding: $spacing-third $spacing-half;
-  @include font-scale(-2);
-  @include line-scale(0);
-  font-family: $font-family-heading;
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
   background-color: color(light);
   color: color(dark);
-  cursor: pointer;
-  user-select: none;
-  white-space: nowrap;
-  @include transition(short);
-
-  @include mq(medium) {
-    display: inline-block;
-  }
 
   &:hover {
-    text-decoration: none;
-    background-color: color(light, dark);
-    color: color(dark, dark);
+    background-color: rgba(color(light, dark), .5);
   }
 
   + .c-btn {
@@ -46,62 +28,7 @@
 
 /* VARIANTS
    ========================================================================== */
-  &.-block {
-    display: block;
-    width: 100%;
-  }
-
-
-
-  &.-large {
-    padding: $spacing-half $spacing-whole;
-    @include font-scale(0);
-  }
-
-
-
-  &.-radio {
-    padding: $spacing-third;
-    @include type-scale(-4);
-    fill: #B1B6C3;
-    width: 100%;
-
-    .text {
-      display: block;
-      margin-top: $spacing-third;
-      line-height: 1;
-      color: #7a8295;
-      @include transition(short);
-    }
-
-    input {
-      display: none;
-    }
-
-    &:hover {
-      background-color: color(brand);
-      fill: color(brand, xdark);
-
-      .text {
-        color: white;
-      }
-    }
-  }
-
-
-
-  &.-icon {
-    .icon {
-      display: block;
-      width: 70px;
-      margin: 0 auto;
-    }
-  }
-
-
-
-  &.-link {
-    border-color: transparent;
+&.-link {
     background-color: transparent;
     color: color(brand);
 
@@ -123,6 +50,8 @@
     }
   }
 
+
+
   &.-accent {
     background-color: color(accent);
     color: color(brand);
@@ -141,7 +70,7 @@
     color: color(brand);
 
     &:hover {
-      background-color: rgba(black, .05);
+      background-color: rgba(color(dark), .05);
       color: color(brand);
     }
 
