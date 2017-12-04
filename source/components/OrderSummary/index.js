@@ -3,7 +3,7 @@ import './assets/order-summary.scss';
 
 const OrderSummary = props => {
   return (
-    <ul className="c-order-summary _flat-grid">
+    <ul className="c-order-summary _collapse-grid">
       <li className="item">
         <span className="name">Distância</span>
         <span className="name">Valor Total</span>
