@@ -59,5 +59,23 @@
       max-width: 100%;
     }
   }
-}
 
+
+
+
+
+/* CONTEXTUAL COMPONENTS
+   ========================================================================== */
+  .c-input.-text {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  .l-order-summary {
+    grid-gap: 0 0;
+  }
+}
