@@ -128,15 +128,15 @@ form {
     width: 100%;
     border-color: transparent;
     padding: $spacing-third;
-    @include type-scale(-4);
     background-color: color(light);
     color: rgba(color(dark), .6);
     fill: rgba(color(dark), .3);
 
     > .text {
       display: block;
-      margin-top: $spacing-third;
+      @include font-scale(-2);
       line-height: 1;
+      text-transform: initial;
     }
 
     &:hover {

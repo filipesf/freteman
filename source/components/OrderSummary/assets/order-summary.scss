@@ -49,6 +49,7 @@
     &.-large {
       @include font-scale(8);
       line-height: 1;
+      font-weight: bold;
     }
   }
 
