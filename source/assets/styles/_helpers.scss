@@ -6,23 +6,28 @@
    HELPERS
    ========================================================================== */
 ._shadow {
-  box-shadow: $box-shadow-size rgba(black, 0.15) !important;
+  box-shadow: $shadow-size rgba(black, 0.15) !important;
 }
 
 
 
 ._shadow-large {
-  box-shadow: $box-shadow-size-large rgba(black, 0.3) !important;
+  box-shadow: $shadow-size-large rgba(black, 0.3) !important;
 }
 
 
 
-._flat {
-  border: none  !important;
+._nospacing {
   padding: 0  !important;
   margin: 0  !important;
 }
 
-._flat-grid {
+._noborder {
+  border: none  !important;
+}
+
+
+
+._collapse-grid {
   grid-gap: 0 0 !important;
 }
