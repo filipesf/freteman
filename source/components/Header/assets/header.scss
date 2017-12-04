@@ -67,10 +67,13 @@
 /* CONTEXTUAL COMPONENTS
    ========================================================================== */
   .c-input.-text {
-    box-shadow: none;
     border: none;
     margin: 0;
     padding: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
   }
 
 
