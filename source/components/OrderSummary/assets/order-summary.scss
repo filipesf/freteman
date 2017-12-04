@@ -3,7 +3,7 @@
 @import '../../../assets/styles/mixins';
 
 /* ==========================================================================
-   RESULTS TABLE
+   ORDER SUMMARY
    ========================================================================== */
 .l-order-summary {
   display: grid;
@@ -11,29 +11,25 @@
   grid-template-rows: auto;
   grid-row-gap: $spacing-half;
   margin-bottom: $spacing-whole;
+}
 
 
 
 
 
-/* ELEMENTS
+/* ==========================================================================
+   ORDER ITEM
    ========================================================================== */
-  > .item {
+.c-order-item {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
-    &.-total {
-      border-top: 1px solid color(light);
-      padding-top: $spacing-whole;
-      margin-top: $spacing-half;
-    }
-  }
 
 
-  > .item > .name {
+  > .name {
     margin: 0;
     @include type-scale(-2);
     font-weight: bold;
@@ -47,12 +43,37 @@
 
 
 
-  > .item > .value {
+  > .value {
     margin: 0;
 
     &.-large {
       @include font-scale(8);
       line-height: 1;
+    }
+  }
+
+
+
+  &.-total {
+    border-top: 1px solid color(light);
+    padding-top: $spacing-whole;
+    margin-top: $spacing-half;
+
+    > .name,
+    > .value {
+      line-height: 1;
+    }
+
+
+
+    > .name {
+      @include font-scale(4);
+    }
+
+
+
+    > .value {
+      @include font-scale(8);
     }
   }
 }
