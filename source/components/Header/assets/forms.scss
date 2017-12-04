@@ -1,6 +1,7 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/functions';
 @import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
 
 /* ==========================================================================
    FORMS
@@ -14,96 +15,143 @@ form {
 
 
 
-/* SUB COMPONENTS
+/* FIELDSET
    ========================================================================== */
 .c-fieldset {
   display: grid;
   border: none;
   margin-bottom: $spacing-whole;
+  grid-gap: $spacing-half;
 
-  > .icon {
-    display: block;
-    @include rectangle($spacing-whole);
-    fill: color(brand);
-  }
 
-  > .field {
-    width: 100%;
 
-    > .label {
+  &.has-veicles {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: $spacing-half;
+    margin-bottom: $spacing-half;
+
+    > .detail {
       display: block;
-      @include type-scale(-2);
-      font-weight: bold;
-      cursor: pointer;
-      color: color(brand);
-    }
-
-    > .input {
       margin-top: $spacing-third;
-
-      &[type="text"] {
-        display: block;
-        width: 100%;
-        padding: $spacing-half;
-        border: solid 1px color(light);
-        @include type-scale(2);
-        border-radius: $spacing-third / 2;
-        background-color: white;
-        color: color(dark);
-        @include transition(short);
-
-        &:hover {
-          border-color: color(light, dark);
-        }
-
-        &:focus {
-          border-color: color(brand);
-          box-shadow: 0 3px 4px 0 rgba(color(brand, light), 0.15);
-        }
-
-        @include placeholder {
-          color: rgba(color(dark), .5)
-        }
-      }
-
-      &._flat:focus {
-        box-shadow: none;
-      }
-    }
-
-    &.-radio {
-      > input {
-        display: none;
-      }
+      grid-column: 1 / -1;
+      text-align: center;
     }
   }
 
 
 
-
-
-/* VARIANTS
-   ========================================================================== */
-    &.has-veicles {
-      grid-template-columns: auto auto auto;
-      grid-template-rows: auto;
-      grid-column-gap: $spacing-half;
-      margin-bottom: $spacing-half;
-
-      > .detail {
-        display: block;
-        margin-top: $spacing-third;
-        grid-column: 1 / -1;
-        text-align: center;
-      }
-    }
-
-    &.has-icon {
+  &.has-icon {
     grid-template-columns: $spacing-whole auto;
     grid-column-gap: $spacing-half;
 
-    > .field + .field {
-      margin-left: $spacing-half;
+    > .icon {
+      display: block;
+      @include rectangle($spacing-whole);
+      fill: color(brand);
+    }
+  }
+}
+
+
+
+
+
+/* FIELD
+   ========================================================================== */
+.c-field {
+  width: 100%;
+
+
+
+  > .label {
+    display: block;
+    @include type-scale(-2);
+    font-weight: bold;
+    cursor: pointer;
+    color: color(brand);
+  }
+
+
+
+  > [type="radio"] {
+    display: none;
+  }
+
+
+
+  > :checked {
+    & ~ .c-input.-radio {
+      background-color: color(brand);
+      fill: color(brand, xdark);
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+/* INPUTS
+   ========================================================================== */
+.c-input {
+  + .c-input {
+    margin-top: $spacing-third;
+  }
+
+
+
+  &.-text {
+    @include o-input-text;
+    border-color: color(light);
+    background-color: white;
+    color: color(dark);
+
+    &:hover {
+      border-color: color(light, dark);
+    }
+
+    &:focus {
+      box-shadow: $shadow-size rgba(color(brand, light), 0.15);
+      border-color: color(brand);
+    }
+
+    @include placeholder {
+      color: rgba(color(dark), .5)
+    }
+  }
+
+
+
+  &.-radio {
+    @include o-btn;
+    width: 100%;
+    border-color: transparent;
+    padding: $spacing-third;
+    @include type-scale(-4);
+    background-color: color(light);
+    color: rgba(color(dark), .6);
+    fill: rgba(color(dark), .3);
+
+    > .text {
+      display: block;
+      margin-top: $spacing-third;
+      line-height: 1;
+    }
+
+    &:hover {
+      background-color: rgba(color(light, dark), .5);
+    }
+  }
+
+
+
+  &.has-icon {
+    > .icon {
+      display: block;
+      width: 70px;
+      margin: 0 auto;
     }
   }
 }
