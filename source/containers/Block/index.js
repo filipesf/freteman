@@ -5,7 +5,7 @@ import './assets/block.scss';
 
 const Block = ({shadow, radius, ...props}) => {
   const classes = classNames(
-    'c-block',
+    'l-block',
     shadow && `_shadow`
   );
 

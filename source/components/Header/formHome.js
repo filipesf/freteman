@@ -13,7 +13,7 @@ import OrderSummary from '../OrderSummary';
 const FormHome = props => {
   return (
     <form>
-      <section className="c-fieldset has-icon">
+      <section className="l-fieldset has-icon">
         <SVG className="icon" classSuffix="" svg={arrowCollection} />
         <div className="c-field">
           <label className="label" htmlFor="collection-address">Endereço de coleta</label>
@@ -21,7 +21,7 @@ const FormHome = props => {
         </div>
       </section>
 
-      <section className="c-fieldset has-icon">
+      <section className="l-fieldset has-icon">
         <SVG className="icon" classSuffix="" svg={arrowDelivery} />
         <div className="c-field">
           <label className="label" htmlFor="delivery-address">Endereço de entrega</label>
@@ -31,7 +31,7 @@ const FormHome = props => {
 
       <hr />
 
-      <section className="c-fieldset has-veicles">
+      <section className="l-fieldset has-veicles">
         <div className="c-field">
           <input id="Fiorino" type="radio" name="veicle" value="Fiorino" />
           <label className="c-input -radio has-icon" htmlFor="Fiorino">
