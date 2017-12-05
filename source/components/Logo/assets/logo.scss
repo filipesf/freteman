@@ -7,4 +7,23 @@
    ========================================================================== */
 .site-logo {
   margin: 0;
+
+  .logo {
+    display: none;
+    max-width: 265px;
+    width: 100%;
+
+    @include mq(medium) {
+      display: block;
+    }
+  }
+
+  .icon {
+    display: block;
+    @include rectangle($spacing-double);
+
+    @include mq(medium) {
+      display: none;
+    }
+  }
 }

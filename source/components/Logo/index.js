@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from './assets/logo-freteman.png';
-import logoMobile from './assets/logo-freteman-mobile.png';
+import SVG from 'react-svg-inline';
+import logo from './assets/logo.svg';
+import icon from './assets/icon.svg';
 import './assets/logo.scss';
 
 const Logo = props => {
   return (
     <a className="site-logo" href="#Logo">
-      <picture>
-        <source media="(max-width: 768px)" srcSet={logoMobile} />
-        <img src={logo} alt="Freteman" />
-      </picture>
+      <SVG className="icon" svg={icon} />
+      <SVG className="logo" svg={logo} />
     </a>
   );
 }
