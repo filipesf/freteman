@@ -1,14 +1,15 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/functions';
 @import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
 
 /* ==========================================================================
    SITE NAV
    ========================================================================== */
 .site-nav {
-  padding: $spacing-whole;
+  padding: $spacing-third $spacing-whole;
   font-family: $font-family-heading;
-  background-color: color(brand);
+  background-color: white;
 
   @include mq(medium) {
     padding: $spacing-double;
@@ -21,14 +22,11 @@
    ========================================================================== */
   // NEEDS REFACTORING
   > .container {
-    display: flex;
-    flex-direction: column;
+    @include o-wrapper;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
-
-    width: 100%;
-    max-width: 75rem;
-    margin: 0 auto;
 
     @include mq(medium) {
       flex-direction: row;
@@ -76,6 +74,37 @@
     &:hover {
       text-decoration: none;
       color: color(accent);
+    }
+  }
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   MOBILE NAV ICON
+   ========================================================================== */
+.i-nav {
+  display: block;
+  @include rectangle($spacing-double);
+  padding: $spacing-third;
+  cursor: pointer;
+
+  .line {
+    stroke: color(brand);
+    stroke-width: 5;
+    transform-origin: 50% 50%;
+    @include transition(short);
+  }
+
+  &.is-active {
+    .line {
+      &:nth-child(1) { transform: translateY(16px) rotate(-45deg); }
+      &:nth-child(3) { transform: translateY(-16px) rotate(45deg); }
+      &:nth-child(2) { transform: scale(0); }
     }
   }
 }
