@@ -10,6 +10,8 @@
 
 
 
+
+
 /* ELEMENTS
  ========================================================================== */
   > .title {
@@ -17,6 +19,8 @@
     margin-bottom: 0;
     color: inherit;
   }
+
+
 
   > .subtitle {
     @include type-scale(2);
@@ -27,6 +31,8 @@
 
 
 
+
+
 /* VARIANTS
  ========================================================================== */
   &.-header {
@@ -34,24 +40,36 @@
     text-align: center;
 
     @include mq(medium) {
-      max-width: 470px;
+      max-width: 500px;
+      padding-right: $spacing-double;
       text-align: left;
     }
 
+
+
     > .title {
       margin-bottom: $spacing-half;
-      @include font-scale(8);
-      @include line-scale(0);
+      @include font-scale(9);
 
       @include mq(medium) {
         margin-bottom: $spacing-whole;
+        @include type-scale(12);
+      }
+
+      @include mq(950px) {
         @include type-scale(14);
       }
     }
 
+
+
     > .subtitle {
-      @include font-scale(5);
-      @include line-scale(0);
+      @include type-scale(4);
+
+      @include mq(medium) {
+        @include font-scale(5);
+        @include line-scale(0);
+      }
     }
   }
 }
