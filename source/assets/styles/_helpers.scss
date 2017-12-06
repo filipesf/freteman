@@ -5,6 +5,9 @@
 /* ==========================================================================
    HELPERS
    ========================================================================== */
+
+/* BOX SHADOW
+   ========================================================================== */
 ._shadow {
   box-shadow: $shadow-size rgba(black, 0.15) !important;
 }
@@ -23,10 +26,16 @@
 
 
 
+
+
+/* SPACING
+   ========================================================================== */
 ._nospacing {
   padding: 0  !important;
   margin: 0  !important;
 }
+
+
 
 ._noborder {
   border: none  !important;
@@ -36,4 +45,28 @@
 
 ._collapse-grid {
   grid-gap: 0 0 !important;
+}
+
+
+
+
+
+/* RESPONSIVE DISPLAY
+   ========================================================================== */
+._show-mobile-only {
+  display: inherit !important;
+
+  @include mq(medium) {
+    display: none !important;
+  }
+}
+
+
+
+._hide-mobile-only {
+  display: none !important;
+
+  @include mq(medium) {
+    display: inherit !important;
+  }
 }
