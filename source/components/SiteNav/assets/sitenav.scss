@@ -7,7 +7,7 @@
    SITE NAV
    ========================================================================== */
 .site-nav {
-  padding: $spacing-third $spacing-whole;
+  padding: $spacing-third $spacing-half;
   font-family: $font-family-heading;
   background-color: white;
 
@@ -18,29 +18,56 @@
 
 
 
+
+
 /* ELEMENTS
    ========================================================================== */
-  // NEEDS REFACTORING
   > .container {
     @include o-wrapper;
+    position: relative;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     justify-content: space-between;
     align-items: center;
 
     @include mq(medium) {
-      flex-direction: row;
+      grid-template-columns: auto auto;
     }
   }
 
 
 
   .list {
-    margin: 0;
-    display: none;
+    position: absolute;
+    border-top: 1px solid color(light);
+    margin: 0 (-$spacing-half);
+    width: 100vw;
+    grid-column: 1 / -1;
+    background-color: white;
+    @include transition(medium);
+    transform: translateY(calc(-100% - 56px));
+    transform-origin: top;
+    opacity: 0;
+
+    &.is-active {
+      transform: translateY(56px);
+      opacity: 1;
+
+      @include mq(medium) {
+        transform: initial;
+      }
+    }
 
     @include mq(medium) {
+      position: initial;
       display: block;
+      border: none;
+      width: auto;
+      margin: 0;
+      grid-column: auto;
+      background-color: transparent;
+      transform: initial;
+      opacity: 1;
     }
   }
 
@@ -68,17 +95,27 @@
 
 
   .link {
-    color: white;
+    display: block;
+    padding: $spacing-half $spacing-whole;
     @include transition(medium);
 
-    &:hover {
+    @include mq(medium) {
+      padding: 0;
+      color: white;
+    }
+
+    @include on-event {
       text-decoration: none;
-      color: color(accent);
+      background-color: color(accent);
+      color: color(brand);
+
+      @include mq(medium) {
+        background-color: transparent;
+        color: color(accent);
+      }
     }
   }
 }
-
-
 
 
 
@@ -93,6 +130,12 @@
   padding: $spacing-third;
   cursor: pointer;
 
+  @include mq(medium) {
+    display: none;
+  }
+
+
+
   .line {
     stroke: color(brand);
     stroke-width: 5;
@@ -100,6 +143,10 @@
     @include transition(short);
   }
 
+
+
+/* STATES
+   ========================================================================== */
   &.is-active {
     .line {
       &:nth-child(1) { transform: translateY(16px) rotate(-45deg); }
