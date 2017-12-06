@@ -8,22 +8,24 @@
 .site-header {
   padding: $spacing-double $spacing-whole;
   background-color: color(brand);
-  background-position: center top;
+  background-position: left bottom;
   background-repeat: repeat-x;
-  background-size: 90rem;
+  background-size: 60rem;
   color: white;
 
   // NEEDS REFACTORING
-  .c-block {
+  .l-block {
     display: none;
   }
 
   @include mq(medium) {
     height: auto;
     padding: $spacing-double;
+    background-position: center top;
+    background-size: 90rem;
 
     // NEEDS REFACTORING
-    .c-block {
+    .l-block {
       display: block;
     }
   }
@@ -43,8 +45,12 @@
     margin: 0 auto;
 
     @include mq(medium) {
-      grid-template-columns: auto 400px;
+      grid-template-columns: auto 340px;
       align-items: start;
+    }
+
+    @include mq(950px) {
+      grid-template-columns: auto 400px;
     }
   }
 
@@ -53,7 +59,11 @@
   .image {
     width: 100%;
     margin: 0;
-    margin-top: $spacing-triple;
+    margin-top: $spacing-double * 2;
+
+    @include mq(medium) {
+      margin-top: $spacing-triple;
+    }
 
     > img {
       max-width: 100%;

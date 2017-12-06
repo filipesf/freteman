@@ -8,22 +8,35 @@
 .site-logo {
   margin: 0;
 
+
+
   .logo {
     display: none;
-    max-width: 265px;
-    width: 100%;
 
     @include mq(medium) {
       display: block;
     }
+
+    &,
+    &-svg {
+      vertical-align: middle;
+      max-width: 265px;
+      width: 100%;
+    }
   }
+
+
 
   .icon {
     display: block;
-    @include rectangle($spacing-double);
 
     @include mq(medium) {
       display: none;
+    }
+
+    &,
+    &-svg {
+      @include rectangle($spacing-double);
     }
   }
 }
