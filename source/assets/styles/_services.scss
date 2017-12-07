@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'objects';
+
+/* ==========================================================================
+   SERVICES
+   ========================================================================== */
+
+/* BOX
+   ========================================================================== */
+.l-box-container {
+  display: grid;
+  grid-template-columns: repeat(5, 210px);
+  grid-gap: $spacing-whole;
+  justify-content: center;
+  margin-top: $spacing-whole;
+}
+
+.c-box {
+  @include o-box;
+  display: inline-block;
+  border-radius: 0;
+  box-shadow: 0 12px 34px 0 rgba(138, 143, 153, 0.3);
+
+  svg {
+    width: 140px;
+  }
+}

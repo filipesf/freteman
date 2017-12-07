@@ -1,0 +1,20 @@
+<svg viewBox="0 0 136 71">
+  <path fill="#e54239" d="M69 0l38 22v5l-4-1H35l-4 1v-5z"/>
+  <path fill="#ffffff" d="M34 26L69 6l35 20v42H34z"/>
+  <path fill="none" stroke="#3b3e47" stroke-width="1.5" d="M34.8 26.4v40.8h68.5V26.4L69 6.9 34.8 26.4z"/>
+  <path fill="#e54239" d="M93 10l38 22v5l-4-1H59l-4 1v-5z"/>
+  <path fill="#ffffff" d="M58 36.2L93 16l35 20.2v32.3H58z"/>
+  <path fill="none" stroke="#3b3e47" stroke-width="1.5" d="M58.8 36.6v31.1h68.5V36.6L93 16.9 58.8 36.6z"/>
+  <path fill="#ffffff" d="M5 42h54.5v26.5H5z"/>
+  <path fill="none" stroke="#3b3e47" stroke-width="1.5" d="M5.8 42.8h53v25h-53z"/>
+  <path fill="#e54239" d="M11 48h42v20H11z"/>
+  <path fill="#ffffff" d="M103 51h12v17h-12z"/>
+  <path fill="none" stroke="#3b3e47" stroke-width="1.5" d="M103.8 51.8h10.5v15.5h-10.5z"/>
+  <path fill="#ffffff" d="M67 42h19v15H67z"/>
+  <path fill="none" stroke="#3b3e47" stroke-width="1.5" d="M67.8 42.8h17.5v13.5H67.8z"/>
+  <path fill="#3b3e47" d="M76 42h1.5v15H76z"/>
+  <path fill="#3b3e47" d="M67 49h19v1.5H67z"/>
+  <path fill="#e54239" d="M102 47h14v4h-14z"/>
+  <path fill="#ffffff" d="M0 67h136v4H0z"/>
+  <path fill="none" stroke="#3b3e47" stroke-width="1.5" d="M.8 67.8h134.5v2.5H.8z"/>
+</svg>
