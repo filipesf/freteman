@@ -21,23 +21,58 @@ const Services = () =>
 
     <section className="l-box-container">
       <div className="c-box _shadow-large">
-        <SVG svg={products} />
+        <figure className="image">
+          <SVG svg={products} />
+        </figure>
+        <Headline
+          modifier="small"
+          title="Entrega de produtos"
+          subtitle="Entrega de produtos."
+        />
       </div>
 
       <div className="c-box _shadow-large">
-        <SVG svg={distrib} />
+        <figure className="image">
+          <SVG svg={distrib} />
+        </figure>
+        <Headline
+          modifier="small"
+          title="Transporte e distribuição"
+          subtitle="Transporte e distribuição."
+        />
       </div>
 
       <div className="c-box _shadow-large">
-        <SVG svg={house} />
+        <figure className="image">
+          <SVG svg={house} />
+        </figure>
+        <Headline
+          modifier="small"
+          title="Pequena mudança"
+          subtitle="Pequena mudança."
+        />
       </div>
 
       <div className="c-box _shadow-large">
-        <SVG svg={pieces} />
+        <figure className="image">
+          <SVG svg={pieces} />
+        </figure>
+        <Headline
+          modifier="small"
+          title="Transporte de peças"
+          subtitle="Transporte de peças."
+        />
       </div>
 
       <div className="c-box _shadow-large">
-        <SVG svg={trash} />
+        <figure className="image">
+          <SVG svg={trash} />
+        </figure>
+        <Headline
+          modifier="small"
+          title="Remoção de lixo"
+          subtitle="Remoção de lixo."
+        />
       </div>
     </section>
   </Section>
