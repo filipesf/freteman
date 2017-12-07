@@ -44,19 +44,10 @@
     width: 100vw;
     grid-column: 1 / -1;
     background-color: white;
-    @include transition(medium);
-    transform: translateY(calc(-100% - 56px));
+    transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5s;
+    transform: translateY(56px) scaleY(0);
     transform-origin: top;
     opacity: 0;
-
-    &.is-active {
-      transform: translateY(56px);
-      opacity: 1;
-
-      @include mq(medium) {
-        transform: initial;
-      }
-    }
 
     @include mq(medium) {
       position: initial;
@@ -140,7 +131,11 @@
     stroke: color(brand);
     stroke-width: 5;
     transform-origin: 50% 50%;
-    @include transition(short);
+    transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5s;
+
+    &:nth-child(3) {
+      stroke-width: 0;
+    }
   }
 
 
@@ -149,9 +144,31 @@
    ========================================================================== */
   &.is-active {
     .line {
-      &:nth-child(1) { transform: translateY(16px) rotate(-45deg); }
-      &:nth-child(3) { transform: translateY(-16px) rotate(45deg); }
-      &:nth-child(2) { transform: scale(0); }
+      &:nth-child(1) {
+        stroke-width: 0;
+      }
+
+      &:nth-child(4) {
+        stroke-width: 0;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        stroke-width: 5;
+        transform: rotate(-45deg);
+      }
+    }
+
+    ~ .list {
+      transform: translateY(56px) scaleY(1);
+      opacity: 1;
+
+      @include mq(medium) {
+        transform: initial;
+      }
     }
   }
 }
