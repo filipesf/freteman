@@ -10,10 +10,10 @@ class SiteNav extends Component {
   constructor(props) {
     super(props);
     this.state = { active: false };
-    this.handleClass = this.handleClass.bind(this);
+    this.handleMobileNav = this.handleMobileNav.bind(this);
   }
 
-  handleClass() {
+  handleMobileNav() {
     const currentState = this.state.active;
     this.setState({ active: !currentState });
   }
@@ -26,7 +26,7 @@ class SiteNav extends Component {
         <div className="container">
           <Logo />
           <a href="#Button" className="c-btn -accent _show-mobile-only">Fazer Orçamento</a>
-          <div className={'i-nav' + activeState} onClick={this.handleClass}>
+          <div className={'i-nav' + activeState} onClick={this.handleMobileNav}>
             <SVG svg={icon} />
           </div>
           <ul className="list">
