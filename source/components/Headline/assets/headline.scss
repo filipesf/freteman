@@ -72,4 +72,16 @@
       }
     }
   }
+
+
+
+  &.-small {
+    > .title {
+      @include type-scale(0);
+    }
+
+    > .subtitle {
+      @include type-scale(-2);
+    }
+  }
 }
