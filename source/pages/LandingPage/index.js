@@ -1,50 +1,31 @@
 import React from 'react';
 
-import Section from '../../containers/Section';
-
+/* LANDING PAGE LAYOUT
+   ========================================================================== */
 import SiteNav  from '../../components/SiteNav';
 import Header   from '../../components/Header';
 import Footer   from '../../components/Footer';
-import Headline from '../../components/Headline';
+
+/* LANDING PAGE SECTIONS
+   ========================================================================== */
+import Services   from './Sections/Services';
+import HowItWorks from './Sections/HowItWorks';
+import Benefits   from './Sections/Benefits';
+import Clients    from './Sections/Clients';
+import Brands     from './Sections/Brands';
 
 const LandingPage = () =>
-  <section id="LandingPage">
+  <section id="landing-page">
     <SiteNav />
     <Header />
 
-    <Section>
-      <Headline
-        title="Tipos de serviços"
-        subtitle="Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade."
-      />
-    </Section>
-
-    <Section>
-      <Headline
-        title="Como Funciona"
-        subtitle="Chame um mensageiro em três passos simples"
-      />
-    </Section>
-
-    <Section>
-      <Headline
-        title="Benefícios"
-        subtitle="Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade."
-      />
-    </Section>
-
-    <Section theme="red">
-      <Headline
-        title="Clientes Satisfeitos"
-      />
-    </Section>
-
-    <Section theme="tint">
-      <Headline
-        title="Marcas"
-        subtitle="Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade."
-      />
-    </Section>
+    <main id="main-content" role="main">
+      <Services />
+      <HowItWorks />
+      <Benefits />
+      <Clients />
+      <Brands />
+    </main>
 
     <Footer />
   </section>
