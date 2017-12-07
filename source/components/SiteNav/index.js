@@ -26,8 +26,10 @@ class SiteNav extends Component {
         <div className="container">
           <Logo />
           <a href="#Button" className="c-btn -accent _show-mobile-only">Fazer Orçamento</a>
-          <SVG className={'i-nav' + activeState} svg={icon} onClick={this.handleClass} />
-          <ul className={'list' + activeState}>
+          <div className={'i-nav' + activeState} onClick={this.handleClass}>
+            <SVG svg={icon} />
+          </div>
+          <ul className="list">
             <li className="item"><a href="#Frota" className="link">Frota</a></li>
             <li className="item"><a href="#Serviços" className="link">Serviços</a></li>
             <li className="item"><a href="#Contato" className="link">Contato</a></li>
