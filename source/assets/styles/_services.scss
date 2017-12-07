@@ -11,19 +11,48 @@
    ========================================================================== */
 .l-box-container {
   display: grid;
-  grid-template-columns: repeat(5, 210px);
+  grid-template-columns: 90%;
+  grid-template-rows: auto;
   grid-gap: $spacing-whole;
   justify-content: center;
-  margin-top: $spacing-whole;
+  padding-right: $spacing-whole;
+  padding-left: $spacing-whole;
+  margin-top: $spacing-triple;
+
+  @include mq(510px) {
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @include mq(745px) {
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @include mq(1150px) {
+    grid-template-columns: repeat(5, 210px);
+    grid-template-rows: 1fr;
+    padding: 0;
+  }
 }
 
 .c-box {
-  @include o-box;
-  display: inline-block;
-  border-radius: 0;
-  box-shadow: 0 12px 34px 0 rgba(138, 143, 153, 0.3);
+  display: grid;
+  grid-template-rows: 75px 48px;
+  grid-gap: $spacing-whole;
+  align-content: center;
+  height: 250px;
+  padding: $spacing-half;
+  background-color: white;
 
-  svg {
-    width: 140px;
+
+  > .image {
+    margin: 0;
+
+    svg {
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+    }
   }
 }
