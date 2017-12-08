@@ -1,0 +1,22 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   CARDS LIST
+   ========================================================================== */
+.l-cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: $spacing-whole;
+  justify-content: center;
+  padding-right: $spacing-whole;
+  padding-left: $spacing-whole;
+  margin-top: $spacing-triple;
+
+  @include mq(1150px) {
+    grid-template-columns: repeat(5, 210px);
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   CARD
+   ========================================================================== */
+.c-card {
+  display: grid;
+  grid-template-rows: 75px 48px;
+  grid-gap: $spacing-whole;
+  align-content: center;
+  height: 250px;
+  border-radius: 5px;
+  padding: $spacing-half;
+  box-shadow: $shadow-size-large rgba(color(gray), 0.3);
+  background-color: white;
+
+
+
+  > .image {
+    margin: 0;
+    overflow: hidden;
+
+
+
+    svg {
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+}
