@@ -1,0 +1,134 @@
+@mixin carousel($items) {
+  .c-carousel {
+    position: relative;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: auto 515px 12px;
+    align-content: center;
+    width: 100%;
+    max-width: 60rem;
+    height: 100%;
+    padding: 0;
+    margin-top: 4.5rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    > .c-carousel__controller {
+      display: none;
+
+      &:checked {
+        ~ .c-carousel__items .c-carousel__item {
+          opacity: 0;
+        }
+      }
+
+      @for $i from 1 through $items {
+        &:nth-child(#{$i}) {
+          &:checked {
+            ~ .c-carousel__items .c-carousel__item {
+              &:nth-child(#{$i}) {
+                opacity: 1;
+              }
+            }
+
+            ~ .c-carousel__details {
+              > .c-media:nth-child(#{$i}) .title {
+                color: #e54239;
+              }
+            }
+
+            ~ .c-carousel__nav {
+              > .bullet:nth-child(#{$i}) {
+                background-color: #e54239;
+                cursor: default;
+                pointer-events: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__items {
+      position: relative;
+      height: 310px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      overflow: hidden;
+    }
+
+    &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      transition: opacity .5s;
+      z-index: -1;
+    }
+
+    &__details {
+      display: grid;
+      grid-template-rows: 4.5rem;
+      align-content: space-between;
+    }
+
+    &__nav {
+      display: grid;
+      grid-gap: 8px;
+      align-content: center;
+
+      > .bullet {
+        background-color: #d9dade;
+        display: block;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        transition: all .5s;
+      }
+    }
+  }
+}
+
+.c-media {
+  display: grid;
+  grid-template-columns: 48px auto;
+  grid-gap: .75rem;
+
+  > .img {
+    width: 100%;
+    height: 100%;
+  }
+
+  > .info {
+    cursor: pointer;
+    transition: all .5s;
+  }
+
+  > .info:hover > .title {
+    color: #e54239;
+  }
+
+  > .info > .title,
+  > .info > .description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    transition: all .5s;
+  }
+
+  > .info > .title {
+    color: #8990a0;
+  }
+
+  > .info > .description {
+    color: #7a8295;
+  }
+}
+
+@include carousel(3);
