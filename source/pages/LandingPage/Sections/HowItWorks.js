@@ -41,22 +41,22 @@ const HowItWorks = () =>
       <input className="c-carousel__controller" type="radio" id="howitworks-3" name="carousel" />
       <ul className="c-carousel__details">
         <li className="c-media">
-          <SVG className="img" svg={pin} />
-          <label className="info" htmlFor="howitworks-1">
+          <SVG svg={pin} />
+          <label htmlFor="howitworks-1">
             <h4 className="title">Faça um pedido pelo sistema da Freteman</h4>
             <p className="description">Escolha o local de coleta e de entrega e forneça detalhes do serviço.</p>
           </label>
         </li>
         <li className="c-media">
-          <SVG className="img" svg={pin} />
-          <label className="info" htmlFor="howitworks-2">
+          <SVG svg={pin} />
+          <label htmlFor="howitworks-2">
             <h4 className="title">Encontre-se com o funcionário da Freteman</h4>
             <p className="description">A encomenda é coletada por nosso funcionário e encaminhada até seu destino.</p>
           </label>
         </li>
         <li className="c-media">
-          <SVG className="img" svg={pin} />
-          <label className="info" htmlFor="howitworks-3">
+          <SVG svg={pin} />
+          <label htmlFor="howitworks-3">
             <h4 className="title">Seu material é entregue ao destino escolhido</h4>
             <p className="description">Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema.</p>
           </label>
@@ -67,7 +67,7 @@ const HowItWorks = () =>
         <li className="c-carousel__item"><img src={employee} alt="" /></li>
         <li className="c-carousel__item"><img src={destiny} alt="" /></li>
       </ul>
-       <div className="c-carousel__nav">
+       <div className="c-bullet-list">
          <label className="bullet" htmlFor="howitworks-1"></label>
          <label className="bullet" htmlFor="howitworks-2"></label>
          <label className="bullet" htmlFor="howitworks-3"></label>

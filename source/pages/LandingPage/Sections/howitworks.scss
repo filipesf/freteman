@@ -5,7 +5,7 @@
     grid-gap: 12px;
     grid-template-columns: auto 515px 12px;
     align-content: center;
-    width: 100%;
+    width: 90%;
     max-width: 60rem;
     height: 100%;
     padding: 0;
@@ -37,7 +37,7 @@
               }
             }
 
-            ~ .c-carousel__nav {
+            ~ .c-bullet-list {
               > .bullet:nth-child(#{$i}) {
                 background-color: #e54239;
                 cursor: default;
@@ -73,61 +73,77 @@
 
     &__details {
       display: grid;
-      grid-template-rows: 4.5rem;
+      grid-template-rows: minmax(4.5rem, max-content);
+      grid-gap: .75rem;
       align-content: space-between;
-    }
+      margin-bottom: 0;
 
-    &__nav {
-      display: grid;
-      grid-gap: 8px;
-      align-content: center;
-
-      > .bullet {
-        background-color: #d9dade;
-        display: block;
-        border-radius: 50%;
-        cursor: pointer;
-        width: 12px;
-        height: 12px;
+      .title,
+      .description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
         transition: all .5s;
+      }
+
+      .title {
+        color: #8990a0;
+        cursor: pointer;
+
+        &:hover {
+          color: #e54239;
+        }
+      }
+
+      .description {
+        color: #7a8295;
       }
     }
   }
 }
 
+
+
+
+
+/* BULLET LIST
+   ========================================================================== */
+.c-bullet-list {
+  display: grid;
+  grid-gap: 8px;
+  align-content: center;
+
+  > .bullet {
+    background-color: #d9dade;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    transition: all .5s;
+  }
+}
+
+
+
+
+
+/* MEDIA OBJECT
+   ========================================================================== */
 .c-media {
   display: grid;
   grid-template-columns: 48px auto;
   grid-gap: .75rem;
 
-  > .img {
+  > :first-child {
+    display: block;
     width: 100%;
     height: 100%;
   }
 
-  > .info {
-    cursor: pointer;
-    transition: all .5s;
-  }
-
-  > .info:hover > .title {
-    color: #e54239;
-  }
-
-  > .info > .title,
-  > .info > .description {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    transition: all .5s;
-  }
-
-  > .info > .title {
-    color: #8990a0;
-  }
-
-  > .info > .description {
-    color: #7a8295;
+  > :last-child {
+    display: block;
+    vertical-align: top;
   }
 }
 
