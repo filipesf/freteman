@@ -1,32 +1,19 @@
 import React, { Component } from 'react';
-import SVG from 'react-svg-inline';
 
-/* COMPONENTS
-   ========================================================================== */
-import Headline from '../Headline';
+import ShowcaseDetail  from './ShowcaseDetail';
+import ShowcaseThumbs  from './ShowcaseThumbs';
+import ShowcaseNav     from './ShowcaseNav';
 
-
-
-/* ASSETS
-   ========================================================================== */
 import './assets/showcase.scss';
 
-
-
-
-
-/* ==========================================================================
-   SHOWCASE
-   ========================================================================== */
 class Showcase extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      items: []
+      items: [],
+      active: 'destination'
     };
-
-    this.handleItem = this.handleItem.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentWillMount() {
@@ -35,49 +22,39 @@ class Showcase extends Component {
     });
   }
 
-  handleItem(i) {
-    const items = this.state.items;
-    const item = items[i];
-    console.log(item);
+  handleChange(item) {
+    let newItems = Object.assign({}, this.state.items);
+    item.active = !item.active;
 
-    // this.setState({
-    //   items: [
-    //     i: { active: true }
-    //   ]
-    // })
+    this.setState({ newItems })
+    console.log(newItems);
   }
 
   render() {
-    const showcaseItems = this.state.items;
+    // console.log(this.props.data.order);
+    // console.log(this.props.data.meet);
+    // console.log(this.props.data.destination);
 
-    let showcaseDetail = showcaseItems.map((item, index) =>
-      <li className="c-showcase__detail" onClick={()=>this.handleItem(index)} key={index}>
-        <SVG className="c-showcase__icon" svg={item.icon} />
-        <Headline title={item.title} subtitle={item.description} />
-      </li>
-    );
-
-    let showcaseThumb = showcaseItems.map((item, index) =>
-      <li className="c-showcase__thumb" key={index}><img src={item.thumb} alt="" /></li>
-    );
-
-    let showcaseBullet = showcaseItems.map((item, index) =>
-      <li className="c-bullets__bullet" onClick={()=>this.handleItem(index)} key={index}></li>
-    );
-
-    return(
+    return (
       <div className="c-showcase">
+
         <ul className="c-showcase__details">
-          {showcaseDetail}
+          <ShowcaseDetail
+            info={this.props.data[this.state.active]}
+            handleChange={this.handleChange}
+          />
         </ul>
 
-        <ul className="c-showcase__thumbnails">
-          {showcaseThumb}
+        <ul className="c-showcase__thumbs">
+          <ShowcaseThumbs info={this.props.data[this.state.active]} />
         </ul>
 
-         <ul className="c-bullets">
-           {showcaseBullet}
-         </ul>
+        <ul className="c-showcase__nav">
+          <ShowcaseNav
+            x={this.props.data[this.state.active]}
+            handleChange={this.handleChange}
+          />
+        </ul>
       </div>
     );
   }

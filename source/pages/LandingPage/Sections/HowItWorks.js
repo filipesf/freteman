@@ -17,36 +17,40 @@ import Showcase from '../../../components/Showcase';
 
 /* ASSETS
    ========================================================================== */
-import iconBox       from '../../../assets/images/icons/box.svg';
-import iconBrand     from '../../../assets/images/icons/brand.svg';
-import iconPin       from '../../../assets/images/icons/pin.svg';
-import thumbOrder    from '../../../assets/images/howitworks-1.png';
-import thumbEmployee from '../../../assets/images/howitworks-2.png';
-import thumbDestiny  from '../../../assets/images/howitworks-3.png';
+import iconOrder         from '../../../assets/images/icons/box.svg';
+import iconMeet          from '../../../assets/images/icons/brand.svg';
+import iconDestination   from '../../../assets/images/icons/pin.svg';
+import thumbOrder        from '../../../assets/images/howitworks-1.png';
+import thumbMeet         from '../../../assets/images/howitworks-2.png';
+import thumbDestination  from '../../../assets/images/howitworks-3.png';
 
 
 
 /* DATA
    ========================================================================== */
-const showcaseItems = [{
-  "active": true,
-  "icon": iconBox,
-  "thumb": thumbOrder,
-  "title": "Faça um pedido pelo sistema da Freteman",
-  "description": "Escolha o local de coleta e de entrega e forneça detalhes do serviço."
-},{
-  "active": false,
-  "icon": iconBrand,
-  "thumb": thumbEmployee,
-  "title": "Encontre-se com o funcionário da Freteman",
-  "description": "A encomenda é coletada por nosso funcionário e encaminhada até seu destino."
-},{
-  "active": false,
-  "icon": iconPin,
-  "thumb": thumbDestiny,
-  "title": "Seu material é entregue ao destino escolhido",
-  "description": "Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema."
-}];
+const showcaseItems = {
+  order: {
+    active: true,
+    icon: iconOrder,
+    thumb: thumbOrder,
+    title: "Faça um pedido pelo sistema da Freteman",
+    description: "Escolha o local de coleta e de entrega e forneça detalhes do serviço."
+  },
+  meet: {
+    active: false,
+    icon: iconMeet,
+    thumb: thumbMeet,
+    title: "Encontre-se com o funcionário da Freteman",
+    description: "A encomenda é coletada por nosso funcionário e encaminhada até seu destino."
+  },
+  destination: {
+    active: false,
+    icon: iconDestination,
+    thumb: thumbDestination,
+    title: "Seu material é entregue ao destino escolhido",
+    description: "Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema."
+  }
+};
 
 
 
