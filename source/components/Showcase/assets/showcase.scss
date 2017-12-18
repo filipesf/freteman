@@ -1,0 +1,158 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+
+/* ==========================================================================
+   SHOWCASE
+   ========================================================================== */
+.c-showcase {
+  position: relative;
+  display: grid;
+  grid-gap: $spacing-half;
+  grid-template-columns: auto 515px $spacing-half;
+  align-content: center;
+  @include rectangle(90%, 100%);
+  max-width: 60rem;
+  padding: 0;
+  margin-top: $spacing-triple;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-showcase__thumbs {
+  position: relative;
+  min-height: 310px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+
+
+.c-showcase__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  @include rectangle(100%);
+  @include transition(medium);
+  z-index: -1;
+  opacity: 0;
+}
+
+
+
+.c-showcase__details {
+  display: grid;
+  grid-template-rows: minmax($spacing-triple, max-content);
+  grid-gap: $spacing-half;
+  align-content: space-between;
+  margin-bottom: 0;
+}
+
+
+
+.c-showcase__detail {
+  @include o-media;
+
+
+
+  .title,
+  .subtitle {
+    margin: 0;
+    @include type-scale(0);
+    text-align: left;
+    @include transition(medium);
+    cursor: pointer;
+  }
+
+
+
+  .title {
+    color: color(gray);
+  }
+
+
+
+  .subtitle {
+    color: color(gray, light);
+    font-weight: 400;
+  }
+}
+
+
+
+.c-showcase__icon {
+  fill: white;
+  stroke: color(gray);
+  stroke-width: 1.5;
+  @include transition(medium);
+}
+
+
+
+.c-showcase__nav {
+  display: grid;
+  grid-gap: $spacing-third;
+  align-content: center;
+  margin: 0;
+}
+
+
+
+.c-showcase__item {
+  background-color: color(light, dark);
+  display: block;
+  border-radius: 50%;
+  @include rectangle($spacing-half);
+  @include transition(medium);
+  cursor: pointer;
+
+  > * {
+    display: block;
+    @include rectangle(100%);
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+/* SHOWCASE ITEMS ACTIVE STATE
+   ========================================================================== */
+.is-active{
+  &.c-showcase__detail {
+    .title {
+      color: color(brand);
+    }
+
+    .c-showcase__icon {
+      fill: color(brand);
+      stroke: color(dark);
+    }
+  }
+
+
+
+  &.c-showcase__thumb {
+    opacity: 1;
+  }
+
+
+
+  &.c-showcase__item {
+    cursor: default;
+    pointer-events: none;
+    background-color: color(brand);
+  }
+}
