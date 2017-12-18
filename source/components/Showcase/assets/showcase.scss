@@ -27,7 +27,7 @@
    ========================================================================== */
 .c-showcase__thumbs {
   position: relative;
-  height: 310px;
+  min-height: 310px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -63,6 +63,8 @@
 
 .c-showcase__detail {
   @include o-media;
+
+
 
   .title,
   .subtitle {
@@ -126,40 +128,31 @@
 
 
 
-/* SHOWCASE CONTROLLER
+/* SHOWCASE ITEMS ACTIVE STATE
    ========================================================================== */
-.c-showcase__controller {
-  display: none;
-
-  @for $i from 1 through 3 {
-    &:nth-child(#{$i}):checked {
-      ~ .c-showcase__thumbs
-      > .c-showcase__thumb:nth-child(#{$i}) {
-        opacity: 1;
-      }
-
-
-
-      ~ .c-showcase__details
-      > .c-showcase__detail:nth-child(#{$i}) {
-        .title {
-          color: color(brand);
-        }
-
-        .c-showcase__icon {
-          fill: color(brand);
-          stroke: color(dark);
-        }
-      }
-
-
-
-      ~ .c-showcase__nav
-      > .c-showcase__item:nth-child(#{$i}) {
-        cursor: default;
-        pointer-events: none;
-        background-color: color(brand);
-      }
+.is-active{
+  &.c-showcase__detail {
+    .title {
+      color: color(brand);
     }
+
+    .c-showcase__icon {
+      fill: color(brand);
+      stroke: color(dark);
+    }
+  }
+
+
+
+  &.c-showcase__thumb {
+    opacity: 1;
+  }
+
+
+
+  &.c-showcase__item {
+    cursor: default;
+    pointer-events: none;
+    background-color: color(brand);
   }
 }
