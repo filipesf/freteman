@@ -1,16 +1,14 @@
 import React from 'react';
-import SVG from 'react-svg-inline';
+import SvgInline from 'react-svg-inline';
 import logo from './assets/logo.svg';
 import icon from './assets/icon.svg';
 import './assets/logo.scss';
 
-const Logo = props => {
-  return (
-    <a className="site-logo" href="#Logo">
-      <SVG className="icon" svg={icon} />
-      <SVG className="logo" svg={logo} />
-    </a>
-  );
-}
+const Logo = () => (
+  <a className="site-logo" href="#Logo">
+    <SvgInline className="icon" svg={icon} />
+    <SvgInline className="logo" svg={logo} />
+  </a>
+);
 
 export default Logo;

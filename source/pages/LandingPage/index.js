@@ -14,7 +14,7 @@ import Benefits   from './Sections/Benefits';
 import Clients    from './Sections/Clients';
 import Brands     from './Sections/Brands';
 
-const LandingPage = () =>
+const LandingPage = () => (
   <section id="landing-page">
     <SiteNav />
     <Header />
@@ -29,5 +29,6 @@ const LandingPage = () =>
 
     <Footer />
   </section>
+);
 
 export default LandingPage;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SVG from 'react-svg-inline';
+import SvgInline from 'react-svg-inline';
 import icon from './assets/menu.svg';
 import './assets/sitenav.scss';
 
@@ -27,7 +27,7 @@ class SiteNav extends Component {
           <Logo />
           <a href="#Button" className="c-btn -accent _show-mobile-only">Fazer Orçamento</a>
           <div className={'i-nav' + activeState} onClick={this.handleMobileNav}>
-            <SVG svg={icon} />
+            <SvgInline svg={icon} />
           </div>
           <ul className="list">
             <li className="item"><a href="#Frota" className="link">Frota</a></li>

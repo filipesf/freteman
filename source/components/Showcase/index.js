@@ -31,7 +31,7 @@ class Showcase extends Component {
   render() {
     const showcaseItems = this.state.items;
 
-    const showcaseDetailItems = showcaseItems.map(item =>
+    const showcaseDetailItems = showcaseItems.map(item => (
       <ShowcaseDetail
         data={item}
         key={item.id}
@@ -39,18 +39,18 @@ class Showcase extends Component {
         activeItem={this.state.active}
         handleChange={this.handleChange}
       />
-    );
+    ));
 
-    const showcaseThumbItems = showcaseItems.map(item =>
+    const showcaseThumbItems = showcaseItems.map(item =>(
       <ShowcaseThumbs
         data={item}
         key={item.id}
         currentItem={item.id}
         activeItem={this.state.active}
       />
-    );
+    ));
 
-    const showcaseNavItems = showcaseItems.map(item =>
+    const showcaseNavItems = showcaseItems.map(item => (
       <ShowcaseNav
         data={item}
         key={item.id}
@@ -58,7 +58,7 @@ class Showcase extends Component {
         activeItem={this.state.active}
         handleChange={this.handleChange}
       />
-    );
+    ));
 
     return (
       <div className="c-showcase">

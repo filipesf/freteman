@@ -8,8 +8,8 @@ const ShowcaseNav = props => {
   );
 
   return (
-    <li className={classes} onClick={() => props.handleChange(props.currentItem)}></li>
+    <li className={classes} />
   );
-}
+};
 
 export default ShowcaseNav;

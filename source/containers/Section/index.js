@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import classNames from 'classnames';
 import './assets/section.scss';
 
@@ -14,11 +14,11 @@ const SectionContainer = ({theme, ...props}) => {
       {props.children}
     </section>
   );
-}
+};
 
-SectionContainer.PropTypes = {
-  children: PropTypes.element.isRequired,
-  theme: PropTypes.string
-}
+SectionContainer.propTypes = {
+  children: propTypes.node.isRequired,
+  theme: propTypes.string
+};
 
 export default SectionContainer;

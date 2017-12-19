@@ -32,7 +32,7 @@ const showcaseItems = [{
   description: "Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema."
 }];
 
-const HowItWorks = () =>
+const HowItWorks = () => (
   <Section>
     <Headline
       title="Como Funciona"
@@ -41,5 +41,6 @@ const HowItWorks = () =>
 
     <Showcase data={showcaseItems} />
   </Section>
+);
 
 export default HowItWorks;

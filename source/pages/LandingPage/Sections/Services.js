@@ -54,14 +54,15 @@ const serviceCards = [{
 /* ==========================================================================
    SERVICES
    ========================================================================== */
-const Services = props =>
+const Services = () => (
   <Section>
     <Headline
       title="Tipos de serviços"
       subtitle="Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade."
     />
 
-    <CardsList data={serviceCards}/>
+    <CardsList data={serviceCards} />
   </Section>
+);
 
 export default Services;

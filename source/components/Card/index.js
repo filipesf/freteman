@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import SVG from 'react-svg-inline';
+import propTypes from 'prop-types';
+import SvgInline from 'react-svg-inline';
 
 /* COMPONENTS
    ========================================================================== */
@@ -23,7 +23,7 @@ const Card = props => {
   return (
     <li className="c-card">
       <figure className="image">
-        <SVG svg={c.image} />
+        <SvgInline svg={c.image} />
       </figure>
       <Headline
         modifier="small"
@@ -32,17 +32,17 @@ const Card = props => {
       />
     </li>
   );
-}
+};
 
 
 
 /**
  * PROPTYPES
  */
-Card.PropTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired
-}
+Card.propTypes = {
+  image: propTypes.string,
+  title: propTypes.string.isRequired,
+  subtitle: propTypes.string.isRequired
+};
 
 export default Card;

@@ -1,16 +1,10 @@
 import React from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
+import cx from 'classnames';
+import propTypes from 'prop-types';
 import './assets/headline.scss';
 
-const Headline = ({
-  modifier,
-  ...props
-}) => {
-  const classes = classNames(
-    'c-headline',
-    modifier && `-${modifier}`
-  );
+const Headline = ({modifier, ...props}) => {
+  const classes = cx('c-headline', modifier && `-${modifier}`);
 
   return (
     <section className={classes}>
@@ -20,12 +14,12 @@ const Headline = ({
       }
     </section>
   );
-}
+};
 
-Headline.PropTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  modifier: PropTypes.string
-}
+Headline.propTypes = {
+  title: propTypes.string.isRequired,
+  subtitle: propTypes.string,
+  modifier: propTypes.string
+};
 
 export default Headline;

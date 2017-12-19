@@ -12,20 +12,20 @@ const Btn = ({
   size,
   ...props,
 }) => {
-  const Tag = tagName || "button"
+  const Tag = tagName || "button";
 
   const defaultTagProps = {
     a: { role: "button" },
     button: { type: "button" },
     input: { type: "button" },
-  }
+  };
 
   const extendedProps = _.extend(
     {},
     defaultTagProps[Tag],
     disabled && tagName !== "a" && { disabled: true },
     props
-  )
+  );
 
   const classes = classNames(
     "btn",
@@ -34,13 +34,12 @@ const Btn = ({
     size && `btn--${size}`,
     disabled && tagName === "a" && "disabled",
     className
-  )
+  );
 
-  return <Tag
-    {...extendedProps}
-    className={classes}
-  />
-}
+  return (
+    <Tag {...extendedProps} className={classes} />
+  );
+};
 
 
 

@@ -10,6 +10,6 @@ const ShowcaseThumbs = props => {
   return (
     <li className={classes}><img src={props.data.thumb} alt={props.data.title} /></li>
   );
-}
+};
 
 export default ShowcaseThumbs;

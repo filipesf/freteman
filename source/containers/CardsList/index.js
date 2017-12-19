@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 
@@ -34,12 +34,12 @@ class CardsList extends Component {
 
   render() {
     const results = this.state.cards;
-    let card = results.map((card, index) =>
+    let card = results.map((card, index) => (
       <Card
         key={index}
         card={card}
       />
-    );
+    ));
 
     return (
       <ul className="l-cards-list">
@@ -54,8 +54,8 @@ class CardsList extends Component {
 /**
  * PROPTYPES
  */
-CardsList.PropTypes = {
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
+CardsList.propTypes = {
+  data: propTypes.arrayOf(propTypes.object).isRequired,
+};
 
 export default CardsList;

@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import classNames from 'classnames';
 import './assets/block.scss';
 
-const Block = ({shadow, radius, ...props}) => {
+const Block = ({shadow, ...props}) => {
   const classes = classNames(
     'l-block',
     shadow && `_shadow`
@@ -14,11 +14,11 @@ const Block = ({shadow, radius, ...props}) => {
       {props.children}
     </div>
   );
-}
+};
 
-Block.PropTypes = {
-  children: PropTypes.element.isRequired,
-  shadow: PropTypes.bool
-}
+Block.propTypes = {
+  children: propTypes.element.isRequired,
+  shadow: propTypes.bool
+};
 
 export default Block;
