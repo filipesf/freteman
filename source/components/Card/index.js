@@ -40,6 +40,7 @@ const Card = props => {
  * PROPTYPES
  */
 Card.propTypes = {
+  card: propTypes.object,
   image: propTypes.string,
   title: propTypes.string.isRequired,
   subtitle: propTypes.string.isRequired

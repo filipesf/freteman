@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import SvgInline from 'react-svg-inline';
 import cx from 'classnames';
 
@@ -16,6 +17,13 @@ const ShowcaseDetail = props => {
       <Headline title={props.data.title} subtitle={props.data.description} />
     </li>
   );
+};
+
+ShowcaseDetail.propTypes = {
+  data: propTypes.object.isRequired,
+  currentItem: propTypes.number,
+  activeItem: propTypes.number,
+  handleChange: propTypes.func
 };
 
 export default ShowcaseDetail;

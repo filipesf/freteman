@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 
 import ShowcaseDetail  from './ShowcaseDetail';
 import ShowcaseThumbs  from './ShowcaseThumbs';
@@ -11,7 +12,7 @@ class Showcase extends Component {
     super(props);
     this.state = {
       items: [],
-      active: 1
+      activeItem: 1
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -24,7 +25,7 @@ class Showcase extends Component {
 
   handleChange(item) {
     this.setState({
-      active: item
+      activeItem: item
     });
   }
 
@@ -36,7 +37,7 @@ class Showcase extends Component {
         data={item}
         key={item.id}
         currentItem={item.id}
-        activeItem={this.state.active}
+        activeItem={this.state.activeItem}
         handleChange={this.handleChange}
       />
     ));
@@ -46,7 +47,7 @@ class Showcase extends Component {
         data={item}
         key={item.id}
         currentItem={item.id}
-        activeItem={this.state.active}
+        activeItem={this.state.activeItem}
       />
     ));
 
@@ -55,7 +56,7 @@ class Showcase extends Component {
         data={item}
         key={item.id}
         currentItem={item.id}
-        activeItem={this.state.active}
+        activeItem={this.state.activeItem}
         handleChange={this.handleChange}
       />
     ));
@@ -68,6 +69,10 @@ class Showcase extends Component {
       </div>
     );
   }
-}
+};
+
+Showcase.propTypes = {
+  data: propTypes.array.isRequired
+};
 
 export default Showcase;

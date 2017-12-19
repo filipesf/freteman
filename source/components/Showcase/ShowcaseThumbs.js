@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import cx from 'classnames';
 
 const ShowcaseThumbs = props => {
@@ -10,6 +11,13 @@ const ShowcaseThumbs = props => {
   return (
     <li className={classes}><img src={props.data.thumb} alt={props.data.title} /></li>
   );
+};
+
+ShowcaseThumbs.propTypes = {
+  data: propTypes.object.isRequired,
+  currentItem: propTypes.number,
+  activeItem: propTypes.number,
+  handleChange: propTypes.func
 };
 
 export default ShowcaseThumbs;
