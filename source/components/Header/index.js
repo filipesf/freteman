@@ -1,16 +1,16 @@
 import React from 'react';
 
-import bg from './assets/bg-header.png';
-import trucks from './assets/trucks.png';
-
-import './assets/header.scss';
+import Block from '../../containers/Block';
 
 import Headline from '../Headline';
 import FormHome from './formHome';
-import Block from '../../containers/Block';
+
+import imageHero     from './assets/bg-header.png';
+import imageFeatured from './assets/trucks.png';
+import './assets/header.scss';
 
 const Header = () => (
-  <header className="site-header" style={{ backgroundImage: 'url(' + bg + ')' }}>
+  <header className="site-header" style={{ backgroundImage: 'url(' + imageHero + ')' }}>
     <div className="container">
       <section className="section">
         <Headline
@@ -19,7 +19,7 @@ const Header = () => (
           modifier="header"
         />
         <figure className="image">
-          <img src={trucks} alt="Trucks" />
+          <img src={imageFeatured} alt="Entregamos qualquer coisa em qualquer lugar" />
         </figure>
       </section>
       <section className="section">

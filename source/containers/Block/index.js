@@ -1,12 +1,13 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
+
 import './assets/block.scss';
 
-const Block = ({shadow, ...props}) => {
-  const classes = classNames(
+const Block = props => {
+  const classes = cx(
     'l-block',
-    shadow && `_shadow`
+    props.shadow && `_shadow`
   );
 
   return (
