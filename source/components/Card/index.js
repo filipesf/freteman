@@ -42,8 +42,8 @@ const Card = props => {
 Card.propTypes = {
   card: propTypes.object,
   image: propTypes.string,
-  title: propTypes.string.isRequired,
-  subtitle: propTypes.string.isRequired
+  title: propTypes.string,
+  subtitle: propTypes.string
 };
 
 export default Card;
