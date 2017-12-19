@@ -1,16 +1,17 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
+
 import './assets/section.scss';
 
-const SectionContainer = ({theme, ...props}) => {
-  const classes = classNames(
+const SectionContainer = props => {
+  const classes = cx(
     'l-section',
-    theme && `-${theme}`
+    props.theme && `-${props.theme}`
   );
 
   return (
-    <section className={classes}>
+    <section {...props} className={classes}>
       {props.children}
     </section>
   );

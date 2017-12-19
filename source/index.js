@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/styles/main.scss';
 import registerServiceWorker from './sw';
+import './assets/styles/main.scss';
 
 import LandingPage from './pages/LandingPage';
 

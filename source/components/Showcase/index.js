@@ -70,7 +70,7 @@ class Showcase extends Component {
       </div>
     );
   }
-};
+}
 
 Showcase.propTypes = {
   data: propTypes.object.isRequired

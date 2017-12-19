@@ -1,33 +1,39 @@
-import React, {Component} from 'react';
+import React from 'react';
+import cx from 'classnames';
 import SvgInline from 'react-svg-inline';
-import icon from './assets/menu.svg';
-import './assets/sitenav.scss';
 
 import Logo from '../Logo';
 import '../Button';
 
-class SiteNav extends Component {
+import mobileNavIcon from './assets/menu.svg';
+import './assets/sitenav.scss';
+
+class SiteNav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false };
+    this.state = {
+      isMobileNavActive: false,
+    };
     this.handleMobileNav = this.handleMobileNav.bind(this);
   }
 
   handleMobileNav() {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
+    const currentState = this.state.isMobileNavActive;
+    this.setState({
+      isMobileNavActive: !currentState,
+    });
   }
 
   render() {
-    let activeState = this.state.active ? ' is-active' : '';
+    const classes = cx('i-nav', this.state.isMobileNavActive && 'is-active');
 
     return (
       <nav className="site-nav">
         <div className="container">
           <Logo />
           <a href="#Button" className="c-btn -accent _show-mobile-only">Fazer Orçamento</a>
-          <div className={'i-nav' + activeState} onClick={this.handleMobileNav}>
-            <SvgInline svg={icon} />
+          <div className={classes} onClick={this.handleMobileNav}>
+            <SvgInline svg={mobileNavIcon} />
           </div>
           <ul className="list">
             <li className="item"><a href="#Frota" className="link">Frota</a></li>
