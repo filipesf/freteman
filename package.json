@@ -100,7 +100,8 @@
     "extends": "airbnb"
   },
   "eslintIgnore": [
-    "sw.js"
+    "sw.js",
+    "formHome.js"
   ],
   "devDependencies": {
     "raw-loader": "^0.5.1"

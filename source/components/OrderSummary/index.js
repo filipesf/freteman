@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './assets/order-summary.scss';
 
 const OrderSummary = () => (

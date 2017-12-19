@@ -1,10 +1,14 @@
 import React from 'react';
 import cx from 'classnames';
 import propTypes from 'prop-types';
+
 import './assets/headline.scss';
 
-const Headline = ({modifier, ...props}) => {
-  const classes = cx('c-headline', modifier && `-${modifier}`);
+const Headline = props => {
+  const classes = cx(
+    'c-headline',
+    props.modifier && `-${props.modifier}`
+  );
 
   return (
     <section className={classes}>

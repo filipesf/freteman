@@ -1,59 +1,39 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
-/* CONTAINERS
-   ========================================================================== */
-import Section   from '../../../containers/Section';
+import Section from '../../../containers/Section';
 import CardsList from '../../../containers/CardsList';
 
-
-
-/* COMPONENTS
-   ========================================================================== */
 import Headline from '../../../components/Headline';
 
+import imageDistribution from '../../../assets/images/distribution.svg';
+import imageHouse from '../../../assets/images/house.svg';
+import imageGenerator from '../../../assets/images/pieces.svg';
+import imageProduct from '../../../assets/images/products.svg';
+import imageBrokenComputer from '../../../assets/images/trash.svg';
 
-
-/* ASSETS
-   ========================================================================== */
-import distrib  from '../../../assets/images/distribution.svg';
-import house    from '../../../assets/images/house.svg';
-import pieces   from '../../../assets/images/pieces.svg';
-import products from '../../../assets/images/products.svg';
-import trash    from '../../../assets/images/trash.svg';
-
-
-
-/* DATA
-   ========================================================================== */
 const serviceCards = [{
-  "image": distrib,
-  "title": "Entrega de produtos",
-  "subtitle": "Entrega de produtos."
-},{
-  "image": house,
-  "title": "Entrega de produtos",
-  "subtitle": "Entrega de produtos."
-},{
-  "image": pieces,
-  "title": "Entrega de produtos",
-  "subtitle": "Entrega de produtos."
-},{
-  "image": products,
-  "title": "Entrega de produtos",
-  "subtitle": "Entrega de produtos."
-},{
-  "image": trash,
-  "title": "Entrega de produtos",
-  "subtitle": "Entrega de produtos."
+  image: imageDistribution,
+  title: "Entrega de produtos",
+  subtitle: "Entrega de produtos.",
+}, {
+  image: imageHouse,
+  title: "Entrega de produtos",
+  subtitle: "Entrega de produtos.",
+}, {
+  image: imageGenerator,
+  title: "Entrega de produtos",
+  subtitle: "Entrega de produtos.",
+}, {
+  image: imageProduct,
+  title: "Entrega de produtos",
+  subtitle: "Entrega de produtos.",
+}, {
+  image: imageBrokenComputer,
+  title: "Entrega de produtos",
+  subtitle: "Entrega de produtos.",
 }];
 
-
-
-
-
-/* ==========================================================================
-   SERVICES
-   ========================================================================== */
 const Services = () => (
   <Section>
     <Headline
@@ -64,5 +44,9 @@ const Services = () => (
     <CardsList data={serviceCards} />
   </Section>
 );
+
+Services.propTypes = {
+  data: propTypes.array,
+};
 
 export default Services;
