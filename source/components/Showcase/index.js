@@ -11,15 +11,16 @@ class Showcase extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [],
-      activeItem: 1
+      items: {},
+      activeItem: ''
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   componentWillMount() {
     this.setState({
-      items: this.props.data
+      items: this.props.data,
+      activeItem: '1'
     });
   }
 
@@ -30,13 +31,13 @@ class Showcase extends Component {
   }
 
   render() {
-    const showcaseItems = this.state.items;
+    const showcaseItems = Object.keys(this.state.items);
 
     const showcaseDetailItems = showcaseItems.map(item => (
       <ShowcaseDetail
-        data={item}
-        key={item.id}
-        currentItem={item.id}
+        key={item}
+        currentItem={item}
+        data={this.state.items[item]}
         activeItem={this.state.activeItem}
         handleChange={this.handleChange}
       />
@@ -44,18 +45,18 @@ class Showcase extends Component {
 
     const showcaseThumbItems = showcaseItems.map(item =>(
       <ShowcaseThumbs
-        data={item}
-        key={item.id}
-        currentItem={item.id}
+        key={item}
+        currentItem={item}
+        data={this.state.items[item]}
         activeItem={this.state.activeItem}
       />
     ));
 
     const showcaseNavItems = showcaseItems.map(item => (
       <ShowcaseNav
-        data={item}
-        key={item.id}
-        currentItem={item.id}
+        key={item}
+        currentItem={item}
+        data={this.state.items[item]}
         activeItem={this.state.activeItem}
         handleChange={this.handleChange}
       />
@@ -72,7 +73,7 @@ class Showcase extends Component {
 };
 
 Showcase.propTypes = {
-  data: propTypes.array.isRequired
+  data: propTypes.object.isRequired
 };
 
 export default Showcase;
