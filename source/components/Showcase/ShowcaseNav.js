@@ -14,8 +14,8 @@ const ShowcaseNav = props => {
 };
 
 ShowcaseNav.propTypes = {
-  currentItem: propTypes.number,
-  activeItem: propTypes.number
+  currentItem: propTypes.string,
+  activeItem: propTypes.string
 };
 
 export default ShowcaseNav;

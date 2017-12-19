@@ -12,25 +12,26 @@ import thumbMeet         from '../../../assets/images/howitworks-2.png';
 import iconDestination   from '../../../assets/images/icons/pin.svg';
 import thumbDestination  from '../../../assets/images/howitworks-3.png';
 
-const showcaseItems = [{
-  id: 1,
-  icon: iconOrder,
-  thumb: thumbOrder,
-  title: "Faça um pedido pelo sistema da Freteman",
-  description: "Escolha o local de coleta e de entrega e forneça detalhes do serviço."
-},{
-  id: 2,
-  icon: iconMeet,
-  thumb: thumbMeet,
-  title: "Encontre-se com o funcionário da Freteman",
-  description: "A encomenda é coletada por nosso funcionário e encaminhada até seu destino."
-},{
-  id: 3,
-  icon: iconDestination,
-  thumb: thumbDestination,
-  title: "Seu material é entregue ao destino escolhido",
-  description: "Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema."
-}];
+const showcaseItems = {
+  1: {
+    icon: iconOrder,
+    thumb: thumbOrder,
+    title: "Faça um pedido pelo sistema da Freteman",
+    description: "Escolha o local de coleta e de entrega e forneça detalhes do serviço."
+  },
+  2: {
+    icon: iconMeet,
+    thumb: thumbMeet,
+    title: "Encontre-se com o funcionário da Freteman",
+    description: "A encomenda é coletada por nosso funcionário e encaminhada até seu destino."
+  },
+  3: {
+    icon: iconDestination,
+    thumb: thumbDestination,
+    title: "Seu material é entregue ao destino escolhido",
+    description: "Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema."
+  }
+};
 
 const HowItWorks = () => (
   <Section>

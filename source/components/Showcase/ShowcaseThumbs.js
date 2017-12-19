@@ -15,8 +15,8 @@ const ShowcaseThumbs = props => {
 
 ShowcaseThumbs.propTypes = {
   data: propTypes.object.isRequired,
-  currentItem: propTypes.number,
-  activeItem: propTypes.number,
+  currentItem: propTypes.string,
+  activeItem: propTypes.string,
   handleChange: propTypes.func
 };
 
