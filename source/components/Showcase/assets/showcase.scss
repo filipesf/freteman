@@ -10,7 +10,7 @@
 .c-showcase {
   position: relative;
   display: grid;
-  grid-gap: $spacing-double;
+  grid-gap: $spacing-whole;
   grid-template-columns: auto;
   align-content: center;
   @include rectangle(90%, 100%);
@@ -119,13 +119,15 @@
 
 
 .c-showcase__nav {
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(3, $spacing-half);
+  justify-content: center;
   grid-gap: $spacing-third;
   align-content: center;
   margin: 0;
 
   @include mq(769px) {
-    display: grid;
+    grid-template-columns: auto;
   }
 }
 
