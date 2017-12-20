@@ -10,8 +10,8 @@
 .c-showcase {
   position: relative;
   display: grid;
-  grid-gap: $spacing-half;
-  grid-template-columns: auto 515px $spacing-half;
+  grid-gap: $spacing-double;
+  grid-template-columns: auto;
   align-content: center;
   @include rectangle(90%, 100%);
   max-width: 60rem;
@@ -19,6 +19,11 @@
   margin-top: $spacing-triple;
   margin-right: auto;
   margin-left: auto;
+
+  @include mq(769px) {
+    grid-gap: $spacing-half;
+    grid-template-columns: auto 50% $spacing-half;
+  }
 }
 
 
@@ -54,15 +59,28 @@
 .c-showcase__details {
   display: grid;
   grid-template-rows: minmax($spacing-triple, max-content);
-  grid-gap: $spacing-half;
+  grid-gap: $spacing-third;
   align-content: space-between;
+  order: 2;
   margin-bottom: 0;
+
+  @include mq(769px) {
+    grid-gap: $spacing-half;
+    order: unset;
+  }
 }
 
 
 
 .c-showcase__detail {
   @include o-media;
+  grid-gap: $spacing-whole;
+  padding: $spacing-half;
+
+  @include mq(769px) {
+    grid-gap: $spacing-half;
+    padding: 0;
+  }
 
 
 
@@ -101,10 +119,14 @@
 
 
 .c-showcase__nav {
-  display: grid;
+  display: none;
   grid-gap: $spacing-third;
   align-content: center;
   margin: 0;
+
+  @include mq(769px) {
+    display: grid;
+  }
 }
 
 
@@ -115,13 +137,6 @@
   border-radius: 50%;
   @include rectangle($spacing-half);
   @include transition(medium);
-  cursor: pointer;
-
-  > * {
-    display: block;
-    @include rectangle(100%);
-    cursor: pointer;
-  }
 }
 
 
@@ -130,8 +145,14 @@
 
 /* SHOWCASE ITEMS ACTIVE STATE
    ========================================================================== */
-.is-active{
+.is-active {
   &.c-showcase__detail {
+    background-color: color(light);
+
+    @include mq(769px) {
+      background-color: transparent;
+    }
+
     .title {
       color: color(brand);
     }
