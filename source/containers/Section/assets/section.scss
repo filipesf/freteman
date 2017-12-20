@@ -6,6 +6,9 @@
    SECTION
    ========================================================================== */
 .l-section {
+  display: grid;
+  grid-gap: $spacing-triple;
+  justify-items: center;
   padding-top: $spacing-double * 2;
   padding-bottom: $spacing-double * 2;
 

@@ -16,9 +16,6 @@
   @include rectangle(90%, 100%);
   max-width: 60rem;
   padding: 0;
-  margin-top: $spacing-triple;
-  margin-right: auto;
-  margin-left: auto;
 
   @include mq(769px) {
     grid-gap: $spacing-half;

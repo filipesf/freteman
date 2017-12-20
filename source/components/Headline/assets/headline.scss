@@ -36,10 +36,13 @@
 /* VARIANTS
  ========================================================================== */
   &.-header {
+    display: grid;
+    grid-gap: $spacing-half;
     max-width: 100%;
     text-align: center;
 
     @include mq(medium) {
+      grid-gap: $spacing-whole;
       max-width: 500px;
       padding-right: $spacing-double;
       text-align: left;
@@ -48,11 +51,9 @@
 
 
     > .title {
-      margin-bottom: $spacing-half;
       @include font-scale(9);
 
       @include mq(medium) {
-        margin-bottom: $spacing-whole;
         @include type-scale(12);
       }
 

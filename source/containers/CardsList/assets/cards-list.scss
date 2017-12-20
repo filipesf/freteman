@@ -14,7 +14,7 @@
   justify-content: center;
   padding-right: $spacing-whole;
   padding-left: $spacing-whole;
-  margin-top: $spacing-triple;
+  margin: 0;
 
   @include mq(1150px) {
     grid-template-columns: repeat(5, 210px);
