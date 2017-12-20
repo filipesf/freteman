@@ -15,7 +15,7 @@ const LandingPage = () => (
     <SiteNav />
     <Header />
 
-    <main id="main-content" role="main">
+    <main id="site-content" role="main">
       <Services />
       <HowItWorks />
       <Benefits />

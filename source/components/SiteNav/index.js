@@ -40,6 +40,7 @@ class SiteNav extends React.Component {
             <li className="item"><a href="#Serviços" className="link">Serviços</a></li>
             <li className="item"><a href="#Contato" className="link">Contato</a></li>
             <li className="item"><a href="#Login" className="link">Login</a></li>
+            <a href="#Button" className="c-btn -outline -accent _hide-mobile-only">Fazer Orçamento</a>
           </ul>
         </div>
       </nav>

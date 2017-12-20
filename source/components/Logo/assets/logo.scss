@@ -6,7 +6,12 @@
    SITE LOGO
    ========================================================================== */
 .site-logo {
+  max-width: 220px;
   margin: 0;
+
+  @include mq(800px) {
+    max-width: 265px;
+  }
 
 
 
@@ -20,7 +25,6 @@
     &,
     &-svg {
       vertical-align: middle;
-      max-width: 265px;
       width: 100%;
     }
   }

@@ -7,6 +7,8 @@
    FORMS
    ========================================================================== */
 form {
+  display: grid;
+  grid-gap: $spacing-whole;
   margin: 0;
 }
 
@@ -20,7 +22,6 @@ form {
 .l-fieldset {
   display: grid;
   border: none;
-  margin-bottom: $spacing-whole;
   grid-gap: $spacing-half;
 
 
@@ -29,7 +30,10 @@ form {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
     grid-column-gap: $spacing-half;
-    margin-bottom: $spacing-half;
+    border-top: 1px solid color(light);
+    border-bottom: 1px solid color(light);
+    padding-top: $spacing-whole;
+    padding-bottom: $spacing-half;
 
     > .detail {
       display: block;
@@ -95,12 +99,6 @@ form {
 /* INPUTS
    ========================================================================== */
 .c-input {
-  + .c-input {
-    margin-top: $spacing-third;
-  }
-
-
-
   &.-text {
     @include o-input-text;
     border-color: color(light);

@@ -51,7 +51,10 @@
 
     @include mq(medium) {
       position: initial;
-      display: block;
+      display: grid;
+      grid-gap: $spacing-half;
+      grid-template-columns: repeat(5, auto);
+      align-items: center;
       border: none;
       width: auto;
       margin: 0;
@@ -59,6 +62,10 @@
       background-color: transparent;
       transform: initial;
       opacity: 1;
+    }
+
+    @include mq(860px) {
+      grid-gap: $spacing-whole;
     }
   }
 
@@ -68,15 +75,6 @@
     display: block;
     @include type-scale(0);
     font-weight: bold;
-
-    & + .item {
-      margin: 0;
-
-      @include mq(medium) {
-        margin-top: 0;
-        margin-left: $spacing-whole;
-      }
-    }
 
     @include mq(medium) {
       display: inline-block;
