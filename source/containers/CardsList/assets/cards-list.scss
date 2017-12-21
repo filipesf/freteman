@@ -8,7 +8,7 @@
    ========================================================================== */
 .l-cards-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(5, minmax(210px, 1fr));
   grid-template-rows: auto;
   grid-gap: $spacing-whole;
   justify-content: center;
@@ -18,7 +18,7 @@
   margin: 0;
 
   @include mq(1150px) {
-    grid-template-columns: repeat(auto-fit, 210px);
+    grid-template-columns: repeat(5, 210px);
   }
 
 
@@ -27,7 +27,7 @@
    ========================================================================== */
   &.-has-benefits {
     grid-gap: 100px;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(3, 300px);
 
     > .c-card {
       grid-template-rows: 90px auto;
