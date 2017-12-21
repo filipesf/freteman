@@ -18,6 +18,24 @@
   margin: 0;
 
   @include mq(1150px) {
-    grid-template-columns: repeat(5, 210px);
+    grid-template-columns: repeat(auto-fit, 210px);
+  }
+
+
+
+/* VARIANTS
+   ========================================================================== */
+  &.-has-benefits {
+    grid-gap: 100px;
+    grid-template-columns: repeat(auto-fit, 300px);
+
+    > .c-card {
+      grid-template-rows: 90px auto;
+      align-content: start;
+      height: auto;
+      padding: 0;
+      box-shadow: none;
+      background-color: transparent;
+    }
   }
 }
