@@ -17,7 +17,7 @@
   padding-left: $spacing-whole;
   margin: 0;
 
-  @include mq(1150px) {
+  @include mq(1195px) {
     grid-template-columns: repeat(5, 210px);
   }
 
@@ -26,10 +26,11 @@
 /* VARIANTS
    ========================================================================== */
   &.-has-benefits {
-    grid-gap: 100px;
+    grid-gap: 50px;
     grid-template-columns: repeat(auto-fit, 300px);
 
-    @include mq(1150px) {
+    @include mq(1195px) {
+      grid-gap: 100px;
       grid-template-columns: repeat(3, 300px);
     }
 
