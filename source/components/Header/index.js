@@ -16,7 +16,7 @@ const Header = () => (
         <Headline
           title="Entregamos qualquer coisa em qualquer lugar"
           subtitle="Atendemos entregas de mercadorias, cargas, móveis e mudanças."
-          modifier="header"
+          header
         />
         <figure className="image">
           <img src={imageFeatured} alt="Entregamos qualquer coisa em qualquer lugar" />

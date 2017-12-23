@@ -14,7 +14,7 @@ const ShowcaseDetail = props => {
   return (
     <li className={classes} onClick={() => props.handleChange(props.currentItem)}>
       <SvgInline className="c-showcase__icon" svg={props.data.icon} />
-      <Headline title={props.data.title} subtitle={props.data.description} />
+      <Headline title={props.data.title} subtitle={props.data.description} small />
     </li>
   );
 };
