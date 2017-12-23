@@ -6,7 +6,11 @@
    HEADLINE
    ========================================================================== */
 .c-headline {
+  display: grid;
+  grid-gap: 0;
+  margin: 0;
   text-align: center;
+}
 
 
 
@@ -14,20 +18,20 @@
 
 /* ELEMENTS
  ========================================================================== */
-  > .title {
-    @include type-scale(11);
-    margin-bottom: 0;
-    color: inherit;
-  }
+.c-headline__title {
+  @include type-scale(11);
+  margin-bottom: 0;
+  color: inherit;
+}
 
 
 
-  > .subtitle {
-    @include type-scale(2);
-    margin-bottom: 0;
-    font-weight: 300;
-    color: inherit;
-  }
+.c-headline__subtitle {
+  @include type-scale(2);
+  margin-bottom: 0;
+  font-weight: 300;
+  color: inherit;
+}
 
 
 
@@ -35,54 +39,52 @@
 
 /* VARIANTS
  ========================================================================== */
-  &.-header {
-    display: grid;
-    grid-gap: $spacing-half;
-    max-width: 100%;
-    text-align: center;
+.c-headline--header {
+  grid-gap: $spacing-half;
+  max-width: 100%;
+  text-align: center;
+
+  @include mq(medium) {
+    grid-gap: $spacing-whole;
+    max-width: 500px;
+    padding-right: $spacing-double;
+    text-align: left;
+  }
+
+
+
+  > .c-headline__title {
+    @include font-scale(9);
 
     @include mq(medium) {
-      grid-gap: $spacing-whole;
-      max-width: 500px;
-      padding-right: $spacing-double;
-      text-align: left;
+      @include type-scale(12);
     }
 
-
-
-    > .title {
-      @include font-scale(9);
-
-      @include mq(medium) {
-        @include type-scale(12);
-      }
-
-      @include mq(950px) {
-        @include type-scale(14);
-      }
-    }
-
-
-
-    > .subtitle {
-      @include type-scale(4);
-
-      @include mq(medium) {
-        @include font-scale(5);
-        @include line-scale(0);
-      }
+    @include mq(950px) {
+      @include type-scale(14);
     }
   }
 
 
 
-  &.-small {
-    > .title {
-      @include type-scale(0);
-    }
+  > .c-headline__subtitle {
+    @include type-scale(4);
 
-    > .subtitle {
-      @include type-scale(-2);
+    @include mq(medium) {
+      @include font-scale(5);
+      @include line-scale(0);
     }
+  }
+}
+
+
+
+.c-headline--small {
+  > .c-headline__title {
+    @include type-scale(0);
+  }
+
+  > .c-headline__subtitle {
+    @include type-scale(-2);
   }
 }
