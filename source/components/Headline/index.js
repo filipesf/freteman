@@ -7,23 +7,26 @@ import './assets/headline.scss';
 const Headline = props => {
   const classes = cx(
     'c-headline',
-    props.modifier && `-${props.modifier}`
+    props.header && 'c-headline--header',
+    props.small && 'c-headline--small'
   );
 
+  const Title = props.small ? `h4` : `h2`;
+  const Subtitle = props.small ? `h5` : `h3`;
+
   return (
-    <section className={classes}>
-      <h2 className="title">{props.title}</h2>
-      {props.subtitle &&
-        <h3 className="subtitle">{props.subtitle}</h3>
-      }
-    </section>
+    <hgroup className={classes}>
+      <Title className="c-headline__title">{props.title}</Title>
+      {props.subtitle && <Subtitle className="c-headline__subtitle">{props.subtitle}</Subtitle> }
+    </hgroup>
   );
 };
 
 Headline.propTypes = {
   title: propTypes.string.isRequired,
   subtitle: propTypes.string,
-  modifier: propTypes.string
+  header: propTypes.bool,
+  small: propTypes.bool,
 };
 
 export default Headline;
