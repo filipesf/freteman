@@ -81,10 +81,8 @@
 
 
 
-  .title,
-  .subtitle {
-    margin: 0;
-    @include type-scale(0);
+  .c-headline__title,
+  .c-headline__subtitle {
     text-align: left;
     @include transition(medium);
     cursor: pointer;
@@ -92,15 +90,16 @@
 
 
 
-  .title {
+  .c-headline__title {
     color: color(gray);
   }
 
 
 
-  .subtitle {
-    color: color(gray, light);
+  .c-headline__subtitle {
+    @include type-scale(0);
     font-weight: 400;
+    color: color(gray, light);
   }
 }
 
@@ -152,7 +151,7 @@
       background-color: transparent;
     }
 
-    .title {
+    .c-headline__title {
       color: color(brand);
     }
 
