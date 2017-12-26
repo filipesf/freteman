@@ -23,12 +23,13 @@ class CardsList extends React.Component {
   render() {
     const classes = cx(
       'l-cards-list',
-      this.props.hasBenefits && `has-benefits`
+      this.props.hasBenefits && `has-benefits`,
+      this.props.hasBrands && `has-brands`
     );
 
     const cards = this.state.cards;
     const card = cards.map((cardItem, index) => (
-      <Card key={index} card={cardItem} />
+      <Card key={index} card={cardItem} flat={this.props.hasBenefits || this.props.hasBrands} />
     ));
 
     return (
@@ -39,7 +40,8 @@ class CardsList extends React.Component {
 
 CardsList.propTypes = {
   data: propTypes.arrayOf(propTypes.object).isRequired,
-  hasBenefits: propTypes.bool
+  hasBenefits: propTypes.bool,
+  hasBrands: propTypes.bool
 };
 
 export default CardsList;
