@@ -29,17 +29,17 @@ class SiteNav extends React.Component {
 
     return (
       <nav className="site-nav">
-        <div className="container">
+        <div className="site-nav__container">
           <Logo />
           <a href="#Button" className="c-btn -accent _show-mobile-only">Fazer Orçamento</a>
           <div className={classes} onClick={this.handleMobileNav}>
             <SvgInline svg={mobileNavIcon} />
           </div>
-          <ul className="list">
-            <li className="item"><a href="#Frota" className="link">Frota</a></li>
-            <li className="item"><a href="#Serviços" className="link">Serviços</a></li>
-            <li className="item"><a href="#Contato" className="link">Contato</a></li>
-            <li className="item"><a href="#Login" className="link">Login</a></li>
+          <ul className="site-nav__list">
+            <li className="site-nav__item"><a href="#Frota" className="site-nav__link">Frota</a></li>
+            <li className="site-nav__item"><a href="#Serviços" className="site-nav__link">Serviços</a></li>
+            <li className="site-nav__item"><a href="#Contato" className="site-nav__link">Contato</a></li>
+            <li className="site-nav__item"><a href="#Login" className="site-nav__link">Login</a></li>
             <a href="#Button" className="c-btn -outline -accent _hide-mobile-only">Fazer Orçamento</a>
           </ul>
         </div>

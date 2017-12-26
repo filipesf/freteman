@@ -15,6 +15,7 @@
     padding: $spacing-double;
     background-color: color(brand);
   }
+}
 
 
 
@@ -22,86 +23,85 @@
 
 /* ELEMENTS
    ========================================================================== */
-  > .container {
-    @include o-wrapper;
-    position: relative;
+.site-nav__container {
+  @include o-wrapper;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(medium) {
+    grid-template-columns: auto auto;
+  }
+}
+
+
+
+.site-nav__list {
+  position: absolute;
+  border-top: 1px solid color(light);
+  margin: 0 (-$spacing-half);
+  width: 100vw;
+  grid-column: 1 / -1;
+  background-color: white;
+  transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5s;
+  transform: translateY(56px) scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+
+  @include mq(medium) {
+    position: initial;
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
+    grid-gap: $spacing-half;
+    grid-template-columns: repeat(5, auto);
     align-items: center;
-
-    @include mq(medium) {
-      grid-template-columns: auto auto;
-    }
+    border: none;
+    width: auto;
+    margin: 0;
+    grid-column: auto;
+    background-color: transparent;
+    transform: initial;
+    opacity: 1;
   }
 
+  @include mq(860px) {
+    grid-gap: $spacing-whole;
+  }
+}
 
 
-  .list {
-    position: absolute;
-    border-top: 1px solid color(light);
-    margin: 0 (-$spacing-half);
-    width: 100vw;
-    grid-column: 1 / -1;
-    background-color: white;
-    transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5s;
-    transform: translateY(56px) scaleY(0);
-    transform-origin: top;
-    opacity: 0;
+
+.site-nav__item {
+  display: block;
+  @include type-scale(0);
+  font-weight: bold;
+
+  @include mq(medium) {
+    display: inline-block;
+  }
+}
+
+
+
+.site-nav__link {
+  display: block;
+  padding: $spacing-half $spacing-whole;
+  @include transition(medium);
+
+  @include mq(medium) {
+    padding: 0;
+    color: white;
+  }
+
+  @include on-event {
+    text-decoration: none;
+    background-color: color(accent);
+    color: color(brand);
 
     @include mq(medium) {
-      position: initial;
-      display: grid;
-      grid-gap: $spacing-half;
-      grid-template-columns: repeat(5, auto);
-      align-items: center;
-      border: none;
-      width: auto;
-      margin: 0;
-      grid-column: auto;
       background-color: transparent;
-      transform: initial;
-      opacity: 1;
-    }
-
-    @include mq(860px) {
-      grid-gap: $spacing-whole;
-    }
-  }
-
-
-
-  .item {
-    display: block;
-    @include type-scale(0);
-    font-weight: bold;
-
-    @include mq(medium) {
-      display: inline-block;
-    }
-  }
-
-
-
-  .link {
-    display: block;
-    padding: $spacing-half $spacing-whole;
-    @include transition(medium);
-
-    @include mq(medium) {
-      padding: 0;
-      color: white;
-    }
-
-    @include on-event {
-      text-decoration: none;
-      background-color: color(accent);
-      color: color(brand);
-
-      @include mq(medium) {
-        background-color: transparent;
-        color: color(accent);
-      }
+      color: color(accent);
     }
   }
 }
