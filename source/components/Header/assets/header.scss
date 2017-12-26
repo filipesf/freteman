@@ -1,6 +1,7 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/functions';
 @import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
 
 /* ==========================================================================
    SITE HEADER
@@ -29,46 +30,44 @@
       display: block;
     }
   }
+}
 
 
 
 /* ELEMENTS
    ========================================================================== */
-  > .container {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: space-between;
-    align-items: center;
+.site-header__container {
+  @include o-wrapper;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: space-between;
+  align-items: center;
 
-    width: 100%;
-    max-width: 75rem;
-    margin: 0 auto;
-
-    @include mq(medium) {
-      grid-template-columns: auto 340px;
-      align-items: start;
-    }
-
-    @include mq(950px) {
-      grid-template-columns: auto 400px;
-    }
+  @include mq(medium) {
+    grid-template-columns: auto 340px;
+    align-items: start;
   }
 
-
-
-  .image {
-    width: 100%;
-    margin: 0;
-    margin-top: $spacing-double * 2;
-
-    @include mq(medium) {
-      margin-top: $spacing-triple;
-    }
-
-    > img {
-      max-width: 100%;
-    }
+  @include mq(950px) {
+    grid-template-columns: auto 400px;
   }
+}
+
+
+
+.site-header__image {
+  width: 100%;
+  margin: 0;
+  margin-top: $spacing-double * 2;
+
+  @include mq(medium) {
+    margin-top: $spacing-triple;
+  }
+
+  > img {
+    max-width: 100%;
+  }
+}
 
 
 
@@ -76,6 +75,7 @@
 
 /* CONTEXTUAL COMPONENTS
    ========================================================================== */
+.site-header {
   .l-fieldset.has-icon > .icon {
     margin-top: $spacing-half;
   }
