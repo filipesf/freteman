@@ -76,13 +76,13 @@
 /* CONTEXTUAL COMPONENTS
    ========================================================================== */
 .site-header {
-  .l-fieldset.has-icon > .icon {
+  .l-fieldset.has-icon > .l-fieldset__icon {
     margin-top: $spacing-half;
   }
 
 
 
-  .c-input.-text {
+  .c-input.--text {
     border: none;
     margin: 0;
     padding: 0;

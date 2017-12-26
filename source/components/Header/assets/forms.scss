@@ -35,7 +35,7 @@ form {
     padding-top: $spacing-whole;
     padding-bottom: $spacing-half;
 
-    > .detail {
+    > .l-fieldset__detail {
       display: block;
       grid-column: 1 / -1;
       text-align: center;
@@ -48,7 +48,7 @@ form {
     grid-template-columns: $spacing-whole auto;
     grid-column-gap: $spacing-half;
 
-    > .icon {
+    > .l-fieldset__icon {
       display: block;
       @include rectangle($spacing-whole);
       fill: color(brand);
@@ -67,16 +67,6 @@ form {
 
 
 
-  > .label {
-    display: block;
-    @include type-scale(-2);
-    font-weight: bold;
-    cursor: pointer;
-    color: color(brand);
-  }
-
-
-
   > [type="radio"] {
     display: none;
   }
@@ -84,7 +74,7 @@ form {
 
 
   > :checked {
-    & ~ .c-input.-radio {
+    & ~ .c-input.--radio {
       background-color: color(brand);
       fill: color(brand, xdark);
       color: white;
@@ -94,12 +84,22 @@ form {
 
 
 
+.c-field__label {
+  display: block;
+  @include type-scale(-2);
+  font-weight: bold;
+  cursor: pointer;
+  color: color(brand);
+}
+
+
+
 
 
 /* INPUTS
    ========================================================================== */
 .c-input {
-  &.-text {
+  &.--text {
     @include o-input-text;
     border-color: color(light);
     background-color: white;
@@ -121,7 +121,7 @@ form {
 
 
 
-  &.-radio {
+  &.--radio {
     @include o-btn;
     width: 100%;
     border-color: transparent;
@@ -130,7 +130,7 @@ form {
     color: rgba(color(dark), .6);
     fill: rgba(color(dark), .3);
 
-    > .text {
+    > .c-input__info {
       display: block;
       @include font-scale(-2);
       line-height: 1;
@@ -145,7 +145,7 @@ form {
 
 
   &.has-icon {
-    > .icon {
+    > .c-input__icon {
       display: block;
       width: 70px;
       margin: 0 auto;
