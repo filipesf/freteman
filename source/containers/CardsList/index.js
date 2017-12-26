@@ -23,7 +23,7 @@ class CardsList extends React.Component {
   render() {
     const classes = cx(
       'l-cards-list',
-      this.props.hasBenefits && `-has-benefits`
+      this.props.hasBenefits && `has-benefits`
     );
 
     const cards = this.state.cards;
