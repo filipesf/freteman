@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import SvgInline from 'react-svg-inline';
 
-import Logo from '../Logo';
+import Brand from '../Brand';
 import '../Button';
 
 import mobileNavIcon from './assets/menu.svg';
@@ -30,7 +30,7 @@ class SiteNav extends React.Component {
     return (
       <nav className="site-nav">
         <div className="site-nav__container">
-          <Logo />
+          <Brand />
           <a href="#Button" className="c-btn -accent _show-mobile-only">Fazer Orçamento</a>
           <div className={classes} onClick={this.handleMobileNav}>
             <SvgInline svg={mobileNavIcon} />

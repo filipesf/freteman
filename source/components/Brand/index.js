@@ -3,12 +3,12 @@ import SvgInline from 'react-svg-inline';
 
 import brandLogo from './assets/logo.svg';
 import brandIcon from './assets/icon.svg';
-import './assets/logo.scss';
+import './assets/brand.scss';
 
 const Logo = () => (
-  <a className="site-logo" href="#Logo">
-    <SvgInline className="icon" svg={brandIcon} />
-    <SvgInline className="logo" svg={brandLogo} />
+  <a className="site-brand" href="#Logo">
+    <SvgInline className="site-brand__icon" svg={brandIcon} />
+    <SvgInline className="site-brand__logo" svg={brandLogo} />
   </a>
 );
 

@@ -5,42 +5,39 @@
 /* ==========================================================================
    SITE LOGO
    ========================================================================== */
-.site-logo {
+.site-brand {
   max-width: 220px;
   margin: 0;
 
   @include mq(800px) {
     max-width: 265px;
   }
+}
 
 
+.site-brand__logo {
+  display: none;
 
-  .logo {
-    display: none;
-
-    @include mq(medium) {
-      display: block;
-    }
-
-    &,
-    &-svg {
-      vertical-align: middle;
-      width: 100%;
-    }
+  @include mq(medium) {
+    display: block;
   }
 
+  &, &-svg {
+    vertical-align: middle;
+    width: 100%;
+  }
+}
 
 
-  .icon {
-    display: block;
 
-    @include mq(medium) {
-      display: none;
-    }
+.site-brand__icon {
+  display: block;
 
-    &,
-    &-svg {
-      @include rectangle($spacing-double);
-    }
+  @include mq(medium) {
+    display: none;
+  }
+
+  &, &-svg {
+    @include rectangle($spacing-double);
   }
 }
