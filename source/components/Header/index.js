@@ -16,7 +16,6 @@ const Header = () => (
         <Headline
           title="Entregamos qualquer coisa em qualquer lugar"
           subtitle="Atendemos entregas de mercadorias, cargas, móveis e mudanças."
-          header
         />
         <figure className="site-header__image">
           <img src={imageFeatured} alt="Entregamos qualquer coisa em qualquer lugar" />

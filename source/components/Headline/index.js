@@ -7,7 +7,6 @@ import './assets/headline.scss';
 const Headline = props => {
   const classes = cx(
     'c-headline',
-    props.header && '--header',
     props.small && '--small'
   );
 
