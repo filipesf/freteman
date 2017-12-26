@@ -7,7 +7,7 @@ import './assets/block.scss';
 const Block = props => {
   const classes = cx(
     'l-block',
-    props.shadow && `_shadow`
+    props.shadow && `u-shadow`
   );
 
   return (

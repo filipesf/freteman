@@ -10,8 +10,4 @@
   @include o-box;
   background-color: white;
   color: color(dark);
-
-  &.-flat {
-    border-radius: 0;
-  }
 }

@@ -31,7 +31,7 @@ class SiteNav extends React.Component {
       <nav className="site-nav">
         <div className="site-nav__container">
           <Brand />
-          <a href="#Button" className="c-btn -accent _show-mobile-only">Fazer Orçamento</a>
+          <a href="#Button" className="c-btn -accent u-show@small">Fazer Orçamento</a>
           <div className={classes} onClick={this.handleMobileNav}>
             <SvgInline svg={mobileNavIcon} />
           </div>
@@ -40,7 +40,7 @@ class SiteNav extends React.Component {
             <li className="site-nav__item"><a href="#Serviços" className="site-nav__link">Serviços</a></li>
             <li className="site-nav__item"><a href="#Contato" className="site-nav__link">Contato</a></li>
             <li className="site-nav__item"><a href="#Login" className="site-nav__link">Login</a></li>
-            <a href="#Button" className="c-btn -outline -accent _hide-mobile-only">Fazer Orçamento</a>
+            <a href="#Button" className="c-btn -outline -accent u-hide@small">Fazer Orçamento</a>
           </ul>
         </div>
       </nav>
