@@ -125,7 +125,7 @@
 
 
 
-  .line {
+  .i-nav__line {
     stroke: color(brand);
     stroke-width: 8;
     stroke-linecap: round;
@@ -142,7 +142,7 @@
 /* STATES
    ========================================================================== */
   &.is-active {
-    .line {
+    .i-nav__line {
       &:nth-child(1) {
         stroke-width: 0;
       }
@@ -161,7 +161,7 @@
       }
     }
 
-    ~ .list {
+    ~ .site-nav__list {
       transform: translateY(56px) scaleY(1);
       opacity: 1;
 
