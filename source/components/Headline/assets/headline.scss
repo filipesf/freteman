@@ -39,7 +39,7 @@
 
 /* VARIANTS
  ========================================================================== */
-.c-headline--header {
+.c-headline.--header {
   grid-gap: $spacing-half;
   max-width: 100%;
   text-align: center;
@@ -79,7 +79,7 @@
 
 
 
-.c-headline--small {
+.c-headline.--small {
   > .c-headline__title {
     @include type-scale(0);
   }

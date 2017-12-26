@@ -7,8 +7,8 @@ import './assets/headline.scss';
 const Headline = props => {
   const classes = cx(
     'c-headline',
-    props.header && 'c-headline--header',
-    props.small && 'c-headline--small'
+    props.header && '--header',
+    props.small && '--small'
   );
 
   const Title = props.small ? `h4` : `h2`;
