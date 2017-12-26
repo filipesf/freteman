@@ -36,11 +36,22 @@
 
     > .c-card {
       grid-template-rows: 90px auto;
-      align-content: start;
-      height: auto;
-      padding: 0;
-      box-shadow: none;
-      background-color: transparent;
+    }
+  }
+
+
+
+  &.has-brands {
+    grid-gap: 80px;
+    grid-template-columns: repeat(auto-fit, 215px);
+
+    @include mq(1230px) {
+      grid-gap: 24px;
+      grid-template-columns: repeat(5, 215px);
+    }
+
+    > .c-card {
+      grid-template-rows: 40px;
     }
   }
 }
