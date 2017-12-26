@@ -16,13 +16,13 @@
 
 /* VARIANTS
    ========================================================================== */
-  &.-tint {
+  &.--tint {
     background-color: color(light);
   }
 
 
 
-  &.-red {
+  &.--red {
     background-color: color(brand);
     color: white;
   }

@@ -7,11 +7,11 @@ import './assets/section.scss';
 const SectionContainer = props => {
   const classes = cx(
     'l-section',
-    props.theme && `-${props.theme}`
+    props.theme && `--${props.theme}`
   );
 
   return (
-    <section {...props} className={classes}>
+    <section className={classes} {...props}>
       {props.children}
     </section>
   );
