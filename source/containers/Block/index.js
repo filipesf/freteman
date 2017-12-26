@@ -4,14 +4,14 @@ import cx from 'classnames';
 
 import './assets/block.scss';
 
-const Block = props => {
+const Block = ({shadow, ...props}) => {
   const classes = cx(
     'l-block',
-    props.shadow && `u-shadow`
+    shadow && `u-shadow`
   );
 
   return (
-    <div {...props} className={classes}>
+    <div className={classes} {...props}>
       {props.children}
     </div>
   );

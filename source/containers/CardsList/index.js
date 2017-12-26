@@ -7,8 +7,8 @@ import Card from '../../components/Card';
 import './assets/cards-list.scss';
 
 class CardsList extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       cards: [],
     };
