@@ -8,7 +8,7 @@ import './assets/card.scss';
 
 const Card = props => (
   <li className="c-card">
-    <figure className="image"><SvgInline svg={props.card.image} /></figure>
+    <figure className="c-card__image"><SvgInline svg={props.card.image} /></figure>
     <Headline title={props.card.title} subtitle={props.card.subtitle} small />
   </li>
 );

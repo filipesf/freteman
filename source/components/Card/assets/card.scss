@@ -16,19 +16,19 @@
   padding: $spacing-half;
   box-shadow: $shadow-size-large rgba(color(gray), 0.3);
   background-color: white;
+}
 
 
 
-  > .image {
-    margin: 0;
-    overflow: hidden;
+.c-card__image {
+  margin: 0;
+  overflow: hidden;
 
 
 
-    svg {
-      display: block;
-      height: 100%;
-      margin: 0 auto;
-    }
+  svg {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
   }
 }
