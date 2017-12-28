@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   AUTHOR
+   ========================================================================== */
+.c-author {
+  @include o-media;
+
+  .c-headline__title,
+  .c-headline__subtitle {
+    text-align: left;
+    color: color(dark);
+  }
+
+  .c-headline__subtitle {
+    color: color(gray, dark);
+  }
+}
+
+.c-author__avatar,
+.c-author__avatar > * {
+  border-radius: 50%;
+  margin: 0;
+}
