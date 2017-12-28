@@ -16,19 +16,11 @@
     background-color: rgba(color(light, dark), .5);
   }
 
-  + .c-btn {
-    margin-top: $spacing-whole;
-
-    @include mq(medium) {
-      margin-top: 0;
-    }
-  }
-
 
 
 /* VARIANTS
    ========================================================================== */
-  &.-link {
+  &.--link {
     background-color: transparent;
     color: color(brand);
 
@@ -40,7 +32,7 @@
 
 
 
-  &.-primary {
+  &.--primary {
     background-color: color(brand);
     color: color(accent);
 
@@ -52,7 +44,7 @@
 
 
 
-  &.-accent {
+  &.--accent {
     background-color: color(accent);
     color: color(brand);
 
@@ -64,7 +56,7 @@
 
 
 
-  &.-outline {
+  &.--outline {
     border-color: color(brand);
     background-color: transparent;
     color: color(brand);
@@ -74,7 +66,7 @@
       color: color(brand);
     }
 
-    &.-accent {
+    &.--accent {
       border-color: color(accent);
       color: color(accent);
     }
