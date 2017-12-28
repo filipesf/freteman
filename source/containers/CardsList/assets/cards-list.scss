@@ -7,15 +7,9 @@
    CARDS LIST
    ========================================================================== */
 .l-cards-list {
-  display: grid;
+  @include o-grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   grid-template-rows: auto;
-  grid-gap: $spacing-whole;
-  justify-content: center;
-  width: 100%;
-  padding-right: $spacing-whole;
-  padding-left: $spacing-whole;
-  margin: 0;
 
   @include media-query(1195px) {
     grid-template-columns: repeat(5, 210px);
@@ -26,7 +20,7 @@
 /* VARIANTS
    ========================================================================== */
   &.has-benefits {
-    grid-gap: 50px;
+    grid-gap: $spacing-double;
     grid-template-columns: repeat(auto-fit, 300px);
 
     @include media-query(1195px) {
