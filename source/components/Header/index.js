@@ -21,7 +21,7 @@ const Header = () => (
           <img src={imageFeatured} alt="Entregamos qualquer coisa em qualquer lugar" />
         </figure>
       </section>
-      <section className="site-header__section">
+      <section className="site-header__section u-hide@small">
         <Block shadow>
           <FormHome />
         </Block>
