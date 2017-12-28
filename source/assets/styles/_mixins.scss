@@ -100,7 +100,7 @@
 ///   .foo {
 ///     background-color: blue;
 ///
-///     @include mq(small) {
+///     @include media-query(small) {
 ///       background-color: red;
 ///     }
 ///   }
@@ -121,10 +121,10 @@
 ///   .bar {
 ///     background-color: blue;
 ///
-///     @include mq(small) {
+///     @include media-query(small) {
 ///       background-color: red;
 ///
-///       @include mq(landscape) {
+///       @include media-query(landscape) {
 ///         background-color: yellow;
 ///       }
 ///     }
@@ -147,7 +147,7 @@
 ///     }
 ///   }
 ///
-@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+@mixin media-query($mq-breakpoint, $mq-breakpoints: $breakpoints) {
   $mq-media-query: "screen and";
 
   @if $mq-breakpoint == landscape or $mq-breakpoint == portrait {
@@ -165,6 +165,19 @@
   }
 
   @media #{$mq-media-query} {
+    @content;
+  }
+}
+
+///
+/// Shorthand to `media-query`
+///
+/// @group responsive
+///
+/// @alias media-query
+///
+@mixin mq($bp, $bps: $breakpoints) {
+  @include media-query($bp, $bps) {
     @content;
   }
 }
