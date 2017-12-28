@@ -4,21 +4,24 @@ import cx from 'classnames';
 
 import './assets/block.scss';
 
-const Block = ({shadow, ...props}) => {
+const Block = props => {
   const classes = cx(
     'l-block',
-    shadow && `u-shadow`
+    props.shadow && `u-shadow`
   );
 
   return (
-    <div className={classes} {...props}>
+    <div className={classes}>
       {props.children}
     </div>
   );
 };
 
 Block.propTypes = {
-  children: propTypes.element.isRequired,
+  children: propTypes.oneOfType([
+    propTypes.array,
+    propTypes.element
+  ]).isRequired,
   shadow: propTypes.bool
 };
 
