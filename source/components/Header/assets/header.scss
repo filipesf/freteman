@@ -14,21 +14,11 @@
   background-size: 60rem;
   color: white;
 
-  // NEEDS REFACTORING
-  .l-block {
-    display: none;
-  }
-
   @include mq(medium) {
     height: auto;
     padding: $spacing-double;
     background-position: center top;
     background-size: 90rem;
-
-    // NEEDS REFACTORING
-    .l-block {
-      display: block;
-    }
   }
 }
 
@@ -116,7 +106,7 @@
 
 
 
-  .l-fieldset.has-icon > .l-fieldset__icon {
+  .l-fieldset__icon {
     margin-top: $spacing-half;
   }
 
