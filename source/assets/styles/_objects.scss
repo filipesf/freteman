@@ -29,6 +29,24 @@
 
 
 
+/* GRID
+   ========================================================================== */
+@mixin o-grid($flat: false) {
+  display: grid;
+  grid-gap: $spacing-whole;
+  justify-content: center;
+  width: 100%;
+  @if $flat != flat {
+    padding-right: $spacing-whole;
+    padding-left: $spacing-whole;
+  }
+  margin: 0;
+}
+
+
+
+
+
 /* BUTTON
    ========================================================================== */
 @mixin o-btn {
@@ -98,12 +116,4 @@
   display: grid;
   grid-template-columns: $spacing-double auto;
   grid-gap: $spacing-half;
-
-  > :first-child {
-    @include rectangle(100%);
-  }
-
-  > :last-child {
-    vertical-align: top;
-  }
 }
