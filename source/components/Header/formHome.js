@@ -13,7 +13,7 @@ import './assets/forms.scss';
 const FormHome = () => (
   <form>
     <section className="l-fieldset has-icon">
-      <SvgInline className="l-fieldset__icon" classSuffix="" svg={arrowUp} />
+      <SvgInline className="l-fieldset__icon" svg={arrowUp} />
       <div className="c-field">
         <label className="c-field__label" htmlFor="collection-address">Endereço de coleta</label>
         <input className="c-input --text" id="collection-address" type="text" placeholder="Digite um endereço" />
@@ -21,7 +21,7 @@ const FormHome = () => (
     </section>
 
     <section className="l-fieldset has-icon">
-      <SvgInline className="l-fieldset__icon" classSuffix="" svg={arrowDown} />
+      <SvgInline className="l-fieldset__icon" svg={arrowDown} />
       <div className="c-field">
         <label className="c-field__label" htmlFor="delivery-address">Endereço de entrega</label>
         <input className="c-input --text" id="delivery-address" type="text" placeholder="Digite um endereço" />
@@ -32,7 +32,7 @@ const FormHome = () => (
       <div className="c-field">
         <input id="Fiorino" type="radio" name="veicle" value="Fiorino" />
         <label className="c-input --radio has-icon" htmlFor="Fiorino">
-          <SvgInline className="c-input__icon" classSuffix="" svg={iconFiorino} />
+          <SvgInline className="c-input__icon" svg={iconFiorino} />
           <span className="c-input__info">Fiorino</span>
         </label>
       </div>
@@ -40,7 +40,7 @@ const FormHome = () => (
       <div className="c-field">
         <input id="Van" type="radio" name="veicle" value="Van" />
         <label className="c-input --radio has-icon" htmlFor="Van">
-          <SvgInline className="c-input__icon" classSuffix="" svg={iconUtil} />
+          <SvgInline className="c-input__icon" svg={iconUtil} />
           <span className="c-input__info">Van</span>
         </label>
       </div>
@@ -48,7 +48,7 @@ const FormHome = () => (
       <div className="c-field">
         <input id="Caminhão" type="radio" name="veicle" value="Caminhão" />
         <label className="c-input --radio has-icon" htmlFor="Caminhão">
-          <SvgInline className="c-input__icon" classSuffix="" svg={iconTruck} />
+          <SvgInline className="c-input__icon" svg={iconTruck} />
           <span className="c-input__info">Caminhão</span>
         </label>
       </div>
@@ -57,7 +57,7 @@ const FormHome = () => (
 
     <OrderSummary />
 
-    <button className="c-btn -block -large -accent">Chamar Mensageiro</button>
+    <button className="c-btn --large --accent">Chamar Mensageiro</button>
   </form>
 );
 
