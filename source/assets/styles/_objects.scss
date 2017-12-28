@@ -48,7 +48,7 @@
   white-space: nowrap;
   @include transition(short);
 
-  @include mq(medium) {
+  @include media-query(medium) {
     display: inline-block;
   }
 

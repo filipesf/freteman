@@ -62,7 +62,7 @@
 .u-show\@small {
   display: inherit !important;
 
-  @include mq(medium) {
+  @include media-query(medium) {
     display: none !important;
   }
 }
@@ -72,7 +72,7 @@
 .u-hide\@small {
   display: none !important;
 
-  @include mq(medium) {
+  @include media-query(medium) {
     display: inherit !important;
   }
 }

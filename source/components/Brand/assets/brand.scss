@@ -9,7 +9,7 @@
   max-width: 220px;
   margin: 0;
 
-  @include mq(800px) {
+  @include media-query(800px) {
     max-width: 265px;
   }
 }
@@ -18,7 +18,7 @@
 .site-brand__logo {
   display: none;
 
-  @include mq(medium) {
+  @include media-query(medium) {
     display: block;
   }
 
@@ -33,7 +33,7 @@
 .site-brand__icon {
   display: block;
 
-  @include mq(medium) {
+  @include media-query(medium) {
     display: none;
   }
 

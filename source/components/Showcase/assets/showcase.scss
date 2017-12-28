@@ -17,7 +17,7 @@
   max-width: 60rem;
   padding: 0;
 
-  @include mq(769px) {
+  @include media-query(769px) {
     grid-gap: $spacing-half;
     grid-template-columns: auto 50% $spacing-half;
   }
@@ -61,7 +61,7 @@
   order: 2;
   margin-bottom: 0;
 
-  @include mq(769px) {
+  @include media-query(769px) {
     grid-gap: $spacing-half;
     order: unset;
   }
@@ -74,7 +74,7 @@
   grid-gap: $spacing-whole;
   padding: $spacing-half;
 
-  @include mq(769px) {
+  @include media-query(769px) {
     grid-gap: $spacing-half;
     padding: 0;
   }
@@ -122,7 +122,7 @@
   align-content: center;
   margin: 0;
 
-  @include mq(769px) {
+  @include media-query(769px) {
     grid-template-columns: auto;
   }
 }
@@ -147,7 +147,7 @@
   &.c-showcase__detail {
     background-color: color(light);
 
-    @include mq(769px) {
+    @include media-query(769px) {
       background-color: transparent;
     }
 

@@ -14,7 +14,7 @@
   background-size: 60rem;
   color: white;
 
-  @include mq(medium) {
+  @include media-query(medium) {
     height: auto;
     padding: $spacing-double;
     background-position: center top;
@@ -33,12 +33,12 @@
   justify-content: space-between;
   align-items: center;
 
-  @include mq(medium) {
+  @include media-query(medium) {
     grid-template-columns: auto 340px;
     align-items: start;
   }
 
-  @include mq(950px) {
+  @include media-query(950px) {
     grid-template-columns: auto 400px;
   }
 }
@@ -50,7 +50,7 @@
   margin: 0;
   margin-top: $spacing-double * 2;
 
-  @include mq(medium) {
+  @include media-query(medium) {
     margin-top: $spacing-triple;
   }
 
@@ -71,7 +71,7 @@
     max-width: 100%;
     text-align: center;
 
-    @include mq(medium) {
+    @include media-query(medium) {
       grid-gap: $spacing-whole;
       max-width: 500px;
       padding-right: $spacing-double;
@@ -83,11 +83,11 @@
     > .c-headline__title {
       @include font-scale(9);
 
-      @include mq(medium) {
+      @include media-query(medium) {
         @include type-scale(12);
       }
 
-      @include mq(950px) {
+      @include media-query(950px) {
         @include type-scale(14);
       }
     }
@@ -97,7 +97,7 @@
     > .c-headline__subtitle {
       @include type-scale(4);
 
-      @include mq(medium) {
+      @include media-query(medium) {
         @include font-scale(5);
         @include line-scale(0);
       }
