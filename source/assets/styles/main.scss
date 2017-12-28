@@ -81,7 +81,7 @@ p, address, blockquote, figure,
 form, noscript, fieldset,
 ul, ol, dd, dl,
 pre, table, hr {
-  margin-bottom: $spacing-whole;
+  margin-bottom: 0;
 }
 
 
@@ -155,6 +155,12 @@ h4, h5, h6 {
   font-family: $font-family-heading;
   font-weight: 700;
   color: inherit;
+}
+
+
+
+blockquote {
+  color: color(gray, dark);
 }
 
 
