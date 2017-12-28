@@ -33,7 +33,7 @@ class CardsList extends React.Component {
     ));
 
     return (
-      <ul className={classes} {...this.props} >{card}</ul>
+      <ul className={classes}>{card}</ul>
     );
   }
 }
