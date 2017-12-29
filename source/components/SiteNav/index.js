@@ -1,11 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
 import SvgInline from 'react-svg-inline';
-
+import assets from '../../constants/assets';
 import Brand from '../Brand';
 import '../Button';
-
-import mobileNavIcon from './assets/menu.svg';
 import './assets/sitenav.scss';
 
 class SiteNav extends React.Component {
@@ -33,7 +31,7 @@ class SiteNav extends React.Component {
           <Brand />
           <a href="#Button" className="c-btn --accent u-show@small">Fazer Orçamento</a>
           <div className={classes} onClick={this.handleMobileNav}>
-            <SvgInline svg={mobileNavIcon} />
+            <SvgInline svg={assets.icon.menu} />
           </div>
           <ul className="site-nav__list">
             <li className="site-nav__item"><a href="#Frota" className="site-nav__link">Frota</a></li>
