@@ -1,9 +1,7 @@
 import React from 'react';
-
 import SiteNav from '../../components/SiteNav';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-
 import Services from './Sections/Services';
 import HowItWorks from './Sections/HowItWorks';
 import Benefits from './Sections/Benefits';

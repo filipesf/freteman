@@ -1,24 +1,17 @@
 import React from 'react';
-
+import data from '../../constants/data';
 import Block from '../../containers/Block';
-
 import Headline from '../Headline';
 import FormHome from './formHome';
-
-import imageHero from './assets/bg-header.png';
-import imageFeatured from './assets/trucks.png';
 import './assets/header.scss';
 
 const Header = () => (
-  <header className="site-header" style={{ backgroundImage: 'url(' + imageHero + ')' }}>
+  <header className="site-header" style={{ backgroundImage: 'url(' + data.header.hero + ')' }}>
     <div className="site-header__container">
       <section className="site-header__section">
-        <Headline
-          title="Entregamos qualquer coisa em qualquer lugar"
-          subtitle="Atendemos entregas de mercadorias, cargas, móveis e mudanças."
-        />
+        <Headline title={data.header.title} subtitle={data.header.subtitle} />
         <figure className="site-header__image">
-          <img src={imageFeatured} alt="Entregamos qualquer coisa em qualquer lugar" />
+          <img src={data.header.featured} alt={data.header.title} />
         </figure>
       </section>
       <section className="site-header__section u-hide@small">
