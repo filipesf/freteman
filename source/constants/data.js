@@ -36,26 +36,22 @@ const LandingPage = {
   howItWorks: {
     title: 'Como Funciona',
     subtitle: 'Chame um mensageiro em três passos simples',
-    content: {
-      1: {
-        icon: assets.icon.box,
-        thumb: assets.img.system,
-        title: "Faça um pedido pelo sistema da Freteman",
-        description: "Escolha o local de coleta e de entrega e forneça detalhes do serviço.",
-      },
-      2: {
-        icon: assets.icon.brand,
-        thumb: assets.img.van,
-        title: "Encontre-se com o funcionário da Freteman",
-        description: "A encomenda é coletada por nosso funcionário e encaminhada até seu destino.",
-      },
-      3: {
-        icon: assets.icon.pin,
-        thumb: assets.img.route,
-        title: "Seu material é entregue ao destino escolhido",
-        description: "Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema.",
-      },
-    }
+    content: [{
+      icon: assets.icon.box,
+      thumb: assets.img.system,
+      title: "Faça um pedido pelo sistema da Freteman",
+      description: "Escolha o local de coleta e de entrega e forneça detalhes do serviço.",
+    }, {
+      icon: assets.icon.brand,
+      thumb: assets.img.van,
+      title: "Encontre-se com o funcionário da Freteman",
+      description: "A encomenda é coletada por nosso funcionário e encaminhada até seu destino.",
+    }, {
+      icon: assets.icon.pin,
+      thumb: assets.img.route,
+      title: "Seu material é entregue ao destino escolhido",
+      description: "Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema.",
+    }],
   },
   benefits: {
     title: 'Benefícios',

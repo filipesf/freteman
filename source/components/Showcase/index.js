@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import propTypes from 'prop-types';
 
 import ShowcaseDetail  from './ShowcaseDetail';
-import ShowcaseThumbs  from './ShowcaseThumbs';
-import ShowcaseNav     from './ShowcaseNav';
+import ShowcaseThumbs from './ShowcaseThumbs';
+import ShowcaseNav from './ShowcaseNav';
 
 import './assets/showcase.scss';
 
@@ -20,7 +20,7 @@ class Showcase extends Component {
   componentWillMount() {
     this.setState({
       items: this.props.data,
-      activeItem: '1'
+      activeItem: 0
     });
   }
 
@@ -31,32 +31,32 @@ class Showcase extends Component {
   }
 
   render() {
-    const showcaseItems = Object.keys(this.state.items);
+    const showcaseItems = this.state.items;
 
-    const showcaseDetailItems = showcaseItems.map(item => (
+    const showcaseDetailItems = showcaseItems.map((item, index) => (
       <ShowcaseDetail
-        key={item}
-        currentItem={item}
-        data={this.state.items[item]}
+        key={index}
+        currentItem={index}
+        data={this.state.items[index]}
         activeItem={this.state.activeItem}
         handleChange={this.handleChange}
       />
     ));
 
-    const showcaseThumbItems = showcaseItems.map(item =>(
+    const showcaseThumbItems = showcaseItems.map((item, index) =>(
       <ShowcaseThumbs
-        key={item}
-        currentItem={item}
-        data={this.state.items[item]}
+        key={index}
+        currentItem={index}
+        data={this.state.items[index]}
         activeItem={this.state.activeItem}
       />
     ));
 
-    const showcaseNavItems = showcaseItems.map(item => (
+    const showcaseNavItems = showcaseItems.map((item, index) => (
       <ShowcaseNav
-        key={item}
-        currentItem={item}
-        data={this.state.items[item]}
+        key={index}
+        currentItem={index}
+        data={this.state.items[index]}
         activeItem={this.state.activeItem}
         handleChange={this.handleChange}
       />
@@ -73,7 +73,7 @@ class Showcase extends Component {
 }
 
 Showcase.propTypes = {
-  data: propTypes.object.isRequired
+  data: propTypes.array.isRequired
 };
 
 export default Showcase;
