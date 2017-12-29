@@ -1,7 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import SvgInline from 'react-svg-inline';
-import isSvg from 'is-svg';
 import cx from 'classnames';
 
 import Headline from '../Headline';
@@ -17,9 +16,9 @@ const Card = props => {
   return (
     <li className={classes}>
       <figure className="c-card__image">{
-        isSvg(props.card.image)
-          ? <SvgInline svg={props.card.image} />
-          : <img src={props.card.image} />
+        typeof props.card.image === 'string'
+          ? <img src={props.card.image} />
+          : <SvgInline svg={props.card.image} />
       }</figure>
       {props.card.title && <Headline title={props.card.title} subtitle={props.card.subtitle} small />}
     </li>
