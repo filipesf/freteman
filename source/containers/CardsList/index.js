@@ -15,7 +15,7 @@ class CardsList extends React.Component {
   }
 
   componentWillMount() {
-    this.state({
+    this.setState({
       cards: this.props.data,
     });
   }
