@@ -7,7 +7,7 @@
    CARDS LIST
    ========================================================================== */
 .l-cards-list {
-  @include o-grid(flat);
+  @include o-grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   grid-template-rows: auto;
 

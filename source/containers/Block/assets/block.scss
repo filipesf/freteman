@@ -8,7 +8,7 @@
    ========================================================================== */
 .l-block {
   @include o-box;
-  @include o-grid(flat);
+  @include o-grid;
   grid-template-columns: 100%;
   background-color: white;
   color: color(dark);

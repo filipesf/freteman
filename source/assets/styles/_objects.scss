@@ -31,15 +31,11 @@
 
 /* GRID
    ========================================================================== */
-@mixin o-grid($flat: false) {
+@mixin o-grid {
   display: grid;
   grid-gap: $spacing-whole;
   justify-content: center;
   width: 100%;
-  @if $flat != flat {
-    padding-right: $spacing-whole;
-    padding-left: $spacing-whole;
-  }
   margin: 0;
 }
 
