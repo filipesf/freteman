@@ -3,10 +3,10 @@ import React from 'react';
 import brandLogo from './assets/logo.png';
 import './assets/sidebar.scss';
 
-const Sidebar = props => (
+const Sidebar = () => (
   <aside className="app-sidebar">
     <a href="#Home" className="app-sidebar__link">
-      <img src={brandLogo} className="app-sidebar__logo" alt="Freteman Logo"></img>
+      <img src={brandLogo} className="app-sidebar__logo" alt="Freteman Logo" />
      </a>
     <nav className="app-nav">
       <ul className="list">

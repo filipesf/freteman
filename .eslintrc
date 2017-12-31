@@ -1,7 +1,6 @@
 {
   "extends": [
-    // "eslint:recommended",
-    // "airbnb",
+    "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
@@ -25,23 +24,23 @@
   },
   "rules": {
     "quotes": 0,
-    "no-console": 1,
+    "no-console": 0,
     "no-debugger": 1,
     "no-var": 1,
     "semi": [1, "always"],
-    "no-trailing-spaces": 0,
-    "eol-last": 0,
+    "no-trailing-spaces": 1,
+    "eol-last": 1,
     "no-underscore-dangle": 0,
-    "no-alert": 0,
-    "no-lone-blocks": 0,
+    "no-alert": 1,
+    "no-lone-blocks": 1,
     "jsx-quotes": 1,
     "react/display-name": [ 1, {"ignoreTranspilerName": false }],
     "react/forbid-prop-types": [1, {"forbid": ["any"]}],
-    "react/jsx-boolean-value": 0,
-    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-boolean-value": 1,
+    "react/jsx-closing-bracket-location": 1,
     "react/jsx-curly-spacing": 1,
     "react/jsx-filename-extension": 0,
-    "react/jsx-indent-props": 0,
+    "react/jsx-indent-props": [1, 2],
     "react/jsx-key": 1,
     "react/jsx-max-props-per-line": 0,
     "react/jsx-no-bind": 0,
@@ -59,7 +58,7 @@
     "react/no-did-mount-set-state": 1,
     "react/no-did-update-set-state": 1,
     "react/no-direct-mutation-state": 1,
-    "react/no-multi-comp": 1,
+    "react/no-multi-comp": [1, { "ignoreStateless": true }],
     "react/no-set-state": 0,
     "react/no-unknown-property": 1,
     "react/prefer-es6-class": 1,
@@ -68,7 +67,5 @@
     "react/require-extension": [0, { "extensions": [".jsx"] }],
     "react/self-closing-comp": 1,
     "react/sort-comp": 1
-  },
-  "globals": {
   }
 }
