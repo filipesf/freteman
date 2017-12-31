@@ -1,12 +1,12 @@
 import firebase from 'firebase';
 
 const config = {
-  apiKey: "AIzaSyCDtC06-9Bqfv94hFQed1glT9yYGwSGsYU",
-  authDomain: "freteman-8ab81.firebaseapp.com",
-  databaseURL: "https://freteman-8ab81.firebaseio.com",
-  projectId: "freteman-8ab81",
-  storageBucket: "freteman-8ab81.appspot.com",
-  messagingSenderId: "493363562614"
+  apiKey: "AIzaSyBSeluDwkRuoy7FQugtgJi-rFC9Flkhteo",
+  authDomain: "freteman-dev.firebaseapp.com",
+  databaseURL: "https://freteman-dev.firebaseio.com",
+  projectId: "freteman-dev",
+  storageBucket: "freteman-dev.appspot.com",
+  messagingSenderId: "842899606137"
 };
 
 const fire = firebase.initializeApp(config);
