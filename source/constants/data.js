@@ -69,17 +69,17 @@ const LandingPage = {
   clients: {
     title: 'Clientes Satisfeitos',
     content: [{
-      quote: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
+      testimonial: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
       avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
       name: 'Guilherme Mesquita',
       location: 'São Paulo - SP',
     }, {
-      quote: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
+      testimonial: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
       avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
       name: 'Guilherme Mesquita',
       location: 'São Paulo - SP',
     }, {
-      quote: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
+      testimonial: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
       avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
       name: 'Guilherme Mesquita',
       location: 'São Paulo - SP',
