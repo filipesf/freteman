@@ -1,13 +1,12 @@
 import React from 'react';
 import propTypes from 'prop-types';
-
+import Thumbnail from '../Thumbnail';
 import Headline from '../Headline';
-
 import './assets/author.scss';
 
 const Author = props => (
   <section className="c-author">
-    <figure className="c-author__avatar"><img src={props.avatar} /></figure>
+    <Thumbnail src={props.avatar} alt={props.name} />
     <Headline small title={props.name} subtitle={props.location} />
   </section>
 );

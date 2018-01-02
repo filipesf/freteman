@@ -18,10 +18,10 @@
   .c-headline__subtitle {
     color: color(gray, dark);
   }
-}
 
-.c-author__avatar,
-.c-author__avatar > * {
-  border-radius: 50%;
-  margin: 0;
+  .c-thumbnail,
+  .c-thumbnail > * {
+    border-radius: 50%;
+    margin: 0;
+  }
 }
