@@ -1,6 +1,6 @@
 import React from 'react';
 import SiteNav from '../../components/SiteNav';
-import Header from '../../components/Header';
+import Header from '../../containers/Header';
 import Footer from '../../components/Footer';
 import Services from './Sections/Services';
 import HowItWorks from './Sections/HowItWorks';

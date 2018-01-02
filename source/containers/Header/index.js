@@ -1,7 +1,7 @@
 import React from 'react';
 import data from '../../constants/data';
-import Block from '../../containers/Block';
-import Headline from '../Headline';
+import Block from '../Block';
+import Headline from '../../components/Headline';
 import FormHome from './formHome';
 import './assets/header.scss';
 

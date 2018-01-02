@@ -28,8 +28,8 @@ import iconTooltip from '../assets/icons/tooltip.svg';
 /* ==========================================================================
    IMAGES
    ========================================================================== */
-import imgHero from '../components/Header/assets/hero.png';
-import imgFeatured from '../components/Header/assets/featured.png';
+import imgHero from '../containers/Header/assets/hero.png';
+import imgFeatured from '../containers/Header/assets/featured.png';
 import imgComputer from '../pages/LandingPage/assets/computer.png';
 import imgGenerator from '../pages/LandingPage/assets/generator.png';
 import imgHouse from '../pages/LandingPage/assets/house.png';
