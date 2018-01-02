@@ -3,7 +3,7 @@
    ========================================================================== */
 import brandIcon from '../components/Brand/assets/brand-icon.svg';
 import brandLogo from '../components/Brand/assets/brand-logo.svg';
-import iconMenu from '../components/SiteNav/assets/menu.svg';
+import iconMenu from '../containers/SiteNav/assets/menu.svg';
 import iconAlert from '../assets/icons/alert.svg';
 import iconArrowFilled from '../assets/icons/arrow-filled.svg';
 import iconArrowOutline from '../assets/icons/arrow-outline.svg';
