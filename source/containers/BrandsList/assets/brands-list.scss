@@ -1,0 +1,18 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+.l-brands-list {
+  @include o-grid;
+  grid-gap: 80px;
+  grid-template-columns: repeat(auto-fit, 215px);
+
+  @include media-query(1230px) {
+    grid-gap: $spacing-whole;
+  }
+
+  > .c-thumbnail {
+    height: 40px;
+  }
+}
