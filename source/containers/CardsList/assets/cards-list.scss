@@ -9,16 +9,23 @@
 .l-cards-list {
   @include o-grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  grid-template-rows: auto;
 
-  @include media-query(1195px) {
-    grid-template-columns: repeat(5, 210px);
+
+
+  &.has-services {
+    @include media-query(1195px) {
+      grid-template-columns: repeat(5, 210px);
+    }
+
+    > .c-card {
+      grid-template-rows: 75px 48px;
+      height: 250px;
+      box-shadow: $shadow-size-large rgba(color(gray), 0.3);
+    }
   }
 
 
 
-/* VARIANTS
-   ========================================================================== */
   &.has-benefits {
     grid-gap: $spacing-double;
     grid-template-columns: repeat(auto-fit, 300px);
@@ -30,22 +37,7 @@
 
     > .c-card {
       grid-template-rows: 90px auto;
-    }
-  }
-
-
-
-  &.has-brands {
-    grid-gap: 80px;
-    grid-template-columns: repeat(auto-fit, 215px);
-
-    @include media-query(1230px) {
-      grid-gap: 24px;
-      grid-template-columns: repeat(5, 215px);
-    }
-
-    > .c-card {
-      grid-template-rows: 40px;
+      background-color: transparent;
     }
   }
 }
