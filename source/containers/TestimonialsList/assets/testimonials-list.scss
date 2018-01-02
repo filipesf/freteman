@@ -1,0 +1,29 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   TESTIMONIAL LIST
+   ========================================================================== */
+.l-testimonials-list {
+  @include o-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  @include media-query(480px) {
+    grid-template-columns: repeat(auto-fit, 370px);
+  }
+
+  @include media-query(768px) {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  @include media-query(1024px) {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+
+  @include media-query(1195px) {
+    grid-template-columns: repeat(3, 370px);
+  }
+}
