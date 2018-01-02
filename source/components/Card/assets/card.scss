@@ -7,50 +7,9 @@
    CARD
    ========================================================================== */
 .c-card {
-  display: grid;
-  grid-template-rows: 75px 48px;
-  grid-gap: $spacing-whole;
+  @include o-grid;
   align-content: center;
-  height: 250px;
   border-radius: 5px;
-  padding: $spacing-half;
-  box-shadow: $shadow-size-large rgba(color(gray), 0.3);
+  padding: $spacing-whole;
   background-color: white;
-}
-
-
-
-/* ELEMENTS
-   ========================================================================== */
-.c-card__image {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  overflow: hidden;
-
-
-
-  > span, svg {
-    display: block;
-    height: 100%;
-  }
-
-
-
-  img {
-    max-height: 100%;
-  }
-}
-
-
-
-/* VARIANTS
-   ========================================================================== */
-.c-card.--flat {
-  align-content: start;
-  height: auto;
-  padding: 0;
-  box-shadow: none;
-  background-color: transparent;
 }
