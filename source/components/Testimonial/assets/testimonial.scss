@@ -1,0 +1,23 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   TESTIMONIAL
+   ========================================================================== */
+.c-testimonial {
+  @include o-grid;
+  align-content: center;
+  border-radius: 5px;
+  padding: $spacing-whole;
+  background-color: white;
+  box-shadow: $shadow-size rgba(black, 0.15);
+}
+
+
+
+.c-testimonial__quote {
+  @include type-scale(0);
+  color: color(gray, dark);
+}
