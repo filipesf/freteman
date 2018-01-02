@@ -7,7 +7,7 @@ import CardsList from '../../../containers/CardsList';
 const Services = () => (
   <Section>
     <Headline title={data.services.title} subtitle={data.services.subtitle} />
-    <CardsList data={data.services.content} />
+    <CardsList type="services" data={data.services.content} />
   </Section>
 );
 

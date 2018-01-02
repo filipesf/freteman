@@ -7,7 +7,7 @@ import CardsList from '../../../containers/CardsList';
 const Benefits = () => (
   <Section>
     <Headline title={data.benefits.title} subtitle={data.benefits.subtitle} />
-    <CardsList hasBenefits data={data.benefits.content} />
+    <CardsList type="benefits" data={data.benefits.content} />
   </Section>
 );
 
