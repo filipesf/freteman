@@ -20,6 +20,9 @@ import iconMidStop from '../assets/icons/mid-stop.svg';
 import iconOrders from '../assets/icons/orders.svg';
 import iconPadlock from '../assets/icons/padlock.svg';
 import iconPin from '../assets/icons/pin.svg';
+import iconSmFb from '../assets/icons/sm-fb.svg';
+import iconSmIg from '../assets/icons/sm-ig.svg';
+import iconSmIn from '../assets/icons/sm-in.svg';
 import iconStar from '../assets/icons/star.svg';
 import iconTooltip from '../assets/icons/tooltip.svg';
 
@@ -77,6 +80,9 @@ const assets = {
     padlock: iconPadlock,
     pin: iconPin,
     star: iconStar,
+    fb: iconSmFb,
+    ig: iconSmIg,
+    in: iconSmIn,
     tooltip: iconTooltip,
   },
   img: {
