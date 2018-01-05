@@ -5,7 +5,7 @@ import Thumbnail from '../../components/Thumbnail';
 import Headline from '../../components/Headline';
 import ContactInfo from './ContactInfo.js';
 import './assets/footer.scss';
-import '../../assets/styles/_helpers.scss';
+import '../../assets/styles/helpers.scss';
 
 const Footer = () => {
   const subNavs = data.footer.subNavs.map((s, index) =>
