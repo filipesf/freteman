@@ -1,0 +1,50 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   SUB NAV
+   ========================================================================== */
+.c-sub-nav {
+  display: grid;
+  grid-gap: $spacing-whole;
+  align-items: start;
+  grid-template-rows: $spacing-whole auto;
+}
+
+
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-sub-nav__title {
+  @include type-scale(5);
+  color: color(gray, xdark);
+}
+
+
+
+.c-sub-nav__list {
+  display: grid;
+  grid-gap: $spacing-half;
+  align-items: start;
+}
+
+
+
+.c-sub-nav__item {
+  list-style: none;
+}
+
+
+
+.c-sub-nav__link {
+  color: color(gray, light);
+
+  &:hover {
+    color: color(brand);
+    text-decoration: none;
+  }
+}

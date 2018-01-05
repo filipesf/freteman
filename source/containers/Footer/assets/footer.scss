@@ -1,0 +1,56 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.l-footer {
+  @include o-wrapper;
+  padding-top: $spacing-double;
+}
+
+
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.l-footer__band {
+  display: grid;
+  grid-template-columns: 160px auto;
+  grid-template-rows: 110px;
+  justify-content: start;
+  align-items: center;
+}
+
+
+
+.l-footer__micro {
+  @include type-scale(-2);
+  padding-top: $spacing-whole;
+  padding-bottom: $spacing-whole;
+
+  > p { margin: 0; }
+}
+
+
+
+.l-footer__container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: $spacing-double 0;
+  border-top: 1px solid color(light);
+  border-bottom: 1px solid color(light);
+}
+
+
+
+.l-footer__navs {
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+}

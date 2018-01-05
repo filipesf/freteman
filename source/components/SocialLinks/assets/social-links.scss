@@ -1,0 +1,28 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   SOCIAL MEDIA LIST
+   ========================================================================== */
+.c-sm-links {
+  display: grid;
+  grid-gap: $spacing-third;
+  grid-template-columns: repeat(3, auto);
+  justify-content: end;
+  list-style: none;
+}
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-sm-links__item {
+  display: inline-block;
+  @include rectangle($spacing-whole + $spacing-third);
+  border-radius: 50%;
+  background-color: color(brand);
+  color: white;
+  fill: white;
+}

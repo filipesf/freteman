@@ -1,0 +1,32 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/objects';
+
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+.c-contact-info {
+  display: grid;
+  grid-gap: $spacing-half;
+  align-content: start;
+  text-align: right;
+  color: color(gray);
+
+  .c-headline__title {
+    @include type-scale(6);
+    color: color(dark);
+  }
+}
+
+
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-contact-info__text {
+  display: inline-block;
+  @include type-scale(-2);
+  text-transform: uppercase;
+}
