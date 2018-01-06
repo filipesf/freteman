@@ -39,6 +39,7 @@
 
 .c-sub-nav__link {
   color: color(gray, light);
+  @include transition(medium);
 
   &:hover {
     color: color(brand);

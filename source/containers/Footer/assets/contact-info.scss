@@ -5,10 +5,15 @@
    ========================================================================== */
 .c-contact-info {
   display: grid;
-  grid-gap: $spacing-half;
-  align-content: start;
-  text-align: right;
+  grid-gap: $spacing-whole;
+  align-content: center;
+  text-align: center;
   color: color(gray);
+
+  @include media-query(641px) {
+    align-content: start;
+    text-align: right;
+  }
 
   .c-headline__title {
     @include type-scale(6);
@@ -22,6 +27,13 @@
 
 /* ELEMENTS
    ========================================================================== */
+.c-contact-info__group {
+  display: grid;
+  grid-gap: $spacing-third;
+}
+
+
+
 .c-contact-info__text {
   display: inline-block;
   @include type-scale(-2);

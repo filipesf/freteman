@@ -7,8 +7,12 @@
   display: grid;
   grid-gap: $spacing-third;
   grid-template-columns: repeat(3, auto);
-  justify-content: end;
+  justify-content: center;
   list-style: none;
+
+  @include media-query(641px) {
+    justify-content: end;
+  }
 }
 
 
