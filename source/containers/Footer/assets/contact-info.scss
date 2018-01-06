@@ -5,7 +5,7 @@
    ========================================================================== */
 .c-contact-info {
   display: grid;
-  grid-gap: $spacing-whole;
+  grid-gap: spacing(1);
   align-content: center;
   text-align: center;
   color: color(gray);
@@ -29,7 +29,7 @@
    ========================================================================== */
 .c-contact-info__group {
   display: grid;
-  grid-gap: $spacing-third;
+  grid-gap: spacing(1/3);
 }
 
 

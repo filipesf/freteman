@@ -22,22 +22,6 @@ $base-height-ratio: 1.5;
 /// @type {number}
 $base-height: $base-size * $base-height-ratio;
 
-/// @group spacing
-/// @require {variable} $base-height
-$spacing-third: $base-height / 3;
-/// @group spacing
-/// @require {variable} $base-height
-$spacing-half: $base-height / 2;
-/// @group spacing
-/// @require {variable} $base-height
-$spacing-whole: $base-height;
-/// @group spacing
-/// @require {variable} $base-height
-$spacing-double: $base-height * 2;
-/// @group spacing
-/// @require {variable} $base-height
-$spacing-triple: $base-height * 3;
-
 /// Colours
 /// @group colours
 /// @type {map}

@@ -3,6 +3,27 @@
 //-------------------------------------
 
 ///
+/// Spacing scale
+///
+/// @author Filipe Fernandes
+///
+/// @group spacing
+///
+/// @require {variable} $base-height
+///
+/// @param {number} $scale
+///
+/// @return {number}
+///
+@function spacing($scale) {
+  @if $scale <= 0 {
+    @return $base-height;
+  }
+
+  @return $base-height * $scale;
+}
+
+///
 /// Generate Modular Scale number
 ///
 /// @author Matheus Fernandes

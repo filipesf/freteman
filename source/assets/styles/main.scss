@@ -166,7 +166,7 @@ blockquote {
 
 
 p {
-  margin-bottom: $spacing-whole;
+  margin-bottom: spacing(1);
   @include type-scale(0);
 }
 

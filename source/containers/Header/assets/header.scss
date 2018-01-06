@@ -4,7 +4,7 @@
    SITE HEADER
    ========================================================================== */
 .site-header {
-  padding: $spacing-double $spacing-whole;
+  padding: spacing(2) spacing(1);
   background-color: color(brand);
   background-position: left bottom;
   background-repeat: repeat-x;
@@ -13,7 +13,7 @@
 
   @include media-query(medium) {
     height: auto;
-    padding: $spacing-double;
+    padding: spacing(2);
     background-position: center top;
     background-size: 90rem;
   }
@@ -48,14 +48,14 @@
    ========================================================================== */
 .site-header {
   .c-headline {
-    grid-gap: $spacing-half;
+    grid-gap: spacing(1/2);
     max-width: 100%;
     text-align: center;
 
     @include media-query(medium) {
-      grid-gap: $spacing-whole;
+      grid-gap: spacing(1);
       max-width: 500px;
-      padding-right: $spacing-double;
+      padding-right: spacing(2);
       text-align: left;
     }
 
@@ -86,17 +86,17 @@
   }
 
   .c-thumbnail {
-    margin-top: $spacing-double * 2;
+    margin-top: spacing(4);
 
     @include media-query(medium) {
-      margin-top: $spacing-triple;
+      margin-top: spacing(3);
     }
   }
 
 
 
   .l-fieldset__icon {
-    margin-top: $spacing-half;
+    margin-top: spacing(1/2);
   }
 
 

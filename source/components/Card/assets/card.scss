@@ -7,6 +7,6 @@
   @include o-grid;
   align-content: center;
   border-radius: 5px;
-  padding: $spacing-whole;
+  padding: spacing(1);
   background-color: white;
 }

@@ -24,7 +24,7 @@
 
 
   &.has-benefits {
-    grid-gap: $spacing-double;
+    grid-gap: spacing(2);
     grid-template-columns: repeat(auto-fit, 300px);
 
     @include media-query(1195px) {

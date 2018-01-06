@@ -21,8 +21,8 @@
 /* BOX
    ========================================================================== */
 @mixin o-box {
-  border-radius: $spacing-half;
-  padding: $spacing-whole;
+  border-radius: spacing(1/2);
+  padding: spacing(1);
 }
 
 
@@ -33,7 +33,7 @@
    ========================================================================== */
 @mixin o-grid {
   display: grid;
-  grid-gap: $spacing-whole;
+  grid-gap: spacing(1);
   justify-content: center;
   width: 100%;
   margin: 0;
@@ -50,7 +50,7 @@
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
-  padding: $spacing-third $spacing-half;
+  padding: spacing(1/3) spacing(1/2);
   @include font-scale(-2);
   @include line-scale(0);
   font-family: $font-family-heading;
@@ -80,7 +80,7 @@
 
 
   &.--large {
-    padding: $spacing-half $spacing-whole;
+    padding: spacing(1/2) spacing(1);
     @include font-scale(0);
   }
 }
@@ -96,8 +96,8 @@
   width: 100%;
   border-width: 1px;
   border-style: solid;
-  border-radius: $spacing-third / 2;
-  padding: $spacing-half;
+  border-radius: spacing(1/6);
+  padding: spacing(1/2);
   @include type-scale(2);
   @include transition(short);
 }
@@ -110,6 +110,6 @@
    ========================================================================== */
 @mixin o-media {
   display: grid;
-  grid-template-columns: $spacing-double auto;
-  grid-gap: $spacing-half;
+  grid-template-columns: spacing(2) auto;
+  grid-gap: spacing(1/2);
 }

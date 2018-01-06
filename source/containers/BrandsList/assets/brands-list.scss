@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fit, 215px);
 
   @include media-query(1230px) {
-    grid-gap: $spacing-whole;
+    grid-gap: spacing(1);
   }
 
   > .c-thumbnail {

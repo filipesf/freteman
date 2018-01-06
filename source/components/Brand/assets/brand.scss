@@ -38,6 +38,6 @@
   }
 
   &, &-svg {
-    @include rectangle($spacing-double);
+    @include rectangle(spacing(2));
   }
 }

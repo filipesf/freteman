@@ -7,9 +7,9 @@
    ========================================================================== */
 .l-section {
   display: grid;
-  grid-gap: $spacing-triple;
+  grid-gap: spacing(3);
   justify-items: center;
-  padding: ($spacing-double * 2) $spacing-half;
+  padding: spacing(4) spacing(1);
 
 
 

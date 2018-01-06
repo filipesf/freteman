@@ -7,7 +7,7 @@
    ========================================================================== */
 .l-order-summary {
   display: grid;
-  grid-gap: $spacing-half;
+  grid-gap: spacing(1/2);
   margin-bottom: 0;
 }
 
@@ -57,8 +57,8 @@
 
 .c-order-item.--total {
   border-top: 1px solid color(light);
-  padding-top: $spacing-whole;
-  margin-top: $spacing-half;
+  padding-top: spacing(1);
+  margin-top: spacing(1/2);
 
 
 
