@@ -1,7 +1,10 @@
+@import '../../../assets/styles/tools';
+
 /* ==========================================================================
    THUMBNAIL
    ========================================================================== */
 .c-thumbnail {
+  @include rectangle(100%);
   text-align: center;
   overflow: hidden;
 
