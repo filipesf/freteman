@@ -19,11 +19,22 @@
 
 /* ELEMENTS
    ========================================================================== */
-.c-sm-links__item {
+.c-sm-links__item {}
+
+
+
+.c-sm-links__link {
   display: inline-block;
-  @include rectangle(spacing(1.3333));
+  @include rectangle(spacing(4/3));
+  padding: 7px 0;
   border-radius: 50%;
   background-color: color(brand);
-  color: white;
-  fill: white;
+
+
+
+  .c-thumbnail {
+    margin: 0 auto;
+    fill: white;
+  }
 }
+
