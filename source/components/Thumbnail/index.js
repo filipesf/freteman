@@ -4,9 +4,13 @@ import SvgInline from 'react-svg-inline';
 import './assets/thumbnail.scss';
 
 const Thumbnail = props => {
+  const isImage = src => !!src.match(
+    "(.(jpeg|jpg|gif|png))|(data:image/(jpeg|jpg|gif|png);?(;base64,))"
+  );
+
   return (
     <figure className="c-thumbnail">{
-      typeof props.src === 'string'
+      isImage(props.src)
         ? <img src={props.src} alt={props.alt} />
         : <SvgInline svg={props.src} />
     }</figure>
