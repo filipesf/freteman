@@ -7,7 +7,7 @@
 ///
 /// @author Filipe Fernandes
 ///
-/// @group spacing
+/// @group sizing
 ///
 /// @require {variable} $base-height
 ///
@@ -58,6 +58,22 @@
 ///
 @function ms($scale: 0) {
   @return modular-scale($scale);
+}
+
+/// Remove the unit of a length
+/// @param {number} $n - Number to remove unit from
+/// @return {number} - Unitless number
+@function stript-unit($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+/// Convert number into rem
+/// @group sizing
+/// @param {number} $n - Number to be converted
+/// @require {variable} $base-size
+/// @return {number} - Rem number
+@function rem($n) {
+  @return stript-unit($n) / 16 * $base-size;
 }
 
 ///
