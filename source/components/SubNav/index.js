@@ -1,13 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import SubNavList from './SubNavList.js';
-import './assets/sub-nav.scss';
+import SubnavList from './SubnavList';
+import './assets/subnav.scss';
 
 const SubNav = props => {
+  const s = props.data;
+
   return (
-    <section className="c-sub-nav">
-      <h5 className="c-sub-nav__title">{props.data.title}</h5>
-      <SubNavList data={props.data.list} />
+    <section className="c-subnav">
+      <h5 className="c-subnav__title">{s.title}</h5>
+      <SubnavList data={s.list} />
     </section>
   );
 };

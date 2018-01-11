@@ -1,13 +1,13 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import SubNavItem from './SubNavItem.js';
+import SubnavItem from './SubnavItem';
 
 const SubNavList = props => {
-  const subNavItems = props.data.map((item, index) =>
-    <SubNavItem key={index} text={item.text} href={item.href} />);
+  const subnavItems = props.data.map((item, index) =>
+    <SubnavItem key={index} text={item.text} href={item.href} />);
 
   return (
-    <ul className="c-sub-nav__list">{subNavItems}</ul>
+    <ul className="c-subnav__list">{subnavItems}</ul>
   );
 };
 

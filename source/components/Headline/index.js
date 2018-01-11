@@ -1,7 +1,6 @@
 import React from 'react';
-import cx from 'classnames';
 import propTypes from 'prop-types';
-
+import cx from 'classnames';
 import './assets/headline.scss';
 
 const Headline = props => {

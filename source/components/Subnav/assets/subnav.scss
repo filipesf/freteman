@@ -1,0 +1,48 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   SUB NAV
+   ========================================================================== */
+.c-subnav {
+  display: grid;
+  grid-gap: spacing(1);
+  align-items: start;
+  grid-template-rows: spacing(1) auto;
+}
+
+
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-subnav__title {
+  @include type-scale(5);
+  color: color(gray, xdark);
+}
+
+
+
+.c-subnav__list {
+  display: grid;
+  grid-gap: spacing(1/2);
+  align-items: start;
+}
+
+
+
+.c-subnav__item {
+  list-style: none;
+}
+
+
+
+.c-subnav__link {
+  color: color(gray, light);
+  @include transition(medium);
+
+  &:hover {
+    color: color(brand);
+    text-decoration: none;
+  }
+}

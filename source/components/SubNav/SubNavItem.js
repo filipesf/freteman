@@ -3,8 +3,8 @@ import propTypes from 'prop-types';
 
 const SubNavItem = props => {
   return (
-    <li className="c-sub-nav__item">
-      <a href={props.href} className="c-sub-nav__link">{props.text}</a>
+    <li className="c-subnav__item">
+      <a href={props.href} className="c-subnav__link">{props.text}</a>
     </li>
   );
 };

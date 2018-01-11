@@ -1,0 +1,79 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   ORDER SUMMARY
+   ========================================================================== */
+.l-order-summary {
+  display: grid;
+  grid-gap: spacing(1/2);
+  margin-bottom: 0;
+}
+
+
+
+
+
+/* ==========================================================================
+   ORDER ITEM
+   ========================================================================== */
+.c-order-item {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+.c-order-item__name {
+  margin: 0;
+  @include type-scale(-2);
+  font-weight: bold;
+  color: color(brand);
+}
+
+.c-order-item__name.--large {
+  @include font-scale(4);
+  line-height: 1;
+}
+
+
+
+.c-order-item__value {
+  margin: 0;
+}
+
+.c-order-item__value.--large {
+  @include font-scale(8);
+  font-weight: bold;
+  line-height: 1;
+}
+
+
+
+
+.c-order-item.--total {
+  border-top: 1px solid color(light);
+  padding-top: spacing(1);
+  margin-top: spacing(1/2);
+
+
+
+  > .c-order-item__name,
+  > .c-order-item__value {
+    line-height: 1;
+  }
+
+
+
+  > .c-order-item__name {
+    @include font-scale(4);
+  }
+
+
+
+  > .c-order-item__value {
+    @include font-scale(8);
+  }
+}

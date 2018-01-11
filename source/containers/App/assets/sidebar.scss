@@ -1,0 +1,46 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+.c-sidebar {
+  display: grid;
+  grid-gap: spacing(3);
+  min-height: 100vh;
+  background-color: color(brand);
+
+  .site-brand {
+    padding: spacing(1);
+  }
+}
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-sidebar__link {
+  display: grid;
+  grid-gap: spacing(1/2);
+  grid-template-columns: spacing(4/3) auto;
+  align-items: center;
+  font-family: $font-family-heading;
+  padding: spacing(1);
+  color: white;
+  @include transition(medium);
+
+  &:hover {
+    text-decoration: none;
+    background-color: color(brand, dark);
+  }
+
+  > .c-thumbnail {
+    @include rectangle(spacing(4/3));
+    fill: white;
+  }
+
+  &:nth-child(2) > .c-thumbnail {
+    fill: none;
+    stroke: white;
+    stroke-width: rem(2px);
+  }
+}
