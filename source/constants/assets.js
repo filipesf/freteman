@@ -33,23 +33,23 @@ import iconTooltip from '../assets/icons/tooltip.svg';
    ========================================================================== */
 import imgHero from '../containers/Header/assets/hero.png';
 import imgFeatured from '../containers/Header/assets/featured.png';
-import imgComputer from '../pages/LandingPage/assets/computer.png';
-import imgGenerator from '../pages/LandingPage/assets/generator.png';
-import imgHouse from '../pages/LandingPage/assets/house.png';
-import imgMan from '../pages/LandingPage/assets/man.png';
-import imgConsul from '../pages/LandingPage/assets/consul.png';
-import imgLatam from '../pages/LandingPage/assets/latam.png';
-import imgPetrobras from '../pages/LandingPage/assets/petrobras.png';
-import imgReclameaqui from '../pages/LandingPage/assets/reclameaqui.png';
-import imgVivo from '../pages/LandingPage/assets/vivo.png';
-import imgPricing from '../pages/LandingPage/assets/pricing.png';
-import imgRoute from '../pages/LandingPage/assets/sc-route.png';
-import imgSystem from '../pages/LandingPage/assets/sc-system.png';
-import imgVan from '../pages/LandingPage/assets/sc-van.png';
-import imgTimer from '../pages/LandingPage/assets/timer.png';
-import imgDistribution from '../pages/LandingPage/assets/van-boxes.png';
-import imgWineShield from '../pages/LandingPage/assets/wine-shield.png';
-import imgWine from '../pages/LandingPage/assets/wine.png';
+import imgComputer from '../pages/Home/assets/computer.png';
+import imgGenerator from '../pages/Home/assets/generator.png';
+import imgHouse from '../pages/Home/assets/house.png';
+import imgMan from '../pages/Home/assets/man.png';
+import imgConsul from '../pages/Home/assets/consul.png';
+import imgLatam from '../pages/Home/assets/latam.png';
+import imgPetrobras from '../pages/Home/assets/petrobras.png';
+import imgReclameaqui from '../pages/Home/assets/reclameaqui.png';
+import imgVivo from '../pages/Home/assets/vivo.png';
+import imgPricing from '../pages/Home/assets/pricing.png';
+import imgRoute from '../pages/Home/assets/sc-route.png';
+import imgSystem from '../pages/Home/assets/sc-system.png';
+import imgVan from '../pages/Home/assets/sc-van.png';
+import imgTimer from '../pages/Home/assets/timer.png';
+import imgDistribution from '../pages/Home/assets/van-boxes.png';
+import imgWineShield from '../pages/Home/assets/wine-shield.png';
+import imgWine from '../pages/Home/assets/wine.png';
 
 
 

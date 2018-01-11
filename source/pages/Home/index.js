@@ -2,14 +2,14 @@ import React from 'react';
 import SiteNav from '../../containers/SiteNav';
 import Header from '../../containers/Header';
 import Footer from '../../containers/Footer';
-import Services from './Sections/Services';
-import HowItWorks from './Sections/HowItWorks';
-import Benefits from './Sections/Benefits';
-import Clients from './Sections/Clients';
-import Brands from './Sections/Brands';
+import Services from './HomeServices';
+import HowItWorks from './HomeHowItWorks';
+import Benefits from './HomeBenefits';
+import Customers from './HomeCustomers';
+import Clients from './HomeClients';
 
-const LandingPage = () => (
-  <section id="landing-page">
+const Home = () => (
+  <section id="Home">
     <SiteNav />
     <Header />
 
@@ -17,12 +17,12 @@ const LandingPage = () => (
       <Services />
       <HowItWorks />
       <Benefits />
+      <Customers />
       <Clients />
-      <Brands />
     </main>
 
     <Footer />
   </section>
 );
 
-export default LandingPage;
+export default Home;

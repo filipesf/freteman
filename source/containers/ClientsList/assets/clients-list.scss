@@ -1,6 +1,6 @@
 @import '../../../assets/styles/tools';
 
-.l-brands-list {
+.l-clients-list {
   @include o-grid;
   grid-gap: 80px;
   grid-template-columns: repeat(auto-fit, 215px);

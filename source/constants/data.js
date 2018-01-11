@@ -1,6 +1,6 @@
 import assets from './assets';
 
-const LandingPage = {
+const HomeData = {
   header: {
     hero: assets.img.hero,
     featured: assets.img.featured,
@@ -66,7 +66,7 @@ const LandingPage = {
       title: "Suas coisas protegidas com seguro",
     }],
   },
-  clients: {
+  customers: {
     title: 'Clientes Satisfeitos',
     content: [{
       testimonial: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
@@ -85,7 +85,7 @@ const LandingPage = {
       location: 'São Paulo - SP',
     }],
   },
-  brands: {
+  clients: {
     title: 'Marcas',
     subtitle: 'Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade.',
     content: [
@@ -155,4 +155,4 @@ const LandingPage = {
   }
 };
 
-export default LandingPage;
+export default HomeData;

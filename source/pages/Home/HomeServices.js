@@ -1,8 +1,8 @@
 import React from 'react';
-import data from '../../../constants/data';
-import Section from '../../../containers/Section';
-import Headline from '../../../components/Headline';
-import CardsList from '../../../containers/CardsList';
+import data from '../../constants/data';
+import Section from '../../containers/Section';
+import Headline from '../../components/Headline';
+import CardsList from '../../containers/CardsList';
 
 const Services = () => (
   <Section>
