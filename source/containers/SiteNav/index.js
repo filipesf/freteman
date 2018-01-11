@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import SvgInline from 'react-svg-inline';
+import { Link } from 'react-router-dom';
 import assets from '../../constants/assets';
 import Brand from '../../components/Brand';
 import '../../components/Button';
@@ -29,16 +30,16 @@ class SiteNav extends React.Component {
       <nav className="site-nav">
         <div className="site-nav__container">
           <Brand />
-          <a href="#Button" className="c-btn --accent u-show@small">Fazer Orçamento</a>
+          <Link to="/orcamento" className="c-btn --accent u-show@small">Fazer Orçamento</Link>
           <div className={classes} onClick={this.handleMobileNav}>
             <SvgInline svg={assets.icon.menu} />
           </div>
           <ul className="site-nav__list">
-            <li className="site-nav__item"><a href="#Frota" className="site-nav__link">Frota</a></li>
-            <li className="site-nav__item"><a href="#Serviços" className="site-nav__link">Serviços</a></li>
-            <li className="site-nav__item"><a href="#Contato" className="site-nav__link">Contato</a></li>
-            <li className="site-nav__item"><a href="#Login" className="site-nav__link">Login</a></li>
-            <a href="#Button" className="c-btn --outline --accent u-hide@small">Fazer Orçamento</a>
+            <li className="site-nav__item"><Link to="#Frota" className="site-nav__link">Frota</Link></li>
+            <li className="site-nav__item"><Link to="#Serviços" className="site-nav__link">Serviços</Link></li>
+            <li className="site-nav__item"><Link to="#Contato" className="site-nav__link">Contato</Link></li>
+            <li className="site-nav__item"><Link to="#Login" className="site-nav__link">Login</Link></li>
+            <Link to="/orcamento" className="c-btn --outline --accent u-hide@small">Fazer Orçamento</Link>
           </ul>
         </div>
       </nav>
