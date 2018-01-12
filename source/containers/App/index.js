@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Console from './Console';
 import Sidebar from './Sidebar';
 import Estimates from './Estimates';
+import Headline from '../../components/Headline';
 import './assets/app.scss';
 
 class App extends React.Component {
@@ -9,10 +11,16 @@ class App extends React.Component {
     return (
       <section className="application">
         <Sidebar />
-        <section className="app-container">
+        <section className="l-dashboard">
+          <Console />
+
           <BrowserRouter>
-            <Route exact path="/orcamento" component={Estimates} />
+            <section className="l-workspace">
+              <Headline title="Solicite uma coleta e entrega" />
+              <Route exact path="/orcamento" component={Estimates} />
+            </section>
           </BrowserRouter>
+
         </section>
       </section>
     );
