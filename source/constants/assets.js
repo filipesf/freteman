@@ -11,6 +11,7 @@ import iconArrowSimple from '../assets/icons/arrow-simple.svg';
 import iconBackspace from '../assets/icons/delete.svg';
 import iconBox from '../assets/icons/box.svg';
 import iconBrand from '../assets/icons/brand.svg';
+import iconCursor from '../assets/icons/cursor.svg';
 import iconFiorino from '../assets/icons/car-fiorino.svg';
 import iconTruck from '../assets/icons/car-truck.svg';
 import iconUtil from '../assets/icons/car-util.svg';
@@ -70,6 +71,7 @@ const assets = {
     backspace: iconBackspace,
     box: iconBox,
     brand: iconBrand,
+    cursor: iconCursor,
     fiorino: iconFiorino,
     truck: iconTruck,
     util: iconUtil,

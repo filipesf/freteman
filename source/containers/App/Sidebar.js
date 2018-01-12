@@ -11,7 +11,7 @@ const Sidebar = () => (
 
     <nav className="c-sidebar__nav">
       <Link to="/orcamento" className="c-sidebar__link">
-        <Thumbnail src={assets.icon.orders} />
+        <Thumbnail src={assets.icon.cursor} />
         <span className="c-sidebar__text">Solicitar</span>
       </Link>
       <Link to="/rastrear" className="c-sidebar__link">
