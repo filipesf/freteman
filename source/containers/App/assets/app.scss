@@ -5,9 +5,28 @@
    ========================================================================== */
 .application {
   display: grid;
-  grid-template-columns: rem(230px) auto;
+  grid-template-columns: rem(230) auto;
+  background-color: color(light);
 }
 
-.app-container {
-  background-color: color(light);
+
+
+.l-dashboard {
+  display: grid;
+  grid-gap: spacing(5);
+  align-content: start;
+}
+
+
+
+.l-workspace {
+  display: grid;
+  grid-gap: spacing(1);
+  grid-template-columns: rem(975);
+  justify-content: center;
+
+  .c-headline__title {
+    text-align: left;
+    font-weight: 400;
+  }
 }
