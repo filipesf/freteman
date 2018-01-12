@@ -3,7 +3,7 @@
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */
-.c-sidebar {
+.l-sidebar {
   display: grid;
   grid-gap: spacing(3);
   min-height: 100vh;
@@ -18,7 +18,7 @@
 
 /* ELEMENTS
    ========================================================================== */
-.c-sidebar__link {
+.l-sidebar__link {
   display: grid;
   grid-gap: spacing(1/2);
   grid-template-columns: spacing(4/3) auto;
