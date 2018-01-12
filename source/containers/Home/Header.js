@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import Block from '../../components/Block';
+import Panel from '../../components/Panel';
 import Headline from '../../components/Headline';
 import Thumbnail from '../../components/Thumbnail';
 import Form from './Form';
@@ -17,9 +17,9 @@ const Header = props => {
           <Thumbnail src={h.featured} alt={h.title} />
         </section>
         <section className="site-header__section u-hide@small">
-          <Block shadow>
+          <Panel shadow>
             <Form />
-          </Block>
+          </Panel>
         </section>
       </div>
     </header>

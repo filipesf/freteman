@@ -1,12 +1,11 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import cx from 'classnames';
+import './assets/panel.scss';
 
-import './assets/block.scss';
-
-const Block = props => {
+const Panel = props => {
   const classes = cx(
-    'l-block',
+    'l-panel',
     props.shadow && `u-shadow`
   );
 
@@ -17,7 +16,7 @@ const Block = props => {
   );
 };
 
-Block.propTypes = {
+Panel.propTypes = {
   children: propTypes.oneOfType([
     propTypes.array,
     propTypes.element
@@ -25,4 +24,4 @@ Block.propTypes = {
   shadow: propTypes.bool
 };
 
-export default Block;
+export default Panel;
