@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import cx from 'classnames';
+import Headline from '../Headline';
 import './assets/panel.scss';
 
 const Panel = props => {
@@ -11,6 +12,7 @@ const Panel = props => {
 
   return (
     <div className={classes}>
+      {props.title && <Headline medium left title={props.title} />}
       {props.children}
     </div>
   );
