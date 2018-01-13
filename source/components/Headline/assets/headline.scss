@@ -39,6 +39,18 @@
 
 /* VARIANTS
  ========================================================================== */
+.c-headline.--medium {
+  > .c-headline__title {
+    @include type-scale(6);
+  }
+
+  > .c-headline__subtitle {
+    @include type-scale(0);
+  }
+}
+
+
+
 .c-headline.--small {
   > .c-headline__title {
     @include type-scale(0);
