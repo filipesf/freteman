@@ -15,6 +15,7 @@
   display: grid;
   grid-gap: spacing(5);
   align-content: start;
+  padding-bottom: spacing(3);
 }
 
 
@@ -26,7 +27,6 @@
   justify-content: center;
 
   .c-headline__title {
-    text-align: left;
     font-weight: 400;
   }
 }
