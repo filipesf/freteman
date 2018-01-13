@@ -6,11 +6,14 @@ import './assets/headline.scss';
 const Headline = props => {
   const classes = cx(
     'c-headline',
-    props.small && '--small'
+    props.medium && '--medium',
+    props.small && '--small',
+    props.left && 'u-text-left',
+    props.right && 'u-text-right'
   );
 
-  const Title = props.small ? `h4` : `h2`;
-  const Subtitle = props.small ? `h5` : `h3`;
+  const Title = props.small || props.medium ? `h4` : `h2`;
+  const Subtitle = props.small || props.medium ? `h5` : `h3`;
 
   return (
     <hgroup className={classes}>
@@ -23,8 +26,10 @@ const Headline = props => {
 Headline.propTypes = {
   title: propTypes.string.isRequired,
   subtitle: propTypes.string,
-  header: propTypes.bool,
+  medium: propTypes.bool,
   small: propTypes.bool,
+  left: propTypes.bool,
+  right: propTypes.bool,
 };
 
 export default Headline;
