@@ -4,54 +4,32 @@
    HELPERS
    ========================================================================== */
 
+/* TEXT ALIGN
+   ========================================================================== */
+.u-text-left { text-align: left !important; }
+.u-text-right { text-align: right !important; }
+.u-text-center { text-align: center !important; }
+
+
+
 /* BOX SHADOW
    ========================================================================== */
-.u-shadow {
-  box-shadow: $shadow-size rgba(black, 0.15) !important;
-}
-
-
-
-.u-shadow-large {
-  box-shadow: $shadow-size-large rgba(black, 0.3) !important;
-}
-
-
-
-.u-noshadow {
-  box-shadow: none !important;
-}
-
-
+.u-shadow { box-shadow: $shadow-size rgba(black, 0.15) !important; }
+.u-shadow-large { box-shadow: $shadow-size-large rgba(black, 0.3) !important; }
+.u-noshadow { box-shadow: none !important; }
 
 
 
 /* SPACING
    ========================================================================== */
+.u-noborder { border: none !important; }
+.u-noradius { border-radius: unset !important; }
+.u-collapse-grid { grid-gap: 0 0 !important; }
+
 .u-nospacing {
   padding: 0 !important;
   margin: 0 !important;
 }
-
-
-
-.u-noborder {
-  border: none !important;
-}
-
-
-
-.u-noradius {
-  border-radius: unset !important;
-}
-
-
-
-.u-collapse-grid {
-  grid-gap: 0 0 !important;
-}
-
-
 
 
 
