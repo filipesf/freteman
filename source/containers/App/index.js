@@ -16,7 +16,7 @@ class App extends React.Component {
 
           <BrowserRouter>
             <section className="l-workspace">
-              <Headline title="Solicite uma coleta e entrega" />
+              <Headline left title="Solicite uma coleta e entrega" />
               <Route exact path="/orcamento" component={Estimates} />
             </section>
           </BrowserRouter>
