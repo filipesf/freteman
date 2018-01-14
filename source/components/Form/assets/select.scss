@@ -3,4 +3,36 @@
 /* ==========================================================================
    FORM SELECT
    ========================================================================== */
-.f-select {}
+.f-select {
+  position: relative;
+
+  .c-thumbnail {
+    @include rectangle(spacing(4/3));
+    position: absolute;
+    top: 50%;
+    right: spacing(1/4);
+    transform: translateY(-50%);
+    fill: color(dark);
+  }
+}
+
+.f-select__options {
+  position: relative;
+  @include o-input-text;
+  @include type-scale(0);
+  border-color: color(light);
+  background-color: transparent;
+  color: rgba(color(dark), .5);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  z-index: 1;
+
+  &:hover {
+    border-color: color(light, dark);
+  }
+
+  &:focus {
+    box-shadow: $shadow-size rgba(color(brand, light), 0.15);
+    border-color: color(brand);
+  }
+}
