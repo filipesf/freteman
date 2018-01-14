@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import cx from 'classnames';
 import Field from './Field';
 import Label from './Label';
@@ -12,8 +13,8 @@ const RadioGroup = props => {
     props.flat && '--flat'
   );
 
-  const radioButtons = props.options.map(r =>
-    <Radio id={parseInputID(r.id)} label={r.label} value={r.value} name={props.name} />
+  const radioButtons = props.options.map((r, i) =>
+    <Radio key={i} id={parseInputID(r.id)} label={r.label} value={r.value} name={props.name} />
   );
 
   return (
@@ -24,6 +25,13 @@ const RadioGroup = props => {
       </section>
     </Field>
   );
+};
+
+RadioGroup.propTypes = {
+  name: propTypes.string.isRequired,
+  label: propTypes.string,
+  options: propTypes.array.isRequired,
+  flat: propTypes.bool,
 };
 
 export default RadioGroup;

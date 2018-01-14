@@ -20,11 +20,13 @@ const Panel = props => {
 };
 
 Panel.propTypes = {
+  title: propTypes.string,
   children: propTypes.oneOfType([
     propTypes.array,
     propTypes.element
   ]).isRequired,
-  shadow: propTypes.bool
+  theme: propTypes.string,
+  shadow: propTypes.bool,
 };
 
 export default Panel;

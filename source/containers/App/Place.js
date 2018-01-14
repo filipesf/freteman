@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import assets from '../../constants/assets';
 import { getPlaceIcon } from '../../constants/utils';
 import Thumbnail from "../../components/Thumbnail";
@@ -31,6 +32,10 @@ const Place = props => {
       </div>
     </section>
   );
+};
+
+Place.propTypes = {
+  point: propTypes.string,
 };
 
 export default Place;

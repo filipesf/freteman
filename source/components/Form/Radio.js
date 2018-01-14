@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import cx from 'classnames';
 import Field from './Field';
 import Thumbnail from '../Thumbnail';
@@ -20,6 +21,14 @@ const Radio = props => {
       </label>
     </Field>
   );
+};
+
+Radio.propTypes = {
+  id: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+  value: propTypes.string.isRequired,
+  label: propTypes.string.isRequired,
+  icon: propTypes.string,
 };
 
 export default Radio;

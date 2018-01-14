@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import cx from 'classnames';
 import './assets/fieldset.scss';
 
@@ -13,6 +14,11 @@ const Fieldset = props => {
       {props.children}
     </section>
   );
+};
+
+Fieldset.propTypes = {
+  has: propTypes.string,
+  children: propTypes.node.isRequired,
 };
 
 export default Fieldset;

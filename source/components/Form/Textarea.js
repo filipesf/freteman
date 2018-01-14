@@ -1,10 +1,11 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import Field from './Field';
 import Label from './Label';
 import { parseInputID } from '../../constants/utils';
 import './assets/text.scss';
 
-const TextArea = props => {
+const Textarea = props => {
   return (
     <Field>
       {props.label && <Label for={parseInputID(props.id)} text={props.label} />}
@@ -13,4 +14,10 @@ const TextArea = props => {
   );
 };
 
-export default TextArea;
+Textarea.propTypes = {
+  id: propTypes.string.isRequired,
+  label: propTypes.string,
+  placeholder: propTypes.string,
+};
+
+export default Textarea;
