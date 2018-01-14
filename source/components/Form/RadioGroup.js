@@ -10,12 +10,20 @@ import './assets/radio-group.scss';
 const RadioGroup = props => {
   const classes = cx(
     'f-radio-group',
-    props.flat && '--flat'
+    props.flat && '--flat',
+    props.block && '--block'
   );
 
-  const radioButtons = props.options.map((r, i) =>
-    <Radio key={i} id={parseInputID(r.id)} label={r.label} value={r.value} name={props.name} />
-  );
+  const radioButtons = props.options.map((r, i) => (
+    <Radio
+      key={i}
+      id={parseInputID(r.id)}
+      label={r.label}
+      value={r.value}
+      name={props.name}
+      icon={r.icon}
+    />
+  ));
 
   return (
     <Field>
@@ -32,6 +40,7 @@ RadioGroup.propTypes = {
   label: propTypes.string,
   options: propTypes.array.isRequired,
   flat: propTypes.bool,
+  block: propTypes.bool,
 };
 
 export default RadioGroup;
