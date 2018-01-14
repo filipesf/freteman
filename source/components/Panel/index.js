@@ -7,6 +7,7 @@ import './assets/panel.scss';
 const Panel = props => {
   const classes = cx(
     'l-panel',
+    props.theme && `--${props.theme}`,
     props.shadow && `u-shadow`
   );
 

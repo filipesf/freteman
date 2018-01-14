@@ -10,3 +10,11 @@
   background-color: white;
   color: color(dark);
 }
+
+.l-panel.--dark {
+  background-color: color(dark);
+
+  * {
+    color: white;
+  }
+}
