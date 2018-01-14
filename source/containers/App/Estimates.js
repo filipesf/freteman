@@ -1,5 +1,6 @@
 import React from 'react';
 import Panel from '../../components/Panel';
+import opts from '../../constants/options';
 import RadioGroup from '../../components/Form/RadioGroup';
 import InputText from '../../components/Form/InputText';
 import Textarea from '../../components/Form/Textarea';
@@ -10,16 +11,6 @@ import './assets/estimates.scss';
 
 class Estimates extends React.Component {
   render() {
-    const paymentOptions = [{
-      id: 'Dinheiro',
-      label: 'Dinheiro',
-      value: 'Dinheiro',
-    },{
-      id: 'Cartão de Crédito',
-      label: 'Cartão de Crédito',
-      value: 'Cartão de Crédito',
-    }];
-
     return (
       <section className="l-estimates">
         <section className="l-estimates__group">
@@ -37,14 +28,17 @@ class Estimates extends React.Component {
             <InputText id="tipo-de-servico" placeholder="Cargas e encomendas" />
           </Panel>
 
-          <Panel title="Você vai precisar de ajudantes?" />
+          <Panel title="Você vai precisar de ajudantes?">
+            <RadioGroup block name="ajudantes" options={opts.helpers} />
+          </Panel>
+
           <Panel title="Descreva o que iremos transportar">
             <Textarea id="descricao" placeholder="Será transportado 2 caixas contendo dois motores de carro. O conteúdo das caixas é frágil e precisa de muito cuidado." />
           </Panel>
 
           <Panel title="Método e local de pagamento">
             <InputText id="pagamento" placeholder="R. Andaraí, Vila Mariana, 123 - São Paulo, SP" />
-            <RadioGroup name="payment" options={paymentOptions} />
+            <RadioGroup name="payment" options={opts.pay} />
           </Panel>
 
           <Panel theme="dark">
@@ -60,7 +54,7 @@ class Estimates extends React.Component {
         </section>
 
         <section>
-          <Panel />
+          <Panel><div /></Panel>
         </section>
       </section>
     );
