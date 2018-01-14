@@ -9,7 +9,7 @@ const Label = props => {
 };
 
 Label.propTypes = {
-  for: propTypes.string.isRequired,
+  for: propTypes.string,
   text: propTypes.string.isRequired,
 };
 
