@@ -1,0 +1,47 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   ADDRESS
+   ========================================================================== */
+.l-place {
+  display: grid;
+  grid-gap: spacing(1/2);
+  grid-template-columns: spacing(1) auto;
+  fill: color(brand);
+
+  > .c-thumbnail {
+    @include rectangle(spacing(1));
+  }
+}
+
+
+
+.l-place__fields {
+  display: grid;
+  grid-gap: spacing(1/2);
+}
+
+
+
+.l-place__address,
+.l-place__details {
+  display: grid;
+  grid-gap: spacing(1/2);
+  align-items: end;
+}
+
+.l-place__address {
+  grid-template-columns: rem(220) rem(60) rem(140) rem(30);
+
+  > .c-thumbnail {
+    @include rectangle(rem(30), rem(40));
+    fill: color(gray, xlight);
+  }
+}
+
+
+
+.l-place__details {
+  grid-template-columns: rem(220) rem(110) rem(125);
+}
+@import '../../../assets/styles/tools';
