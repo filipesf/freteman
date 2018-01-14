@@ -9,3 +9,11 @@
   grid-template-columns: rem(570px) rem(370px);
   justify-content: center;
 }
+
+
+
+.l-estimates__group {
+  display: grid;
+  grid-gap: spacing(1/2);
+  align-items: start;
+}
