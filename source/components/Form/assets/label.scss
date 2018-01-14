@@ -1,0 +1,12 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   FORM LABEL
+   ========================================================================== */
+.f-label {
+  display: block;
+  @include type-scale(-2);
+  font-weight: bold;
+  cursor: pointer;
+  color: color(brand);
+}

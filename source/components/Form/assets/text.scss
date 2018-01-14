@@ -1,0 +1,27 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   FORM INPUT TEXT & TEXTAREA
+   ========================================================================== */
+.f-text,
+.f-textarea {
+  @include o-input-text;
+  @include type-scale(0);
+  border-color: color(light);
+  background-color: white;
+  color: color(dark);
+  resize: none;
+
+  &:hover {
+    border-color: color(light, dark);
+  }
+
+  &:focus {
+    box-shadow: $shadow-size rgba(color(brand, light), 0.15);
+    border-color: color(brand);
+  }
+
+  @include placeholder {
+    color: rgba(color(dark), .5)
+  }
+}
