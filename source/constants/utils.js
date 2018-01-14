@@ -28,7 +28,7 @@ export const getPlaceIcon = point => {
     ? placeIcon = assets.icon.arrowFilled
     : point === 'delivery' || point === 'entrega'
       ? placeIcon = assets.icon.arrowOutline
-      : placeIcon = assets.icon.midStop
+      : placeIcon = assets.icon.midStop;
   return placeIcon;
 };
 
