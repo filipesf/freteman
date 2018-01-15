@@ -15,7 +15,12 @@ import iconCursor from '../assets/icons/cursor.svg';
 import iconFiorino from '../assets/icons/car-fiorino.svg';
 import iconTruck from '../assets/icons/car-truck.svg';
 import iconUtil from '../assets/icons/car-util.svg';
+import iconCheck from '../assets/icons/check.svg';
 import iconClose from '../assets/icons/close.svg';
+import iconHelpers0 from '../assets/icons/helpers-0.svg';
+import iconHelpers1 from '../assets/icons/helpers-1.svg';
+import iconHelpers2 from '../assets/icons/helpers-2.svg';
+import iconHelpers3 from '../assets/icons/helpers-3.svg';
 import iconLogout from '../assets/icons/logout.svg';
 import iconMidStop from '../assets/icons/mid-stop.svg';
 import iconOrders from '../assets/icons/orders.svg';
@@ -75,7 +80,12 @@ const assets = {
     fiorino: iconFiorino,
     truck: iconTruck,
     util: iconUtil,
+    check: iconCheck,
     close: iconClose,
+    helpers0: iconHelpers0,
+    helpers1: iconHelpers1,
+    helpers2: iconHelpers2,
+    helpers3: iconHelpers3,
     logout: iconLogout,
     midStop: iconMidStop,
     orders: iconOrders,
