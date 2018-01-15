@@ -16,15 +16,22 @@
   }
 }
 
+
+
+/* ELEMENTS
+   ========================================================================== */
 .f-select__options {
   position: relative;
   @include o-input-text;
   @include type-scale(0);
+  padding-right: spacing(4/3);
   border-color: color(light);
   background-color: transparent;
   color: rgba(color(dark), .5);
-  -webkit-appearance: button;
-  -moz-appearance: button;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
   z-index: 1;
 
   &:hover {
@@ -34,5 +41,22 @@
   &:focus {
     box-shadow: $shadow-size rgba(color(brand, light), 0.15);
     border-color: color(brand);
+  }
+}
+
+
+
+/* VARIANTS
+   ========================================================================== */
+.f-select.--location {
+  .f-select__options {
+    padding-left: spacing(2);
+  }
+
+  .c-thumbnail:first-of-type {
+    left: spacing(1/4);
+    fill: transparent;
+    stroke: rgba(color(dark), .5);
+    stroke-width: rem(2);
   }
 }
