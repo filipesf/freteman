@@ -16,6 +16,8 @@
 
 
 
+/* ELEMENTS
+   ========================================================================== */
 .l-place__fields {
   display: grid;
   grid-gap: spacing(1/2);
@@ -29,6 +31,8 @@
   grid-gap: spacing(1/2);
   align-items: end;
 }
+
+
 
 .l-place__address {
   grid-template-columns: rem(220) rem(60) rem(140) rem(30);
@@ -44,4 +48,3 @@
 .l-place__details {
   grid-template-columns: rem(220) rem(110) rem(125);
 }
-@import '../../../assets/styles/tools';
