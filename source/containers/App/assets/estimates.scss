@@ -13,7 +13,8 @@
 
 
 .l-estimates__group {
-  display: grid;
-  grid-gap: spacing(1/2);
-  align-items: start;
+  > :last-child,
+  .l-panel + .l-panel {
+    margin-top: spacing(1/2);
+  }
 }
