@@ -1,0 +1,21 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   STAR
+   ========================================================================== */
+.c-star {
+  @include rectangle(rem(30), rem(40));
+  fill: color(gray, xlight);
+  @include transition(short);
+  cursor: pointer;
+}
+
+
+
+/* VARIANTS
+   ========================================================================== */
+:checked {
+  & ~ .c-star {
+    fill: color(brand);
+  }
+}
