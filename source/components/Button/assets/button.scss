@@ -54,18 +54,33 @@
 
 
   &.--outline {
-    border-color: color(brand);
+    border-color: color(light);
     background-color: transparent;
-    color: color(brand);
+    color: color(light);
 
     &:hover {
       background-color: rgba(color(dark), .05);
       color: color(brand);
     }
 
+    &.--primary {
+      border-color: color(brand);
+      color: color(brand);
+
+      &:hover {
+        background-color: color(brand);
+        color: white;
+      }
+    }
+
     &.--accent {
       border-color: color(accent);
       color: color(accent);
+
+      &:hover {
+        background-color: color(accent);
+        color: color(brand);
+      }
     }
   }
 }
