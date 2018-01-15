@@ -1,0 +1,12 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   PLACE ACTIONS
+   ========================================================================== */
+.l-place-actions {
+  display: grid;
+  grid-gap: spacing(1/2);
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: start;
+}
