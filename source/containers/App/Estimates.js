@@ -2,11 +2,11 @@ import React from 'react';
 import Panel from '../../components/Panel';
 import opts from '../../constants/options';
 import RadioGroup from '../../components/Form/RadioGroup';
-import InputText from '../../components/Form/InputText';
 import Textarea from '../../components/Form/Textarea';
+import Select from '../../components/Form/Select';
 import Place from './Place';
+import PlaceActions from './PlaceActions';
 import Veicles from './Veicles';
-import "../../components/Button";
 import './assets/estimates.scss';
 
 class Estimates extends React.Component {
@@ -17,6 +17,7 @@ class Estimates extends React.Component {
           <Panel>
             <Place point="coleta" />
             <Place point="entrega" />
+            <PlaceActions />
           </Panel>
 
           <Panel title="Horário de Retirada" />
@@ -25,7 +26,7 @@ class Estimates extends React.Component {
           </Panel>
 
           <Panel title="Tipo de serviço">
-            <InputText id="tipo-de-servico" placeholder="Cargas e encomendas" />
+            <Select id="servico" name="servico" options={opts.services} />
           </Panel>
 
           <Panel title="Você vai precisar de ajudantes?">
@@ -37,7 +38,7 @@ class Estimates extends React.Component {
           </Panel>
 
           <Panel title="Método e local de pagamento">
-            <InputText id="pagamento" placeholder="R. Andaraí, Vila Mariana, 123 - São Paulo, SP" />
+            <Select location id="pagamento" name="pagamento" options={opts.payMethods} />
             <RadioGroup name="payment" options={opts.pay} />
           </Panel>
 
@@ -50,7 +51,7 @@ class Estimates extends React.Component {
             </ul>
           </Panel>
 
-          <button className="c-btn --accent --large">Finalizar</button>
+          <button className="c-btn --block --accent --large">FINALIZAR</button>
         </section>
 
         <section>
