@@ -10,7 +10,7 @@ const Label = props => {
 
 Label.propTypes = {
   for: propTypes.string,
-  text: propTypes.string.isRequired,
+  text: propTypes.string,
 };
 
 export default Label;
