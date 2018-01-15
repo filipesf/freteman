@@ -1,9 +1,9 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import assets from '../../constants/assets';
 import { getPlaceIcon } from '../../constants/utils';
 import opts from '../../constants/options';
 import Thumbnail from "../../components/Thumbnail";
+import Star from "../../components/Star";
 import Select from "../../components/Form/Select";
 import InputText from "../../components/Form/InputText";
 import RadioGroup from "../../components/Form/RadioGroup";
@@ -18,7 +18,7 @@ const Place = props => {
           <InputText id={`end-${props.point}`} label={`Endereço de ${props.point}`} placeholder="Digite um endereço" />
           <InputText id={`no-${props.point}`} placeholder="Nº" />
           <InputText id={`apto-${props.point}`} placeholder="Apto 101" />
-          <Thumbnail src={assets.icon.star} />
+          <Star id={`star-${props.point}`} name={`star-${props.point}`} value="Meu endereço" />
         </div>
 
         <div className="l-place__details">
