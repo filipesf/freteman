@@ -22,7 +22,7 @@ const Select = props => {
 
   return (
     <Field>
-      <Label text={props.label} />
+      {props.label && <Label text={props.label} />}
       <div className={classes}>
         { props.location && <Thumbnail src={assets.icon.pin} /> }
         <Thumbnail src={assets.icon.arrowSimple} />
