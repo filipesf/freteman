@@ -30,6 +30,18 @@
 
 
   &.--primary {
+    @include type-scale(0);
+    background-color: color(brand);
+    color: white;
+
+    &:hover {
+      background-color: color(brand, dark);
+    }
+  }
+
+
+
+  &.--secondary {
     background-color: color(brand);
     color: color(accent);
 
@@ -54,6 +66,7 @@
 
 
   &.--outline {
+    @include type-scale(-2);
     border-color: color(light);
     background-color: transparent;
     color: color(light);
