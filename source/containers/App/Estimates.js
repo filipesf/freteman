@@ -6,6 +6,7 @@ import Textarea from '../../components/Form/Textarea';
 import Select from '../../components/Form/Select';
 import Place from './Place';
 import PlaceActions from './PlaceActions';
+import Withdrawal from './Withdrawal';
 import Veicles from './Veicles';
 import './assets/estimates.scss';
 
@@ -20,7 +21,10 @@ class Estimates extends React.Component {
             <PlaceActions />
           </Panel>
 
-          <Panel title="Horário de Retirada" />
+          <Panel title="Horário de Retirada">
+            <Withdrawal />
+          </Panel>
+
           <Panel title="Veículo">
             <Veicles />
           </Panel>
