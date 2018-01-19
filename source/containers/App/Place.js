@@ -15,9 +15,9 @@ const Place = props => {
       <Thumbnail src={getPlaceIcon(props.point)} />
       <div className="l-place__fields">
         <div className="l-place__address">
-          <InputText id={`end-${props.point}`} label={`Endereço de ${props.point}`} placeholder="Digite um endereço" />
-          <InputText id={`no-${props.point}`} placeholder="Nº" />
-          <InputText id={`apto-${props.point}`} placeholder="Apto 101" />
+          <InputText id={`endereco-${props.point}`} label={`Endereço de ${props.point}`} placeholder="Endereço" />
+          <InputText id={`numero-${props.point}`} placeholder="Nº" />
+          <InputText id={`complemento-${props.point}`} placeholder="Complemento" />
           <Star id={`star-${props.point}`} name={`star-${props.point}`} value="Meu endereço" />
         </div>
 
