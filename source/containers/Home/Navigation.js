@@ -30,7 +30,7 @@ class Navigation extends React.Component {
       <nav className="site-nav">
         <div className="site-nav__container">
           <Brand link="/" />
-          <Link to="/orcamento" className="c-btn --accent u-show@small">Fazer Orçamento</Link>
+          <Link to="/orcamento" className="c-btn --accent u-show@small">FAZER ORÇAMENTO</Link>
           <div className={classes} onClick={this.handleMobileNav}>
             <SvgInline svg={assets.icon.menu} />
           </div>
@@ -39,7 +39,7 @@ class Navigation extends React.Component {
             <li className="site-nav__item"><Link to="#Serviços" className="site-nav__link">Serviços</Link></li>
             <li className="site-nav__item"><Link to="#Contato" className="site-nav__link">Contato</Link></li>
             <li className="site-nav__item"><Link to="#Login" className="site-nav__link">Login</Link></li>
-            <Link to="/orcamento" className="c-btn --outline --accent u-hide@small">Fazer Orçamento</Link>
+            <Link to="/orcamento" className="c-btn --outline --accent u-hide@small">FAZER ORÇAMENTO</Link>
           </ul>
         </div>
       </nav>

@@ -51,7 +51,7 @@ const Form = () => (
 
     <OrderSummary />
 
-    <button className="c-btn --large --accent">Chamar Mensageiro</button>
+    <button className="c-btn --large --accent">CHAMAR MENSAGEIRO</button>
   </form>
 );
 
