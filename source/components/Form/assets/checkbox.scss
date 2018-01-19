@@ -24,11 +24,38 @@
 
 /* VARIANTS
    ========================================================================== */
+.f-checkbox.--button {
+  @include o-btn;
+  @include type-scale(0);
+  width: 100%;
+  border-color: transparent;
+  padding: spacing(1/2);
+  background-color: color(light);
+  color: rgba(color(dark), .6);
+  fill: rgba(color(dark), .3);
+
+  @include media-query(medium) {
+    display: grid;
+  }
+
+  &:hover {
+    background-color: rgba(color(light, dark), .5);
+  }
+}
+
+
+
 :checked {
   & ~ .f-checkbox {
     .c-thumbnail {
       background-color: color(brand);
       color: color(brand);
     }
+  }
+
+  & ~ .f-checkbox.--button {
+    background-color: color(brand);
+    fill: color(brand, xdark);
+    color: white;
   }
 }
