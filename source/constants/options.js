@@ -66,7 +66,17 @@ const opts = {
     id: 'pagamento-entrega',
     label: 'R. Conselheiro Cotegipe, Belenzinho, 123 - São Paulo, SP',
     value: 'R. Conselheiro Cotegipe, Belenzinho, 123 - São Paulo, SP'
-  }]
+  }],
+  withdrawalDate: [{
+    id: 'dia-mes',
+    label: 'Dia/Mês',
+    value: 'Dia/Mês'
+  }],
+  withdrawalTime: [{
+    id: 'horario',
+    label: 'Horário',
+    value: 'Horário'
+  }],
 };
 
 export default opts;
