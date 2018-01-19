@@ -4,7 +4,6 @@ import cx from 'classnames';
 import Field from './Field';
 import Label from './Label';
 import Radio from './Radio';
-import { parseInputID } from '../../constants/utils';
 import './assets/radio-group.scss';
 
 const RadioGroup = props => {
@@ -17,7 +16,7 @@ const RadioGroup = props => {
   const radioButtons = props.options.map((r, i) => (
     <Radio
       key={i}
-      id={parseInputID(r.id)}
+      id={`${props.name}-${r.id}`}
       label={r.label}
       value={r.value}
       name={props.name}
