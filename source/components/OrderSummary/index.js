@@ -6,8 +6,8 @@ import './assets/order-summary.scss';
 const OrderSummary = props => {
   return (
     <ul className="l-order-summary">
-      <OrderItems data={props.data} />
-      <OrderTotal value="R$ 43,50" />
+      {props.items && <OrderItems data={props.items} />}
+      <OrderTotal value={props.total} />
     </ul>
   );
 };
