@@ -8,7 +8,7 @@ const PlaceActions = () => {
     <Fieldset>
       <button className="c-btn --outline --primary">Adicionar Volta</button>
       <button className="c-btn --outline --primary">Adicionar Parada</button>
-      <Checkbox id="recibo" name="recibo" label="Recibo digital obrigatório" value="1" checked />
+      <Checkbox id="recibo" label="Recibo digital obrigatório" value="1" checked />
     </Fieldset>
   );
 };
