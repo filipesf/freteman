@@ -13,18 +13,19 @@ const Place = props => {
   return (
     <section className="l-place">
       <Thumbnail src={getPlaceIcon(props.point)} />
+
       <div className="l-place__fields">
         <div className="l-place__address">
           <InputText id={`endereco-${props.point}`} label={`Endereço de ${props.point}`} placeholder="Endereço" />
           <InputText id={`numero-${props.point}`} placeholder="Nº" />
           <InputText id={`complemento-${props.point}`} placeholder="Complemento" />
-          <Star id={`salvar-${props.point}`} name={`salvar-${props.point}`} value="Meu endereço" />
+          <Star id={`salvar-${props.point}`} value="Meu endereço" />
         </div>
 
         <div className="l-place__details">
           <InputText id={`contato-${props.point}`} label="Falar com:" placeholder="Rodrigo Rodrigues" />
-          <Select id={`andares-${props.point}`} label="Qual Andar?" name={`andares-${props.point}`} options={opts.floors} />
-          <RadioGroup flat label="Possui elevador?" name={`elevador-${props.point}`} options={opts.yN} />
+          <Select id={`andares-${props.point}`} label="Qual Andar?" options={opts.floors} />
+          <RadioGroup name={`elevador-${props.point}`} label="Possui elevador?" options={opts.yN} flat />
         </div>
       </div>
     </section>
