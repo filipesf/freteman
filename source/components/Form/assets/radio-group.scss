@@ -6,7 +6,7 @@
 .f-radio-group {
   display: grid;
   grid-gap: spacing(1/2);
-  grid-template-columns: repeat(auto-fit, minmax(rem(1), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 
 
