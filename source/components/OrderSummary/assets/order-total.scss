@@ -9,10 +9,13 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-weight: bold;
+}
+
+.c-order-item + .c-order-total {
   padding-top: spacing(1);
   margin-top: spacing(1/2);
   border-top: rem(1) solid color(light);
-  font-weight: bold;
 }
 
 
