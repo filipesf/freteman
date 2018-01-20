@@ -8,14 +8,30 @@
   fill: color(gray, xlight);
   @include transition(short);
   cursor: pointer;
+
+  &:hover {
+    fill: color(gray, light);
+  }
 }
 
 
 
-/* VARIANTS
+/* STATES
    ========================================================================== */
+:focus {
+  & ~ .c-star {
+    filter: drop-shadow(0 rem(1) rem(2) color(gray, light));
+  }
+}
+
 :checked {
   & ~ .c-star {
     fill: color(brand);
+  }
+
+  &:focus {
+    & ~ .c-star {
+      filter: drop-shadow(0 rem(1) rem(2) color(brand, light));
+    }
   }
 }

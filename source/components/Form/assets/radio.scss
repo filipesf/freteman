@@ -32,6 +32,10 @@
 
 
 
+
+
+/* ELEMENTS
+   ========================================================================== */
 .f-radio__text {
   display: block;
   @include type-scale(0);
@@ -39,6 +43,17 @@
 }
 
 
+
+
+
+/* STATES
+   ========================================================================== */
+:focus {
+  & ~ .f-radio {
+    border-color: rgba(color(dark), .2);
+    background-color: rgba(color(light, dark), .5);
+  }
+}
 
 :checked {
   & ~ .f-radio {

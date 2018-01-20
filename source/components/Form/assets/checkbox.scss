@@ -18,6 +18,12 @@
     fill: white;
     @include transition(short);
   }
+
+  &:hover {
+    .c-thumbnail {
+      border-color: color(light, xdark);
+    }
+  }
 }
 
 
@@ -45,9 +51,26 @@
 
 
 
+/* STATES
+   ========================================================================== */
+:focus {
+  & ~ .f-checkbox {
+    .c-thumbnail {
+      border-color: color(brand);
+      box-shadow: $shadow-size rgba(color(brand, light), 0.15);
+    }
+  }
+
+  & ~ .f-checkbox.--button {
+    border-color: rgba(color(dark), .2);
+    background-color: rgba(color(light, dark), .5);
+  }
+}
+
 :checked {
   & ~ .f-checkbox {
     .c-thumbnail {
+      border-color: color(brand);
       background-color: color(brand);
       color: color(brand);
     }

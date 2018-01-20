@@ -13,6 +13,11 @@
     background-color: rgba(color(light, dark), .5);
   }
 
+  &:focus {
+    border-color: color(brand);
+    box-shadow: $shadow-size rgba(color(brand, light), .15);
+  }
+
 
 
 /* VARIANTS
@@ -60,6 +65,11 @@
     &:hover {
       background-color: color(accent, dark);
       color: color(brand, dark);
+    }
+
+    &:focus {
+      border-color: color(accent, dark);
+      box-shadow: $shadow-size rgba(color(accent, xdark), .15);
     }
   }
 

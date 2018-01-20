@@ -29,7 +29,7 @@
   color: white;
   @include transition(medium);
 
-  &:hover {
+  @include on-event {
     text-decoration: none;
     background-color: color(brand, dark);
   }
