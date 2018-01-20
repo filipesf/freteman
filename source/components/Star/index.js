@@ -8,7 +8,12 @@ import './assets/star.scss';
 const FavStar = props => {
   return (
     <Field>
-      <input id={props.id} type="checkbox" name={props.name} value={props.value} />
+      <input
+        type="checkbox"
+        id={props.id}
+        name={props.name ? props.name : props.id}
+        value={props.value}
+      />
       <label className="c-star" htmlFor={props.id}>
         <Thumbnail src={assets.icon.star} />
       </label>
@@ -18,7 +23,7 @@ const FavStar = props => {
 
 FavStar.propTypes = {
   id: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
+  name: propTypes.string,
   value: propTypes.string.isRequired,
 };
 
