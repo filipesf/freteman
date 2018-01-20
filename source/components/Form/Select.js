@@ -26,7 +26,11 @@ const Select = props => {
       <div className={classes}>
         { props.location && <Thumbnail src={assets.icon.pin} /> }
         <Thumbnail src={assets.icon.arrowSimple} />
-        <select id={props.id} className="f-select__options" name={props.name}>
+        <select
+          id={props.id}
+          name={props.name ? props.name : props.id}
+          className="f-select__options"
+        >
           {selectOptions}
         </select>
       </div>
@@ -36,7 +40,7 @@ const Select = props => {
 
 Select.propTypes = {
   id: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
+  name: propTypes.string,
   label: propTypes.string,
   options: propTypes.array.isRequired,
   location: propTypes.bool,
