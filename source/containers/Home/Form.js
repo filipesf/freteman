@@ -1,7 +1,7 @@
 import React from 'react';
 import SvgInline from "react-svg-inline";
 import assets from '../../constants/assets';
-import OrderSummary from '../../components/OrderSummary';
+import '../../components/OrderSummary';
 import './assets/styles/forms.scss';
 
 const Form = () => (
@@ -49,7 +49,17 @@ const Form = () => (
       <small className="l-fieldset__detail">150kg max. P 133 x L 133 x A 133 cm</small>
     </section>
 
-    <OrderSummary />
+    <ul className="l-order-summary">
+      <li className="c-order-item">
+        <span className="c-order-item__name">Distância</span>
+        <span className="c-order-item__value">54km e 200m</span>
+      </li>
+
+      <li className="c-order-item">
+        <span className="c-order-item__name">Valor Total</span>
+        <span className="c-order-item__value --large">R$ 43,50</span>
+      </li>
+    </ul>
 
     <button className="c-btn --large --accent">CHAMAR MENSAGEIRO</button>
   </form>
