@@ -1,0 +1,41 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   ORDER TOTAL
+   ========================================================================== */
+.c-order-total {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: spacing(1);
+  margin-top: spacing(1/2);
+  border-top: rem(1) solid color(light);
+  font-weight: bold;
+}
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-order-total__name,
+.c-order-total__value {
+  line-height: 1;
+}
+
+
+
+.c-order-total__name {
+  @include font-scale(4);
+  color: color(brand);
+}
+
+
+
+.c-order-total__value {
+  @include font-scale(8);
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

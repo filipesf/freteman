@@ -1,18 +1,15 @@
 import React from 'react';
+import OrderItems from './OrderItems';
+import OrderTotal from './OrderTotal';
 import './assets/order-summary.scss';
 
-const OrderSummary = () => (
-  <ul className="l-order-summary">
-    <li className="c-order-item">
-      <span className="c-order-item__name">Distância</span>
-      <span className="c-order-item__value">54km e 200m</span>
-    </li>
-
-    <li className="c-order-item">
-      <span className="c-order-item__name">Valor Total</span>
-      <span className="c-order-item__value --large">R$ 1264,00</span>
-    </li>
-  </ul>
-);
+const OrderSummary = props => {
+  return (
+    <ul className="l-order-summary">
+      <OrderItems data={props.data} />
+      <OrderTotal value="R$ 43,50" />
+    </ul>
+  );
+};
 
 export default OrderSummary;
