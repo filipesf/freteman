@@ -22,11 +22,11 @@ const Select = props => {
 
   return (
     <Field>
-      {props.label && <Label text={props.label} />}
+      {props.label && <Label for={props.id} text={props.label} />}
       <div className={classes}>
         { props.location && <Thumbnail src={assets.icon.pin} /> }
         <Thumbnail src={assets.icon.arrowSimple} />
-        <select className="f-select__options" name={props.name}>
+        <select id={props.id} className="f-select__options" name={props.name}>
           {selectOptions}
         </select>
       </div>
