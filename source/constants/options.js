@@ -32,6 +32,22 @@ const opts = {
     label: 'Cartão de Crédito',
     value: 'Cartão de Crédito'
   }],
+  veicles: [{
+    id: 'fiorino',
+    label: 'Fiorino',
+    value: 'Fiorino',
+    icon: assets.icon.fiorino
+  }, {
+    id: 'van',
+    label: 'Van',
+    value: 'Van',
+    icon: assets.icon.util
+  }, {
+    id: 'caminhao',
+    label: 'Caminhão',
+    value: 'Caminhão',
+    icon: assets.icon.truck
+  }],
   helpers: [{
     id: 'motorista-nao-ajuda',
     value: 'O motorista não carregará coisas',
