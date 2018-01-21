@@ -12,6 +12,11 @@
 
   .site-brand {
     padding: spacing(1);
+    @include transition(short);
+
+    @include on-event {
+      background-color: color(brand, dark);
+    }
   }
 }
 
@@ -27,7 +32,7 @@
   font-family: $font-family-heading;
   padding: spacing(1);
   color: white;
-  @include transition(medium);
+  @include transition(short);
 
   @include on-event {
     text-decoration: none;
