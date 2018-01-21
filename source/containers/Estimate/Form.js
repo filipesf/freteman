@@ -2,7 +2,7 @@ import React from 'react';
 import opts from '../../constants/options';
 import Panel from '../../components/Panel';
 import Place from './Place';
-import PlaceActions from './PlaceActions';
+import AddStop from './AddStop';
 import Withdrawal from './Withdrawal';
 import Veicles from './Veicles';
 import Select from '../../components/Form/Select';
@@ -10,13 +10,13 @@ import RadioGroup from '../../components/Form/RadioGroup';
 import Textarea from '../../components/Form/Textarea';
 import OrderSummary from '../../components/OrderSummary';
 
-const EstimateForm = props => {
+const Form = props => {
   return (
-    <section className="l-estimates__form">
+    <section className="l-estimate__form">
       <Panel>
         <Place point="coleta" />
         <Place point="entrega" />
-        <PlaceActions />
+        <AddStop />
       </Panel>
 
       <Panel title="Horário de Retirada">
@@ -53,4 +53,4 @@ const EstimateForm = props => {
   );
 };
 
-export default EstimateForm;
+export default Form;

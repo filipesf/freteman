@@ -3,7 +3,7 @@ import Fieldset from '../../components/Form/Fieldset';
 import Checkbox from '../../components/Form/Checkbox';
 import '../../components/Button';
 
-const PlaceActions = () => {
+const AddStop = () => {
   return (
     <Fieldset>
       <button className="c-btn --outline --primary">Adicionar Volta</button>
@@ -13,4 +13,4 @@ const PlaceActions = () => {
   );
 };
 
-export default PlaceActions;
+export default AddStop;

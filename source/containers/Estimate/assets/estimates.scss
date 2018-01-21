@@ -3,7 +3,7 @@
 /* ==========================================================================
    ESTIMATES
    ========================================================================== */
-.l-estimates {
+.l-estimate {
   display: grid;
   grid-gap: spacing(3/2);
   grid-template-columns: rem(570px) rem(370px);
@@ -12,7 +12,7 @@
 
 
 
-.l-estimates__form {
+.l-estimate__form {
   > :last-child,
   .l-panel + .l-panel {
     margin-top: spacing(1/2);

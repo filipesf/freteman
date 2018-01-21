@@ -3,7 +3,7 @@ import summaryData from '../../constants/summaryData';
 import Panel from '../../components/Panel';
 import OrderSummary from '../../components/OrderSummary';
 
-const EstimateSummary = props => {
+const Summary = props => {
   return (
     <section className="l-estimates__summary">
       <Panel>
@@ -13,4 +13,4 @@ const EstimateSummary = props => {
   );
 };
 
-export default EstimateSummary;
+export default Summary;
