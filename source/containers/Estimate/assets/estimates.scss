@@ -18,3 +18,11 @@
     margin-top: spacing(1/2);
   }
 }
+
+
+
+.l-estimate__map {
+  @include rectangle(rem(370), rem(348));
+  margin: rem(-24) rem(-24) 0 rem(-24);
+  border: none;
+}
