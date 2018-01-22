@@ -5,7 +5,7 @@ import Panel from '../../components/Panel';
 import Place from './Place';
 import AddPlace from './AddPlace';
 import Withdrawal from './Withdrawal';
-import Veicles from './Veicles';
+import Vehicles from './Vehicles';
 import Select from '../../components/Form/Select';
 import RadioGroup from '../../components/Form/RadioGroup';
 import Textarea from '../../components/Form/Textarea';
@@ -25,7 +25,7 @@ const Form = props => {
       </Panel>
 
       <Panel title="Veículo" tooltip="Selecione o tipo de veículo">
-        <Veicles />
+        <Vehicles />
       </Panel>
 
       <Panel title="Tipo de serviço">

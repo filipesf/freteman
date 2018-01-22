@@ -32,7 +32,7 @@ const opts = {
     label: 'Cartão de Crédito',
     value: 'Cartão de Crédito'
   }],
-  veicles: [{
+  vehicles: [{
     id: 'fiorino',
     label: 'Fiorino',
     value: 'Fiorino',
