@@ -1,0 +1,85 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   TOOLTIP
+   ========================================================================== */
+.c-tooltip {
+  position: absolute;
+  right: spacing(1);
+  top: spacing(1);
+  z-index: 4000;
+  @include rectangle(spacing(1));
+  fill: color(brand);
+  white-space: nowrap;
+  cursor: help;
+
+  @include on-event {
+    .c-tooltip__tip {
+      right: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-tooltip__tip {
+  display: block;
+  position: relative;
+  @include transition(short);
+  right: rem(-12);
+  visibility: hidden;
+  opacity: 0;
+
+
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+  }
+
+
+
+  &:before {
+    content: '';
+    @include rectangle(rem(16));
+    top: rem(3);
+    right: rem(28);
+    border-radius: rem(3);
+    transform: rotate(45deg);
+    background-color: color(dark);
+  }
+
+
+
+  &:after {
+    content: attr(data-tooltip);
+    top: rem(-8);
+    right: rem(32);
+    padding: spacing(1/4) spacing(1/2);
+    border-radius: rem(5);
+    @include type-scale(-2);
+    background-color: color(dark);
+    color: white;
+  }
+}
+
+
+
+
+
+/* VARIANTS
+   ========================================================================== */
+.c-tooltip.--long {
+  white-space: normal;
+
+  .c-tooltip__tip:after {
+    width: rem(250);
+  }
+}
