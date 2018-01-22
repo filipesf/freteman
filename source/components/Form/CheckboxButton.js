@@ -9,7 +9,7 @@ const CheckboxButton = props => {
   return (
     <Field>
      <input id={parseInputID(props.id)} type="checkbox" name={props.name} value={props.value} defaultChecked={props.checked} />
-      <label className="f-checkbox --button" htmlFor={parseInputID(props.id)}>
+      <label className="f-checkbox --btn" htmlFor={parseInputID(props.id)}>
         {props.icon && <Thumbnail src={props.icon} />}
         <span className="f-checkbox__text">{props.label}</span>
       </label>

@@ -30,7 +30,7 @@
 
 /* VARIANTS
    ========================================================================== */
-.f-checkbox.--button {
+.f-checkbox.--btn {
   @include o-btn;
   @include type-scale(0);
   width: 100%;
@@ -61,7 +61,7 @@
     }
   }
 
-  & ~ .f-checkbox.--button {
+  & ~ .f-checkbox.--btn {
     border-color: rgba(color(dark), .2);
     background-color: rgba(color(light, dark), .5);
   }
@@ -76,7 +76,7 @@
     }
   }
 
-  & ~ .f-checkbox.--button {
+  & ~ .f-checkbox.--btn {
     background-color: color(brand);
     fill: color(brand, xdark);
     color: white;
