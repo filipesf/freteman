@@ -14,7 +14,7 @@ const OrderSummary = props => {
 };
 
 OrderSummary.propTypes = {
-  items: propTypes.object,
+  items: propTypes.array,
   total: propTypes.string,
 };
 
