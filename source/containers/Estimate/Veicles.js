@@ -1,7 +1,7 @@
 import React from 'react';
 import opts from '../../constants/options';
 import RadioGroup from '../../components/Form/RadioGroup';
-import './assets/veicles.scss'
+import './assets/veicles.scss';
 
 const Veicles = () => {
   return (

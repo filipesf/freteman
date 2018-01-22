@@ -10,7 +10,7 @@ class Estimate extends React.Component {
       order: {
         total: 'R$ 43,50'
       }
-    }
+    };
   }
 
   render() {
