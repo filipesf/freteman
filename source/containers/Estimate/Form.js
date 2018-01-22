@@ -12,7 +12,7 @@ import OrderSummary from '../../components/OrderSummary';
 
 const Form = props => {
   return (
-    <section className="l-estimate__form">
+    <form className="l-estimate__form">
       <Panel>
         <Place point="coleta" />
         <Place point="entrega" />
@@ -49,7 +49,7 @@ const Form = props => {
       </Panel>
 
       <button className="c-btn --block --accent --large">FINALIZAR</button>
-    </section>
+    </form>
   );
 };
 
