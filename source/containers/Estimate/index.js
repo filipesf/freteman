@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './Form';
 import Summary from './Summary';
-import './assets/estimates.scss';
+import './assets/estimate.scss';
 
 class Estimate extends React.Component {
   constructor(props) {
