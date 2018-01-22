@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import opts from '../../constants/options';
 import Panel from '../../components/Panel';
 import Place from './Place';
@@ -51,6 +52,10 @@ const Form = props => {
       <button className="c-btn --block --accent --large">FINALIZAR</button>
     </form>
   );
+};
+
+Form.propTypes = {
+  order: propTypes.object,
 };
 
 export default Form;

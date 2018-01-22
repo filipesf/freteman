@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import OrderItems from './OrderItems';
 import OrderTotal from './OrderTotal';
 import './assets/order-summary.scss';
@@ -10,6 +11,11 @@ const OrderSummary = props => {
       <OrderTotal value={props.total} />
     </ul>
   );
+};
+
+OrderSummary.propTypes = {
+  items: propTypes.object,
+  total: propTypes.string,
 };
 
 export default OrderSummary;

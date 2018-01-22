@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import './assets/order-total.scss';
 
 const OrderTotal = props => {
@@ -8,6 +9,10 @@ const OrderTotal = props => {
       <span className="c-order-total__value">{props.value}</span>
     </li>
   );
+};
+
+OrderTotal.propTypes = {
+  value: propTypes.string,
 };
 
 export default OrderTotal;

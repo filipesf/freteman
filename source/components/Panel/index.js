@@ -23,6 +23,7 @@ const Panel = props => {
 
 Panel.propTypes = {
   title: propTypes.string,
+  tooltip: propTypes.string,
   children: propTypes.oneOfType([
     propTypes.array,
     propTypes.element

@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import summaryData from '../../constants/summaryData';
 import Panel from '../../components/Panel';
 import OrderSummary from '../../components/OrderSummary';
@@ -12,6 +13,10 @@ const Summary = props => {
       </Panel>
     </section>
   );
+};
+
+Summary.propTypes = {
+  order: propTypes.object
 };
 
 export default Summary;
