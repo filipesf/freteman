@@ -4,6 +4,63 @@
    CONSOLE
    ========================================================================== */
 .c-console {
-  height: rem(80);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  justify-content: end;
+  align-items: center;
+  height: spacing(3);
+  padding: spacing(1/2) spacing(1);
+  background-color: white;
+}
+
+
+/* ELEMENTS
+   ========================================================================== */
+.c-console__msg {
+  display: grid;
+  grid-gap: spacing(1/2);
+  grid-template-columns: rem(32) auto;
+  align-items: center;
+
+  .c-thumbnail {
+    @include rectangle(rem(32));
+    fill: #f9d648;
+  }
+}
+
+
+
+.c-console__actions {
+  display: grid;
+  grid-gap: spacing(1/2);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+.c-console__user {
+  display: grid;
+  grid-gap: spacing(1/2);
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+
+  .c-headline > .c-headline__title {
+    @include font-scale(-2);
+  }
+
+  > .c-thumbnail {
+    @include rectangle(rem(32));
+    border-radius: 50%;
+  }
+}
+
+
+
+
+
+/* VARIANTS
+   ========================================================================== */
+.c-console.--alert {
+  justify-content: space-between;
   background-color: #fff8d4;
 }
