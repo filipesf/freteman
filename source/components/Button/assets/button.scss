@@ -35,7 +35,6 @@
 
 
   &.--primary {
-    @include type-scale(0);
     background-color: color(brand);
     color: white;
 
