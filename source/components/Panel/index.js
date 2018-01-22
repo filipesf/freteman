@@ -2,6 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import cx from 'classnames';
 import Headline from '../Headline';
+import Tooltip from '../Tooltip';
 import './assets/panel.scss';
 
 const Panel = props => {
@@ -13,6 +14,7 @@ const Panel = props => {
 
   return (
     <div className={classes}>
+      {props.tooltip && <Tooltip tip={props.tooltip} />}
       {props.title && <Headline medium left title={props.title} />}
       {props.children}
     </div>

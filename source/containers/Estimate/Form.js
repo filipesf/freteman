@@ -23,7 +23,7 @@ const Form = props => {
         <Withdrawal />
       </Panel>
 
-      <Panel title="Veículo">
+      <Panel title="Veículo" tooltip="Selecione o tipo de veículo">
         <Veicles />
       </Panel>
 
@@ -31,7 +31,7 @@ const Form = props => {
         <Select id="servico" name="servico" options={opts.services} />
       </Panel>
 
-      <Panel title="Você vai precisar de ajudantes?">
+      <Panel title="Você vai precisar de ajudantes?" tooltip="Por favor, especifique quantos ajudantes serão necessários para a realização deste frete">
         <RadioGroup block name="ajudantes" options={opts.helpers} />
       </Panel>
 

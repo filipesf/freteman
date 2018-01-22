@@ -4,6 +4,7 @@
    BLOCK
    ========================================================================== */
 .l-panel {
+  position: relative;
   @include o-box;
   @include o-grid;
   grid-template-columns: 100%;
@@ -12,6 +13,12 @@
   overflow: hidden;
 }
 
+
+
+
+
+/* VARIANTS
+   ========================================================================== */
 .l-panel.--dark {
   background-color: color(dark);
 
