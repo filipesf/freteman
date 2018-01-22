@@ -2,7 +2,7 @@ import React from 'react';
 import opts from '../../constants/options';
 import Panel from '../../components/Panel';
 import Place from './Place';
-import AddStop from './AddStop';
+import AddPlace from './AddPlace';
 import Withdrawal from './Withdrawal';
 import Veicles from './Veicles';
 import Select from '../../components/Form/Select';
@@ -16,7 +16,7 @@ const Form = props => {
       <Panel>
         <Place point="coleta" />
         <Place point="entrega" />
-        <AddStop />
+        <AddPlace />
       </Panel>
 
       <Panel title="Horário de Retirada">
