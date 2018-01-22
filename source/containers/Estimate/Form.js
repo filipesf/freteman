@@ -36,7 +36,7 @@ const Form = props => {
       </Panel>
 
       <Panel title="Descreva o que iremos transportar">
-        <Textarea id="descricao" placeholder="Será transportado 2 caixas contendo dois motores de carro. O conteúdo das caixas é frágil e precisa de muito cuidado." />
+        <Textarea id="descricao" placeholder="Ex: Serão transportadas 2 caixas contendo dois motores de carro. O conteúdo das caixas é frágil e precisa de muito cuidado." />
       </Panel>
 
       <Panel title="Método e local de pagamento">
