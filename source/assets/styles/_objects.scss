@@ -21,7 +21,7 @@
 /* BOX
    ========================================================================== */
 @mixin o-box {
-  border-radius: spacing(1/2);
+  border-radius: rem(10);
   padding: spacing(1);
 }
 
