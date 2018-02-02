@@ -71,8 +71,9 @@
 
 
 .c-showcase__detail {
-  @include o-media;
+  display: grid;
   grid-gap: spacing(1);
+  grid-template-columns: rem(42) auto;
   padding: spacing(1/2);
 
   @include media-query(769px) {
