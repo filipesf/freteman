@@ -57,7 +57,8 @@
   }
 
   > .c-headline__subtitle {
-    @include type-scale(-2);
+    @include font-scale(-2);
+    @include line-scale(0);
     font-weight: 400;
   }
 }

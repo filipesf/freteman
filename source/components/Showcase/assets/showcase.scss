@@ -99,7 +99,6 @@
 
   .c-headline__subtitle {
     @include type-scale(0);
-    font-weight: 400;
     color: color(gray, light);
   }
 }
