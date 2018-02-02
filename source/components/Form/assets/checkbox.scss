@@ -62,8 +62,8 @@
   }
 
   & ~ .f-checkbox.--btn {
-    border-color: rgba(color(dark), .2);
     background-color: rgba(color(light, dark), .5);
+    box-shadow: $shadow-size rgba(color(brand, light), .15);
   }
 }
 
