@@ -17,15 +17,18 @@
   }
 
   &.has-icon {
+    display: grid;
+    grid-gap: spacing(1/3);
     padding: spacing(1/3);
 
     > .c-thumbnail {
-      width: spacing(3);
+      @include rectangle(spacing(3), spacing(4/3));
       margin: 0 auto;
     }
 
     > .f-radio__text {
       @include font-scale(-2);
+      line-height: 1;
     }
   }
 }
