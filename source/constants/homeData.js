@@ -4,6 +4,7 @@ const HomeData = {
   header: {
     hero: assets.img.hero,
     featured: assets.img.featured2x,
+    title: 'Entregamos qualquer coisa em qualquer lugar',
     subtitle: 'Atendemos entregas de mercadorias, cargas, móveis e mudanças.',
   },
   services: {
