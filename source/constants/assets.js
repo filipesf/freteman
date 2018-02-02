@@ -39,6 +39,7 @@ import iconTooltip from '../assets/icons/tooltip.svg';
    ========================================================================== */
 import imgHero from '../containers/Home/assets/images/hero.png';
 import imgFeatured from '../containers/Home/assets/images/featured.png';
+import imgFeatured2x from '../containers/Home/assets/images/featured@2x.png';
 import imgComputer from '../containers/Home/assets/images/computer.png';
 import imgGenerator from '../containers/Home/assets/images/generator.png';
 import imgHouse from '../containers/Home/assets/images/house.png';
@@ -100,6 +101,7 @@ const assets = {
   img: {
     hero: imgHero,
     featured: imgFeatured,
+    featured2x: imgFeatured2x,
     man: imgMan,
     computer: imgComputer,
     generator: imgGenerator,

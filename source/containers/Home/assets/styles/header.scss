@@ -86,6 +86,7 @@
   }
 
   .c-thumbnail {
+    max-width: rem(720);
     margin-top: spacing(4);
 
     @include media-query(medium) {

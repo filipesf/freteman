@@ -3,8 +3,7 @@ import assets from './assets';
 const HomeData = {
   header: {
     hero: assets.img.hero,
-    featured: assets.img.featured,
-    title: 'Entregamos qualquer coisa em qualquer lugar',
+    featured: assets.img.featured2x,
     subtitle: 'Atendemos entregas de mercadorias, cargas, móveis e mudanças.',
   },
   services: {
