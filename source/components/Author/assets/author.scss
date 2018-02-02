@@ -12,8 +12,9 @@
     color: color(dark);
   }
 
-  .c-headline__subtitle {
+  .c-headline > .c-headline__subtitle {
     color: color(gray, dark);
+    font-weight: 600;
   }
 
   .c-thumbnail,
