@@ -6,7 +6,15 @@
 .f-radio-group {
   display: grid;
   grid-gap: spacing(1/2);
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-template-columns: auto;
+
+  @include media-query(landscape) {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+
+  @include media-query(medium) {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
 }
 
 
@@ -48,6 +56,7 @@
 
 .f-radio-group.--flat {
   grid-gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 
   .f-field {
     &:first-of-type {

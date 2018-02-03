@@ -11,6 +11,9 @@
   background-color: white;
   color: color(dark);
   resize: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
   &:hover {
     border-color: color(light, dark);

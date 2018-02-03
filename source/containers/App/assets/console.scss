@@ -5,12 +5,21 @@
    ========================================================================== */
 .c-console {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  grid-gap: spacing(1/2);
+  grid-template-columns: auto;
   justify-content: end;
   align-items: center;
-  height: spacing(3);
-  padding: spacing(1/2) spacing(1);
+  padding: spacing(1/2) ;
   background-color: white;
+
+  @include media-query(landscape) {
+    grid-template-columns: auto auto;
+  }
+
+  @include media-query(medium) {
+    grid-template-columns: repeat(auto-fit, minmax(0, auto));
+    padding: spacing(1/2) spacing(1);
+  }
 }
 
 
@@ -20,7 +29,13 @@
   display: grid;
   grid-gap: spacing(1/2);
   grid-template-columns: rem(32) auto;
-  align-items: center;
+  align-items: start;
+
+  @include media-query(medium) {
+    align-items: center;
+  }
+
+
 
   .c-thumbnail {
     @include rectangle(rem(32));
@@ -34,6 +49,7 @@
   display: grid;
   grid-gap: spacing(1/2);
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }
 
 
@@ -44,9 +60,13 @@
   grid-template-columns: repeat(2, auto);
   align-items: center;
 
+
+
   .c-headline > .c-headline__title {
     @include font-scale(-2);
   }
+
+
 
   > .c-thumbnail {
     @include rectangle(rem(32));

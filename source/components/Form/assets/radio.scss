@@ -25,8 +25,19 @@
     }
 
     > .f-radio__text {
+      max-width: rem(185);
       @include font-scale(-2);
       line-height: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      @include media-query(landscape) {
+        max-width: initial;
+      }
+
+      @include media-query(medium) {
+        width: initial;
+      }
     }
   }
 }

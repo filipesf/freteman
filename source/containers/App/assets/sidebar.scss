@@ -4,19 +4,44 @@
    SIDEBAR
    ========================================================================== */
 .l-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
   display: grid;
-  grid-gap: spacing(3);
+  grid-template-columns: auto 1fr;
   align-content: start;
-  min-height: 100vh;
   background-color: color(brand);
 
+  @include media-query(rem(1025)) {
+    position: initial;
+    grid-gap: spacing(3);
+    grid-template-columns: auto;
+    min-height: 100vh;
+  }
+
+
+
   .site-brand {
-    padding: spacing(1);
+    display: flex;
+    align-items: center;
+    padding: spacing(1/2);
     @include transition(short);
+
+    @include media-query(rem(1025)) {
+      display: block;
+      width: auto;
+      padding: spacing(1);
+    }
 
     @include on-event {
       background-color: color(brand, dark);
     }
+  }
+
+  @include media-query(landscape) {
+    .site-brand__logo { display: block; }
+    .site-brand__icon { display: none; }
   }
 }
 
@@ -24,29 +49,76 @@
 
 /* ELEMENTS
    ========================================================================== */
-.l-sidebar__link {
+.l-sidebar__nav {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  justify-content: space-between;
+  width: 100%;
+
+  @include media-query(landscape) {
+    justify-content: end;
+  }
+
+  @include media-query(medium) {
+    justify-content: end;
+  }
+
+  @include media-query(rem(1025)) {
+    display: block;
+  }
+}
+
+
+
+.l-sidebar__link {
+  display: inline-grid;
   grid-gap: spacing(1/2);
-  grid-template-columns: spacing(4/3) auto;
+  grid-template-columns: auto;
   align-items: center;
+  padding: spacing(1/3) spacing(1/2);
   font-family: $font-family-heading;
-  padding: spacing(1);
   color: white;
   @include transition(short);
+
+  @include media-query(landscape) {
+    padding: spacing(1/2);
+  }
+
+  @include media-query(medium) {
+    padding: spacing(1/2);
+  }
+
+  @include media-query(rem(1025)) {
+    display: grid;
+    grid-template-columns: rem(32) auto;
+    padding: spacing(1);
+  }
 
   @include on-event {
     text-decoration: none;
     background-color: color(brand, dark);
   }
 
+
+
   > .c-thumbnail {
-    @include rectangle(spacing(4/3));
+    @include rectangle(rem(32));
     fill: white;
   }
 
   &:nth-child(2) > .c-thumbnail {
     fill: none;
     stroke: white;
-    stroke-width: rem(2px);
+    stroke-width: rem(2);
+  }
+}
+
+
+
+.l-sidebar__text {
+  display: none;
+
+  @include media-query(rem(1025)) {
+    display: block;
   }
 }

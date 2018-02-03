@@ -6,8 +6,12 @@
 .l-estimate {
   display: grid;
   grid-gap: spacing(3/2);
-  grid-template-columns: rem(570px) rem(370px);
+  grid-template-columns: auto;
   justify-content: center;
+
+  @include media-query(large) {
+    grid-template-columns: rem(570) rem(370);
+  }
 }
 
 
@@ -21,8 +25,20 @@
 
 
 
+.l-estimate__summary {
+  position: -webkit-sticky;
+  position: sticky;
+  top: rem(245);
+}
+
+
+
 .l-estimate__map {
-  @include rectangle(rem(370), rem(348));
+  display: none;
   margin: rem(-24) rem(-24) 0 rem(-24);
   border: none;
+
+  @include media-query(large) {
+    @include rectangle(rem(370), rem(348));
+  }
 }
