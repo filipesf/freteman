@@ -13,7 +13,7 @@
   align-content: start;
   background-color: color(brand);
 
-  @include media-query(rem(769)) {
+  @include media-query(rem(1025)) {
     position: initial;
     grid-gap: spacing(3);
     grid-template-columns: auto;
@@ -28,7 +28,7 @@
     padding: spacing(1/2);
     @include transition(short);
 
-    @include media-query(rem(769)) {
+    @include media-query(rem(1025)) {
       display: block;
       width: auto;
       padding: spacing(1);
@@ -63,7 +63,7 @@
     justify-content: end;
   }
 
-  @include media-query(rem(769)) {
+  @include media-query(rem(1025)) {
     display: block;
   }
 }
@@ -88,7 +88,7 @@
     padding: spacing(1/2);
   }
 
-  @include media-query(rem(769)) {
+  @include media-query(rem(1025)) {
     display: grid;
     grid-template-columns: rem(32) auto;
     padding: spacing(1);
@@ -118,7 +118,7 @@
 .l-sidebar__text {
   display: none;
 
-  @include media-query(rem(769)) {
+  @include media-query(rem(1025)) {
     display: block;
   }
 }

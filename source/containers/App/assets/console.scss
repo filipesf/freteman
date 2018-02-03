@@ -5,7 +5,7 @@
    ========================================================================== */
 .c-console {
   display: grid;
-  grid-gap: spacing(1);
+  grid-gap: spacing(1/2);
   grid-template-columns: auto;
   justify-content: end;
   align-items: center;
@@ -17,7 +17,6 @@
   }
 
   @include media-query(medium) {
-    grid-gap: initial;
     grid-template-columns: repeat(auto-fit, minmax(0, auto));
     padding: spacing(1/2) spacing(1);
   }

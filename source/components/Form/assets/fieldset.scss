@@ -7,7 +7,11 @@
   display: grid;
   border: none;
   grid-gap: spacing(1/2);
-  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  grid-template-columns: auto;
+
+  @include media-query(medium) {
+    grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  }
 
   &.has-veicles {
     grid-template-columns: repeat(3, auto);

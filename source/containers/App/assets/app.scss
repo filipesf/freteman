@@ -5,8 +5,12 @@
    ========================================================================== */
 .application {
   display: grid;
-  grid-template-columns: rem(230) auto;
+  grid-template-columns: auto;
   background-color: color(light);
+
+  @include media-query(rem(1025)) {
+    grid-template-columns: rem(230) auto;
+  }
 }
 
 
@@ -23,8 +27,13 @@
 .l-workspace {
   display: grid;
   grid-gap: spacing(1);
-  grid-template-columns: rem(975);
+  grid-template-columns: auto;
   justify-content: center;
+  padding: 0 spacing(1);
+
+  @include media-query(large) {
+    grid-template-columns: rem(975);
+  }
 
   .c-headline__title {
     font-weight: 400;
