@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/tools';
+@import '../../../assets/styles/tools';
 
 /* ==========================================================================
    SITE NAV
@@ -16,6 +16,7 @@
   @include media-query(medium) {
     position: initial;
     padding: spacing(2);
+    border-bottom: none;
     background-color: color(brand);
   }
 }

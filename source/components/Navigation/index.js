@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import SvgInline from 'react-svg-inline';
 import cx from 'classnames';
 import assets from '../../constants/assets';
-import Brand from '../../components/Brand';
-import '../../components/Button';
-import './assets/styles/navigation.scss';
+import Brand from '../Brand';
+import '../Button';
+import './assets/navigation.scss';
 
 class Navigation extends React.Component {
   constructor(props) {
