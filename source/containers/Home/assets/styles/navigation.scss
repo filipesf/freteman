@@ -4,11 +4,17 @@
    SITE NAV
    ========================================================================== */
 .site-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
   padding: spacing(1/3) spacing(1/2);
+  border-bottom: 1px solid color(light);
   font-family: $font-family-heading;
   background-color: white;
 
   @include media-query(medium) {
+    position: initial;
     padding: spacing(2);
     background-color: color(brand);
   }
@@ -41,6 +47,7 @@
   margin: 0 (-(spacing(1/2)));
   width: 100vw;
   grid-column: 1 / -1;
+  border-bottom: 1px solid color(light);
   background-color: white;
   transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5s;
   transform: translateY(56px) scaleY(0);
