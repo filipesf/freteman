@@ -1,5 +1,4 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import data from '../../constants/dataFooter';
 import Contact from './Contact';
 import Subnav from '../Subnav';
@@ -29,10 +28,6 @@ const Footer = () => {
       </section>
     </footer>
   );
-};
-
-Footer.propTypes = {
-  data: propTypes.object.isRequired,
 };
 
 export default Footer;
