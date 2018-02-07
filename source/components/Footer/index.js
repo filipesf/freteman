@@ -1,28 +1,27 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import data from '../../constants/dataFooter';
 import Contact from './Contact';
-import Subnav from '../../components/Subnav';
-import Thumbnail from '../../components/Thumbnail';
-import Headline from '../../components/Headline';
-import './assets/styles/footer.scss';
+import Subnav from '../Subnav';
+import Thumbnail from '../Thumbnail';
+import Headline from '../Headline';
+import './assets/footer.scss';
 import '../../assets/styles/helpers.scss';
 
-const Footer = props => {
-  const f = props.data;
-
-  const subnavs = f.navs.map((s, index) =>
+const Footer = () => {
+  const subnavs = data.navs.map((s, index) =>
     <Subnav key={index} data={s} />);
 
   return (
     <footer className="site-footer">
       <section className="site-footer__band">
-        <Thumbnail src={f.customerService.image} />
-        <Headline title={f.customerService.title} small />
+        <Thumbnail src={data.customerService.image} />
+        <Headline title={data.customerService.title} small />
       </section>
 
       <section className="site-footer__container">
         <nav className="site-footer__navs">{subnavs}</nav>
-        <Contact data={f.contact} />
+        <Contact data={data.contact} />
       </section>
 
       <section className="site-footer__micro">
