@@ -1,5 +1,5 @@
 import React from 'react';
-import opts from '../../constants/options';
+import opts from '../../constants/dataOptions';
 import RadioGroup from '../../components/Form/RadioGroup';
 import './assets/vehicles.scss';
 

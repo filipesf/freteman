@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { getPlaceIcon } from '../../constants/utils';
-import opts from '../../constants/options';
+import opts from '../../constants/dataOptions';
 import Thumbnail from "../../components/Thumbnail";
 import Star from "../../components/Star";
 import Select from "../../components/Form/Select";

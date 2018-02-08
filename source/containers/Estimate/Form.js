@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import opts from '../../constants/options';
+import opts from '../../constants/dataOptions';
 import Panel from '../../components/Panel';
 import Place from './Place';
 import AddPlace from './AddPlace';

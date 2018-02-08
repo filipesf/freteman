@@ -1,5 +1,5 @@
 import React from 'react';
-import opts from '../../constants/options';
+import opts from '../../constants/dataOptions';
 import Fieldset from '../../components/Form/Fieldset';
 import Checkbox from '../../components/Form/CheckboxButton';
 import Select from '../../components/Form/Select';
