@@ -1,25 +1,26 @@
 import React from 'react';
 import data from '../../constants/dataHome';
-import Page from '../Layout/Page';
+import Layout from '../Layout';
 import Header from './Header';
 import Services from './Services';
 import HowItWorks from './HowItWorks';
 import Benefits from './Benefits';
 import Customers from './Customers';
 import Clients from './Clients';
+import './assets/styles/home.scss';
 
 const Home = () => (
-  <Page id="Home">
+  <Layout id="Home" className="l-home">
     <Header data={data.header} />
 
-    <main id="site-content" role="main">
+    <section id="site-content">
       <Services data={data.services} />
       <HowItWorks data={data.howItWorks} />
       <Benefits data={data.benefits} />
       <Customers data={data.customers} />
       <Clients data={data.clients} />
-    </main>
-  </Page>
+    </section>
+  </Layout>
 );
 
 export default Home;
