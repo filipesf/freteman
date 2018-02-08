@@ -165,8 +165,11 @@ blockquote {
 
 
 p {
-  margin-bottom: spacing(1);
   @include type-scale(0);
+
+  & + p {
+    margin-top: spacing(1);
+  }
 }
 
 
