@@ -10,7 +10,7 @@ const Header = props => {
   const h = props.data;
 
   return (
-    <header className="site-header" style={{ backgroundImage: 'url(' + h.hero + ')' }}>
+    <header className="site-header" style={{ backgroundImage: `url(${h.hero})` }}>
       <div className="site-header__container">
         <section className="site-header__section">
           <Headline title={h.title} subtitle={h.subtitle} />
