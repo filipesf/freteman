@@ -1,0 +1,29 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   PAGE LAYOUT
+   ========================================================================== */
+.l-page {
+  border-bottom: 1px solid color(light);
+}
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.l-page__title {
+  background-color: color(brand);
+  color: white;
+
+  > .c-headline {
+    @include o-wrapper;
+    padding: spacing(1);
+  }
+}
+
+
+
+.l-page__container {
+  @include o-wrapper;
+  padding: spacing(3) spacing(1);
+}
