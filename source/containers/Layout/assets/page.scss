@@ -3,9 +3,7 @@
 /* ==========================================================================
    PAGE LAYOUT
    ========================================================================== */
-.l-page {
-  border-bottom: 1px solid color(light);
-}
+.l-page {}
 
 
 
@@ -25,5 +23,9 @@
 
 .l-page__container {
   @include o-wrapper;
-  padding: spacing(3) spacing(1);
+  padding: spacing(1);
+
+  @include media-query(medium) {
+    padding: spacing(3) spacing(1);
+  }
 }
