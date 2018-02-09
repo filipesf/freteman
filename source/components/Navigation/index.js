@@ -35,10 +35,10 @@ class Navigation extends React.Component {
             <SvgInline svg={assets.icon.menu} />
           </div>
           <ul className="site-nav__list">
+            <li className="site-nav__item"><Link to="sobre" className="site-nav__link">Sobre</Link></li>
             <li className="site-nav__item"><Link to="frota" className="site-nav__link">Frota</Link></li>
             <li className="site-nav__item"><Link to="servicos" className="site-nav__link">Serviços</Link></li>
             <li className="site-nav__item"><Link to="contato" className="site-nav__link">Contato</Link></li>
-            <li className="site-nav__item"><Link to="login" className="site-nav__link">Login</Link></li>
             <Link to="/orcamento" className="c-btn --outline --accent u-hide@small">FAZER ORÇAMENTO</Link>
           </ul>
         </div>
