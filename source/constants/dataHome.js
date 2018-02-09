@@ -1,4 +1,7 @@
 import assets from './assets';
+import dataServices from './dataServices';
+import dataClients from './dataClients';
+import dataTestimonials from './dataTestimonials';
 
 const dataHome = {
   header: {
@@ -7,31 +10,7 @@ const dataHome = {
     title: 'Entregamos qualquer coisa em qualquer lugar',
     subtitle: 'Atendemos entregas de mercadorias, cargas, móveis e mudanças.',
   },
-  services: {
-    title: 'Tipos de serviços',
-    subtitle: 'Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade.',
-    content: [{
-      image: assets.img.distribution,
-      title: "Entrega de produtos",
-      subtitle: "Entrega de produtos.",
-    }, {
-      image: assets.img.house,
-      title: "Entrega de produtos",
-      subtitle: "Entrega de produtos.",
-    }, {
-      image: assets.img.generator,
-      title: "Entrega de produtos",
-      subtitle: "Entrega de produtos.",
-    }, {
-      image: assets.img.wine,
-      title: "Entrega de produtos",
-      subtitle: "Entrega de produtos.",
-    }, {
-      image: assets.img.computer,
-      title: "Entrega de produtos",
-      subtitle: "Entrega de produtos.",
-    }],
-  },
+  services: dataServices,
   howItWorks: {
     title: 'Como Funciona',
     subtitle: 'Chame um mensageiro em três passos simples',
@@ -68,34 +47,9 @@ const dataHome = {
   },
   customers: {
     title: 'Clientes Satisfeitos',
-    content: [{
-      testimonial: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
-      avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
-      name: 'Guilherme Mesquita',
-      location: 'São Paulo - SP',
-    }, {
-      testimonial: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
-      avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
-      name: 'Guilherme Mesquita',
-      location: 'São Paulo - SP',
-    }, {
-      testimonial: 'A entrega ocorreu como planejada e o pessoal foi extremamente copetente e profissional ao manejar objetos frágeis.',
-      avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
-      name: 'Guilherme Mesquita',
-      location: 'São Paulo - SP',
-    }],
+    content: dataTestimonials,
   },
-  clients: {
-    title: 'Marcas',
-    subtitle: 'Atuamos em diversas áreas para oferecer a você serviços para qualquer necessidade.',
-    content: [
-      { image: assets.img.latam },
-      { image: assets.img.petrobras },
-      { image: assets.img.vivo },
-      { image: assets.img.reclameaqui },
-      { image: assets.img.consul },
-    ],
-  }
+  clients: dataClients
 };
 
 export default dataHome;

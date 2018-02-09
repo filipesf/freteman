@@ -10,7 +10,7 @@ const Services = props => {
   return (
     <Section>
       <Headline title={s.title} subtitle={s.subtitle} />
-      <CardsList type="services" data={s.content} />
+      <CardsList type="services" data={s.list} />
     </Section>
   );
 };
