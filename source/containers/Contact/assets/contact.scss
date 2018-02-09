@@ -3,12 +3,7 @@
 /* ==========================================================================
    CONTACT
    ========================================================================== */
-.l-contact{
-  display: grid;
-  grid-gap: spacing(2);
-  grid-template-columns: repeat(2, 45%);
-  justify-content: space-between;
-}
+.l-contact{}
 
 
 
@@ -17,10 +12,6 @@
 .l-contact__form {
   display: grid;
   grid-gap: spacing(1);
-}
-
-
-
-.l-contact__map {
-  @include rectangle(100%);
+  max-width: rem(520);
+  width: 100%;
 }
