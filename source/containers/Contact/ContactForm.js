@@ -5,7 +5,7 @@ import "../../components/Button";
 
 const ContactForm = () => {
   return (
-    <form class="l-contact__form">
+    <form className="l-contact__form">
       <InputText id="nome" label="Nome" />
       <InputText id="email" label="Email" />
       <Textarea id="mensagem" label="Mensagem" />
