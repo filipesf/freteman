@@ -57,6 +57,7 @@ import imgTimer from '../containers/Home/assets/images/timer.png';
 import imgDistribution from '../containers/Home/assets/images/van-boxes.png';
 import imgWineShield from '../containers/Home/assets/images/wine-shield.png';
 import imgWine from '../containers/Home/assets/images/wine.png';
+import imgAboutPicture from '../containers/About/assets/about.jpg';
 
 
 
@@ -119,6 +120,7 @@ const assets = {
     distribution: imgDistribution,
     wineShield: imgWineShield,
     wine: imgWine,
+    about: imgAboutPicture,
   },
 };
 

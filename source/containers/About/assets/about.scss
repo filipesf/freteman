@@ -1,0 +1,29 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+.l-about{
+  display: block;
+
+  > .c-thumbnail {
+    margin-bottom: spacing(1);
+
+    @include media-query(medium) {
+      height: rem(280);
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-query(medium) {
+    display: grid;
+    grid-gap: spacing(2);
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.l-about__content {}
