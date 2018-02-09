@@ -12,6 +12,9 @@
 .l-contact__form {
   display: grid;
   grid-gap: spacing(1);
-  max-width: rem(520);
   width: 100%;
+
+  @include media-query(medium) {
+    max-width: rem(520);
+  }
 }
