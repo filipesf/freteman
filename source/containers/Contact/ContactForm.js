@@ -9,7 +9,7 @@ const ContactForm = () => {
       <InputText id="nome" label="Nome" />
       <InputText id="email" label="Email" />
       <Textarea id="mensagem" label="Mensagem" />
-      <button className="c-btn --accent --large --block">Enviar Mensagem</button>
+      <button className="c-btn --accent --large --block">ENVIAR MENSAGEM</button>
     </form>
   );
 };
