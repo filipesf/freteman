@@ -1,0 +1,26 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+.l-contact{
+  display: grid;
+  grid-gap: spacing(2);
+  grid-template-columns: repeat(2, 45%);
+  justify-content: space-between;
+}
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.l-contact__form {
+  display: grid;
+  grid-gap: spacing(1);
+}
+
+
+
+.l-contact__map {
+  @include rectangle(100%);
+}
