@@ -7,6 +7,7 @@ import Home from './containers/Home';
 import About from './containers/About';
 import Services from './containers/Services';
 import Contact from './containers/Contact';
+import Faq from './containers/Faq';
 import Error404 from './containers/404';
 import './assets/styles/main.scss';
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path="/servicos" component={Services} />
       <Route path="/contato" component={Contact} />
       <Route path="/orcamento" component={App} />
+      <Route path="/faq" component={Faq} />
       <Route component={Error404} />
     </Switch>
   </BrowserRouter>, document.getElementById('root'));
