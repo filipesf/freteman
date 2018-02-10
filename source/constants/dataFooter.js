@@ -9,7 +9,7 @@ const dataFooter = {
     title : 'Empresa',
     list: [{
       text: 'Serviços',
-      href: '#Servicos'
+      href: '/servicos'
     }, {
       text: 'Cidades Atendidas',
       href: '#Cidades-Atendidas'
@@ -36,10 +36,10 @@ const dataFooter = {
     title : 'Dúvidas?',
     list: [{
       text: 'Perguntas Frequentes',
-      href: '#Perguntas-Frequentes'
+      href: '/faq'
     }, {
       text: 'Entre em contato',
-      href: '#Entre-em-contato'
+      href: '/contato'
     }]
   }],
   contact: {
