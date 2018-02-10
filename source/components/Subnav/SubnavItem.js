@@ -1,10 +1,11 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const SubNavItem = props => {
   return (
     <li className="c-subnav__item">
-      <a href={props.href} className="c-subnav__link">{props.text}</a>
+      <Link to={props.href} className="c-subnav__link">{props.text}</Link>
     </li>
   );
 };
