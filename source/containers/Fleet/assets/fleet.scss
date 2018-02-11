@@ -1,0 +1,58 @@
+@import '../../../assets/styles/tools';
+
+/* ==========================================================================
+   FLEET
+   ========================================================================== */
+.l-fleet {
+  // display: grid;
+  // grid-template-columns: rem(250) auto;
+}
+
+
+
+
+
+/* ELEMENTS
+   ========================================================================== */
+.l-fleet__list {
+  @include media-query(rem(569)) {
+    display: grid;
+    grid-gap: spacing(1);
+    grid-template-columns: repeat(3, rem(250));
+    justify-content: center;
+
+    grid-template-columns: repeat(3, minmax(rem(150), 1fr));
+  }
+
+  @include media-query(rem(996)) {
+    grid-template-columns: repeat(3, rem(300));
+  }
+}
+
+
+
+.l-fleet__item {
+  display: block;
+  border-radius: rem(5);
+  border: 1px solid color(light);
+  overflow: hidden;
+
+  & + .l-fleet__item {
+    margin-top: spacing(1);
+
+    @include media-query(rem(569)) {
+      margin-top: 0;
+    }
+  }
+}
+
+
+
+.l-fleet__detail {
+  padding: spacing(1);
+  background-color: color(light);
+
+  > * + * {
+    margin-top: spacing(1/2);
+  }
+}

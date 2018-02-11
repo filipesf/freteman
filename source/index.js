@@ -5,6 +5,7 @@ import ServiceWorker from './sw';
 import App from './containers/App';
 import Home from './containers/Home';
 import About from './containers/About';
+import Fleet from './containers/Fleet';
 import Services from './containers/Services';
 import Contact from './containers/Contact';
 import Faq from './containers/Faq';
@@ -16,6 +17,7 @@ ReactDOM.render(
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/sobre" component={About} />
+      <Route path="/frota" component={Fleet} />
       <Route path="/servicos" component={Services} />
       <Route path="/contato" component={Contact} />
       <Route path="/orcamento" component={App} />
