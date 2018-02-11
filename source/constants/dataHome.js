@@ -16,17 +16,17 @@ const dataHome = {
     subtitle: 'Chame um mensageiro em três passos simples',
     content: [{
       icon: assets.icon.box,
-      thumb: assets.img.system,
+      thumb: assets.img.scSystem,
       title: "Faça um pedido pelo sistema da Freteman",
       description: "Escolha o local de coleta e de entrega e forneça detalhes do serviço.",
     }, {
       icon: assets.icon.brand,
-      thumb: assets.img.van,
+      thumb: assets.img.scVan,
       title: "Encontre-se com o funcionário da Freteman",
       description: "A encomenda é coletada por nosso funcionário e encaminhada até seu destino.",
     }, {
       icon: assets.icon.pin,
-      thumb: assets.img.route,
+      thumb: assets.img.scRoute,
       title: "Seu material é entregue ao destino escolhido",
       description: "Sua encomenda chega nas mãos do destinário e você pode acompanhar tudo pelo sistema.",
     }],
