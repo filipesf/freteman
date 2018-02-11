@@ -50,14 +50,17 @@ import imgPetrobras from '../containers/Home/assets/images/petrobras.png';
 import imgReclameaqui from '../containers/Home/assets/images/reclameaqui.png';
 import imgVivo from '../containers/Home/assets/images/vivo.png';
 import imgPricing from '../containers/Home/assets/images/pricing.png';
-import imgRoute from '../containers/Home/assets/images/sc-route.png';
-import imgSystem from '../containers/Home/assets/images/sc-system.png';
-import imgVan from '../containers/Home/assets/images/sc-van.png';
+import imgScRoute from '../containers/Home/assets/images/sc-route.png';
+import imgScSystem from '../containers/Home/assets/images/sc-system.png';
+import imgScVan from '../containers/Home/assets/images/sc-van.png';
 import imgTimer from '../containers/Home/assets/images/timer.png';
 import imgDistribution from '../containers/Home/assets/images/van-boxes.png';
 import imgWineShield from '../containers/Home/assets/images/wine-shield.png';
 import imgWine from '../containers/Home/assets/images/wine.png';
 import imgAboutPicture from '../containers/About/assets/about.jpg';
+import imgFiorino from '../containers/Fleet/assets/fiorino.jpg';
+import imgVan from '../containers/Fleet/assets/van.jpg';
+import imgTruck from '../containers/Fleet/assets/truck.jpg';
 
 
 
@@ -113,14 +116,17 @@ const assets = {
     reclameaqui: imgReclameaqui,
     vivo: imgVivo,
     pricing: imgPricing,
-    route: imgRoute,
-    system: imgSystem,
-    van: imgVan,
+    scRoute: imgScRoute,
+    scSystem: imgScSystem,
+    scVan: imgScVan,
     timer: imgTimer,
     distribution: imgDistribution,
     wineShield: imgWineShield,
     wine: imgWine,
     about: imgAboutPicture,
+    fiorino: imgFiorino,
+    van: imgVan,
+    truck: imgTruck,
   },
 };
 
