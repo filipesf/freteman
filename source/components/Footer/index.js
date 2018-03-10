@@ -1,7 +1,7 @@
 import React from 'react';
 import data from '../../constants/dataFooter';
 import Contact from './Contact';
-import Subnav from '../Subnav';
+import SubNav from '../SubNav';
 import Thumbnail from '../Thumbnail';
 import Headline from '../Headline';
 import './assets/footer.scss';
@@ -9,7 +9,7 @@ import '../../assets/styles/helpers.scss';
 
 const Footer = () => {
   const subnavs = data.navs.map((s, index) =>
-    <Subnav key={index} data={s} />);
+    <SubNav key={index} data={s} />);
 
   return (
     <footer className="site-footer">
