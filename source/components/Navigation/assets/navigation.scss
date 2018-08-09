@@ -51,7 +51,7 @@
   border-bottom: 1px solid color(light);
   background-color: white;
   transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5s;
-  transform: translateY(56px) scaleY(0);
+  transform: translateY(129px) scaleY(0);
   transform-origin: top;
   opacity: 0;
 
@@ -167,7 +167,7 @@
     }
 
     ~ .site-nav__list {
-      transform: translateY(56px) scaleY(1);
+      transform: translateY(129px) scaleY(1);
       opacity: 1;
 
       @include media-query(medium) {
