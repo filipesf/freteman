@@ -14,14 +14,14 @@ const dataFooter = {
       text: 'Cidades Atendidas',
       href: '#Cidades-Atendidas'
     }, {
-      text: 'Seja um Freteman',
-      href: '#Seja-um-Freteman'
+      text: 'Seja um Fleetman',
+      href: '#Seja-um-Fleetman'
     }]
   }, {
-    title : 'Freteman',
+    title : 'Fleetman',
     list: [{
-      text: 'Seja um Freteman',
-      href: '#Seja-um-Freteman'
+      text: 'Seja um Fleetman',
+      href: '#Seja-um-Fleetman'
     }]
   }, {
     title : 'Sobre',
@@ -43,8 +43,8 @@ const dataFooter = {
     }]
   }],
   contact: {
-    phone: '(11) 93944-1232',
-    email: 'contato@freteman.com.br',
+    phone: '(48) 99999-9999',
+    email: 'contato@fleetman.com.br',
     socialLinks: [{
       href: '#Facebook',
       icon: assets.icon.fb,

@@ -38,7 +38,7 @@ class Console extends React.Component {
 
         {this.state.auth ?
           <div className="c-console__user">
-            <Headline title="Rodrigo Rodrigues" small right />
+            <Headline title="John Doe" small right />
             <Thumbnail src="https://i.stack.imgur.com/HQwHI.jpg" />
           </div>
           :

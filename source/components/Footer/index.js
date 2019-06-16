@@ -24,7 +24,7 @@ const Footer = () => {
       </section>
 
       <section className="site-footer__micro">
-        <p>© Freteman 2017</p>
+        <p>© Fleetman 2019</p>
       </section>
     </footer>
   );

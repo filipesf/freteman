@@ -1,8 +1,8 @@
 {
-  "name": "freteman",
+  "name": "fleetman",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://freteman.filipesf.com",
+  "homepage": "https://fleetman.filipesf.com",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",

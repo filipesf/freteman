@@ -23,7 +23,7 @@ const Place = props => {
         </div>
 
         <div className="l-place__details">
-          <InputText id={`contato-${props.point}`} label="Falar com:" placeholder="Rodrigo Rodrigues" />
+          <InputText id={`contato-${props.point}`} label="Falar com:" placeholder="John Doe" />
           <Select id={`andares-${props.point}`} label="Qual Andar?" options={opts.floors} />
           <RadioGroup name={`elevador-${props.point}`} label="Possui elevador?" options={opts.yN} flat />
         </div>
